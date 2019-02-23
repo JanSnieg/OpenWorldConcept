@@ -1914,16 +1914,6 @@ props {
   lod: 0
 }
 props {
-  name: "docks_wall_securityFenceGate01"
-  gridPoint {
-    x: -82
-    y: 0
-    z: 9
-  }
-  orientation: ORIENTATION_S
-  lod: 0
-}
-props {
   name: "docks_wall_securityFenceEdge02"
   gridPoint {
     x: -81
@@ -8735,4 +8725,47 @@ props {
     }
     intensity: 8
   }
+}
+props {
+  name: "brotherhood_wall_doorBack01Arch"
+  gridPoint {
+    x: -85
+    y: 0
+    z: 7
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "docks_wall_securityFenceGateOpen01"
+  gridPoint {
+    x: -82
+    y: 0
+    z: 9
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "docks_wall_securityFenceGate03"
+  gridPoint {
+    x: -82
+    y: 0
+    z: 12
+  }
+  orientation: ORIENTATION_N
+  idRef {
+    id: "5c718398643431351231b92d"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    doorPoint {
+      doorState: false
+      aiOnlyDoor: true
+      doorSound: "Door_RockSlide"
+      doorSoundBundle: "props"
+    }
+  }
+  lod: 0
 }

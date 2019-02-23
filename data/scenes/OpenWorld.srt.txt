@@ -38,22 +38,6 @@ triggers {
         }
       }
     }
-    ops {
-      functionName: "Teleport Camera To Point"
-      args {
-        call_value {
-          functionName: "Get Random Point Within Region"
-          args {
-            call_value {
-              functionName: "Get Map Item (Region)"
-              args {
-                string_value: "5c715c4c643431bc1131b7bc"
-              }
-            }
-          }
-        }
-      }
-    }
   }
   isActive: true
   idRef {
@@ -323,7 +307,13 @@ triggers {
           }
           args {
             call_value {
-              functionName: "Nothing Selected"
+              functionName: "Get Preset Value (int)"
+              args {
+                string_value: "AllOrAny"
+              }
+              args {
+                int_value: 0
+              }
             }
           }
         }
@@ -346,6 +336,62 @@ triggers {
             string_value: "Default"
           }
         }
+      }
+    }
+    ops {
+      functionName: "Display Text over Actor"
+      args {
+        call_value {
+          functionName: "Nearest Tagged Actor to Actor"
+          args {
+            call_value {
+              functionName: "Get Map Item (SenseTagList)"
+              args {
+                string_value: "warden"
+              }
+            }
+          }
+          args {
+            call_value {
+              functionName: "Triggering Actor"
+            }
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "TextPopupStyle"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        string_value: "Told ya #$%&er!!!"
+      }
+      args {
+        float_value: 250
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 6
+      }
+      args {
+        float_value: 3
+      }
+      args {
+        float_value: 0
       }
     }
   }
@@ -696,15 +742,17 @@ characters {
       }
       specializations {
       }
+      archetypeName: "Guard - Protect"
     }
     team_id: "LoneStar"
     char_name: "Lonestar Heavy Gunner"
     GeneralTags: "warden"
     pc_spawn_number: -1
+    ai_ignores: true
     portrait {
       filename: ""
     }
-    is_prop_character: true
+    is_prop_character: false
   }
 }
 characters {
@@ -712,7 +760,7 @@ characters {
   gridPoint {
     x: -84
     y: 0
-    z: 17
+    z: 16
   }
   orientation: ORIENTATION_S
   GeneralTags: "warden"
@@ -743,6 +791,7 @@ characters {
     char_name: "Lonestar Enforcer"
     GeneralTags: "warden"
     pc_spawn_number: -1
+    ai_ignores: true
     portrait {
       filename: ""
     }
