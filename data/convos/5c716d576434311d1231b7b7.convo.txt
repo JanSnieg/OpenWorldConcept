@@ -1,0 +1,204 @@
+idRef {
+  id: "5c716d576434311d1231b7b7"
+}
+ui_name: "con_merchant"
+nodes {
+  idRef {
+    id: "5c716d666434311d1231b7bd"
+  }
+  index: 0
+  text: "Stupid or what you are?\nCareful with those bastards you have to be, no joke they are!"
+  branches {
+    responseText: "Who are you exactly?"
+    nextNodeIndex: 1
+    onlyOnce: true
+    idRef {
+      id: "5c717344643431351231b7cf"
+    }
+  }
+  branches {
+    responseText: "Those n00bs? I could take them with my hand up in my ass {{GM}}You really not{{/GM}}"
+    conditions {
+      ops {
+        functionName: "Comparison (bool)"
+        args {
+          call_value {
+            functionName: "Get Variable (bool)"
+            args {
+              string_value: "bool_wasInDangerZone"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 2
+    hideIfUnavailable: true
+    onlyOnce: true
+    idRef {
+      id: "5c71734b643431351231b7d1"
+    }
+  }
+  branches {
+    responseText: "Who are you talking about old man?"
+    conditions {
+      ops {
+        functionName: "Comparison (bool)"
+        args {
+          call_value {
+            functionName: "Get Variable (bool)"
+            args {
+              string_value: "bool_wasInDangerZone"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 3
+    hideIfUnavailable: true
+    onlyOnce: true
+    idRef {
+      id: "5c717349643431351231b7d0"
+    }
+  }
+  branches {
+    responseText: "So what I have to do, mysterious man?"
+    nextNodeIndex: 4
+  }
+  branches {
+    responseText: "Bye, I guess."
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5c717266643431351231b7bd"
+  }
+  index: 1
+  text: "Hah! Not a good question to ask, I say.\nTry asking better."
+  branches {
+    responseText: ""
+    nextNodeIndex: 0
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5c717355643431351231b7d3"
+  }
+  index: 2
+  text: "Well than. Go and see if beat them you can!"
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5c717376643431351231b7d5"
+  }
+  index: 3
+  text: "...?\nBetter not knowing for you!\nGo south, find Monorail and survivors visit you shold!"
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Set Variable (bool)"
+      args {
+        call_value {
+          functionName: "Get Variable (bool)"
+          args {
+            string_value: "bool_talkedToMerchant"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "5c717408643431351231b7d7"
+  }
+  index: 4
+  text: "South go and find survivors, you should.\nNow. Go. \nWhat waiting for are you?"
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Set Variable (bool)"
+      args {
+        call_value {
+          functionName: "Get Variable (bool)"
+          args {
+            string_value: "bool_talkedToMerchant"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+}
+roots {
+  nextNodeIndex: 0
+}

@@ -1,4 +1,8 @@
 id: ""
+startScene: "OpenWorld"
+resalePercent: 75
+upgradeToThreeApLevel: 117
+show_conversation_triggering_actor: true
 character_roster {
   roster_entries {
     reference_id: "lvl1_dwarf_rigger"

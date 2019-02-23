@@ -1,0 +1,27 @@
+idRef {
+  id: "5c714d46643431a211058edc"
+}
+ui_name: "con_onStart"
+nodes {
+  idRef {
+    id: "5c714d4a643431a211058ee2"
+  }
+  index: 0
+  text: "You ware driving down the highway, chillin in your sweet van when suddenly you noticed metal fence blocking the way."
+  branches {
+    responseText: "What the {{CC}}$%&#!{{/CC}}"
+    nextNodeIndex: 1
+  }
+  nodeType: ConversationNodeType_GM_Voice
+}
+nodes {
+  idRef {
+    id: "5c714e29643431a211058ee5"
+  }
+  index: 1
+  text: "You crashed into a barricade, wrecking your ride."
+  nodeType: ConversationNodeType_GM_Voice
+}
+roots {
+  nextNodeIndex: 0
+}

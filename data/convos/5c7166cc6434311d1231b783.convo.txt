@@ -1,0 +1,43 @@
+idRef {
+  id: "5c7166cc6434311d1231b783"
+}
+ui_name: "con_dangerZone"
+nodes {
+  idRef {
+    id: "5c7166d06434311d1231b789"
+  }
+  index: 0
+  text: "Hey you, {{CC}}#$%&{{/CC}}head!\nGet da {{CC}}#$%&{{/CC}} out of here before I shoot your a$$!!"
+  branches {
+    responseText: "What?"
+    nextNodeIndex: 1
+  }
+  branches {
+    responseText: "Who the {{CC}}#$%&{{/CC}} are you?"
+    nextNodeIndex: 2
+  }
+  branches {
+    responseText: "Sure thing!"
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5c71677a6434311d1231b790"
+  }
+  index: 1
+  text: "I\'m sure I can make you another hole in you ass!\nOUT!!! NOW!!!"
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5c7167d76434311d1231b792"
+  }
+  index: 2
+  text: "Not ya {{CC}}#$%&{{/CC}} buisness m8!"
+  nodeType: ConversationNodeType_Simple
+}
+roots {
+  nextNodeIndex: 0
+}
