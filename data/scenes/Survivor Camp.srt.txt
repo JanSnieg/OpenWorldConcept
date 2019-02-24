@@ -1,3 +1,25 @@
+characters {
+  name: "system_spawner_playerSpawner"
+  gridPoint {
+    x: 13
+    y: 0
+    z: 39
+  }
+  orientation: ORIENTATION_N
+  idRef {
+    id: "5c72c54f643431c715b7b188"
+  }
+  lod: 0
+  character_instance {
+    character_mod {
+      archetypeName: "Player"
+    }
+    team_id: "Shadowrunners"
+    char_name: "New Actor"
+    enabled_at_start: true
+    pc_spawn_number: 0
+  }
+}
 worldMapLocation {
   filename: ""
   location {

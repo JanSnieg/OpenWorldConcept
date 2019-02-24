@@ -17,7 +17,7 @@ nodes {
     }
   }
   branches {
-    responseText: "Those n00bs? I could take them with my hand up in my ass {{GM}}You really not{{/GM}}"
+    responseText: "Those n00bs? I could take them with one hand."
     conditions {
       ops {
         functionName: "Comparison (bool)"
@@ -140,7 +140,7 @@ nodes {
     id: "5c717376643431351231b7d5"
   }
   index: 3
-  text: "...?\nBetter not knowing for you!\nGo south, find Monorail and survivors visit you shold!"
+  text: "...?\nBetter not knowing for you!\nGo south, find Monorail and survivors visit you shold!\nMy ticket you take. Needed to ride it is."
   nodeType: ConversationNodeType_Simple
   actions {
     ops {
@@ -165,6 +165,31 @@ nodes {
         }
       }
     }
+    ops {
+      functionName: "Set Waypoint on Prop"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "PrimaryOrSecondary"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (Prop)"
+          args {
+            string_value: "5c717c59643431351231b903"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "No Effect"
+    }
   }
 }
 nodes {
@@ -172,7 +197,7 @@ nodes {
     id: "5c717408643431351231b7d7"
   }
   index: 4
-  text: "South go and find survivors, you should.\nNow. Go. \nWhat waiting for are you?"
+  text: "South go and find survivors, you should.\nMy ticket you take. Needed to ride it is.\nNow. Go. \nWhat waiting for are you?"
   nodeType: ConversationNodeType_Simple
   actions {
     ops {
@@ -193,6 +218,28 @@ nodes {
           }
           args {
             int_value: 1
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Set Waypoint on Prop"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "PrimaryOrSecondary"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (Prop)"
+          args {
+            string_value: "5c717c59643431351231b903"
           }
         }
       }

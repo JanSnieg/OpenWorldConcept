@@ -138,7 +138,7 @@ triggers {
   is_oneshot: true
 }
 triggers {
-  name: "spotted"
+  name: "onEnterDangerZone"
   events {
     ops {
       functionName: "On Region Enter"
@@ -264,28 +264,6 @@ triggers {
         }
       }
     }
-    ops {
-      functionName: "Set Variable (bool)"
-      args {
-        call_value {
-          functionName: "Get Variable (bool)"
-          args {
-            string_value: "bool_wasInDangerZone"
-          }
-        }
-      }
-      args {
-        call_value {
-          functionName: "Get Preset Value (int)"
-          args {
-            string_value: "bool"
-          }
-          args {
-            int_value: 1
-          }
-        }
-      }
-    }
   }
   isActive: true
   idRef {
@@ -339,7 +317,20 @@ triggers {
       }
     }
     ops {
-      functionName: "Display Text over Actor"
+      functionName: "Start Conversation Between Actors"
+      args {
+        call_value {
+          functionName: "Get Map Item (Conversation)"
+          args {
+            string_value: "5c72c66d643431c715b7b18b"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Triggering Actor"
+        }
+      }
       args {
         call_value {
           functionName: "Nearest Tagged Actor to Actor"
@@ -362,36 +353,12 @@ triggers {
         call_value {
           functionName: "Get Preset Value (int)"
           args {
-            string_value: "TextPopupStyle"
+            string_value: "WithOrWithout"
           }
           args {
-            int_value: 0
+            int_value: 1
           }
         }
-      }
-      args {
-        string_value: "Told ya #$%&er!!!"
-      }
-      args {
-        float_value: 250
-      }
-      args {
-        float_value: 0
-      }
-      args {
-        float_value: 0
-      }
-      args {
-        float_value: 0
-      }
-      args {
-        float_value: 6
-      }
-      args {
-        float_value: 3
-      }
-      args {
-        float_value: 0
       }
     }
   }
@@ -511,13 +478,211 @@ triggers {
   }
   is_oneshot: true
 }
+triggers {
+  name: "onExitDangerZone"
+  events {
+    ops {
+      functionName: "On Region Exit"
+      args {
+        call_value {
+          functionName: "Get Map Item (Region)"
+          args {
+            string_value: "5c71643f643431bc1131b7c1"
+          }
+        }
+      }
+    }
+  }
+  conditions {
+    ops {
+      functionName: "AND"
+      args {
+        call_value {
+          functionName: "Comparison (Actor)"
+          args {
+            call_value {
+              functionName: "Triggering Actor"
+            }
+          }
+          args {
+            call_value {
+              functionName: "Get Preset Value (int)"
+              args {
+                string_value: "IsOrIsNot"
+              }
+              args {
+                int_value: 1
+              }
+            }
+          }
+          args {
+            call_value {
+              functionName: "Active Actor"
+            }
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Comparison (bool)"
+          args {
+            call_value {
+              functionName: "Get Variable (bool)"
+              args {
+                string_value: "bool_wasInDangerZone"
+              }
+            }
+          }
+          args {
+            call_value {
+              functionName: "Get Preset Value (int)"
+              args {
+                string_value: "IsOrIsNot"
+              }
+              args {
+                int_value: 1
+              }
+            }
+          }
+          args {
+            call_value {
+              functionName: "Get Preset Value (int)"
+              args {
+                string_value: "bool"
+              }
+              args {
+                int_value: 0
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  actions {
+    ops {
+      functionName: "Set Variable (bool)"
+      args {
+        call_value {
+          functionName: "Get Variable (bool)"
+          args {
+            string_value: "bool_wasInDangerZone"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "5c72c5dd643431c715b7b18a"
+  }
+  elseActions {
+  }
+  is_oneshot: true
+}
+triggers {
+  name: "onConEnd"
+  events {
+    ops {
+      functionName: "On Conversation Complete"
+    }
+  }
+  conditions {
+    ops {
+      functionName: "Comparison (bool)"
+      args {
+        call_value {
+          functionName: "Get Variable (bool)"
+          args {
+            string_value: "bool_talkedToMerchant"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+  actions {
+    ops {
+      functionName: "Set Goal Status"
+      args {
+        call_value {
+          functionName: "Get Map Item (Goal)"
+          args {
+            string_value: "Find a way out"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "GoalStatus"
+          }
+          args {
+            int_value: 2
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "5c72c98b643431c715b7b209"
+  }
+  elseActions {
+  }
+  is_oneshot: true
+}
 regions {
   name: "DangerZone"
   position {
     x: -81
-    y: 6
-    width: 6
-    height: 17
+    y: 9
+    width: 12
+    height: 12
   }
   enabledAtStart: true
   is_camera_region: false
@@ -752,7 +917,7 @@ characters {
     portrait {
       filename: ""
     }
-    is_prop_character: false
+    is_prop_character: true
   }
 }
 characters {
@@ -813,6 +978,12 @@ variables {
     name: "bool_talkedToMerchant"
     typeName: "bool"
   }
+}
+goals {
+  name: "Find a way out"
+  type: GoalType_Primary
+  status: GoalStatus_Started
+  description: "Find a way out of this city"
 }
 worldMapLocation {
   filename: ""

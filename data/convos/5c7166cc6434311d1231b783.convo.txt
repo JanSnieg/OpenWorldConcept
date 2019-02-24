@@ -7,7 +7,7 @@ nodes {
     id: "5c7166d06434311d1231b789"
   }
   index: 0
-  text: "Hey you, {{CC}}#$%&{{/CC}}head!\nGet da {{CC}}#$%&{{/CC}} out of here before I shoot your a$$!!"
+  text: "Hey you, {{CC}}#$%&{{/CC}}head!\nGet da {{CC}}#$%&{{/CC}} out of here before I shoot your a$$!!\nThis is ours crossroad!"
   branches {
     responseText: "What?"
     nextNodeIndex: 1
