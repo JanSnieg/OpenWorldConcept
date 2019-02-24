@@ -1,0 +1,96 @@
+idRef {
+  id: "5c72e70b643431c417e50a64"
+}
+ui_name: "Sleep"
+nodes {
+  idRef {
+    id: "5c72f1e16434313518a4045c"
+  }
+  index: 0
+  text: "I feel tired, I should get some sleep."
+  branches {
+    responseText: "Sleep untill morning."
+    actions {
+      ops {
+        functionName: "Set Variable (bool)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (bool)"
+            args {
+              string_value: "5c6fd5ec6434311e0cb7acda"
+            }
+            args {
+              string_value: "isNight"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Fade Camera In"
+        args {
+          float_value: 5
+        }
+        args {
+          float_value: 5
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "Sleep until night."
+    actions {
+      ops {
+        functionName: "Set Variable (bool)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (bool)"
+            args {
+              string_value: "5c6fd5ec6434311e0cb7acda"
+            }
+            args {
+              string_value: "isNight"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Fade Camera In"
+        args {
+          float_value: 5
+        }
+        args {
+          float_value: 5
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+roots {
+  responseText: ""
+  nextNodeIndex: 0
+}

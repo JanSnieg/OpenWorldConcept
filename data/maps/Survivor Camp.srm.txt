@@ -1,6 +1,6 @@
 minX: -88
 minZ: -58
-numX: 174
+numX: 136
 numZ: 123
 props {
   name: "cemetery_ground_dirt01"
@@ -943,222 +943,6 @@ props {
 props {
   name: "diveBar_wall_brickEndBottom"
   gridPoint {
-    x: 74
-    y: 0
-    z: 15
-  }
-  orientation: ORIENTATION_S
-  lod: 0
-}
-props {
-  name: "diveBar_wall_brickEndTop"
-  gridPoint {
-    x: 80
-    y: 0
-    z: 9
-  }
-  orientation: ORIENTATION_S
-  lod: 0
-}
-props {
-  name: "morgue_wall_brickEnd01"
-  gridPoint {
-    x: 75
-    y: 0
-    z: 12
-  }
-  orientation: ORIENTATION_S
-  lod: 0
-}
-props {
-  name: "morgue_wall_brickConnector01"
-  gridPoint {
-    x: 75
-    y: 0
-    z: 12
-  }
-  orientation: ORIENTATION_N
-  lod: 0
-}
-props {
-  name: "morgue_wall_brickConnector01"
-  gridPoint {
-    x: 75
-    y: 0
-    z: 10
-  }
-  orientation: ORIENTATION_S
-  idRef {
-    id: "5c72a48d643431c715b7ad07"
-  }
-  lod: 0
-}
-props {
-  name: "morgue_wall_brickEnd01"
-  gridPoint {
-    x: 75
-    y: 0
-    z: 9
-  }
-  orientation: ORIENTATION_E
-  idRef {
-    id: "5c72a48d643431c715b7ad08"
-  }
-  lod: 0
-}
-props {
-  name: "morgue_wall_brickConnector01"
-  gridPoint {
-    x: 72
-    y: 0
-    z: 10
-  }
-  orientation: ORIENTATION_S
-  idRef {
-    id: "5c72a49d643431c715b7ad09"
-  }
-  lod: 0
-}
-props {
-  name: "morgue_wall_brickEnd01"
-  gridPoint {
-    x: 72
-    y: 0
-    z: 9
-  }
-  orientation: ORIENTATION_N
-  idRef {
-    id: "5c72a49d643431c715b7ad0a"
-  }
-  lod: 0
-}
-props {
-  name: "morgue_wall_brickEnd01"
-  gridPoint {
-    x: 72
-    y: 0
-    z: 12
-  }
-  orientation: ORIENTATION_N
-  idRef {
-    id: "5c72a4ac643431c715b7ad0b"
-  }
-  lod: 0
-}
-props {
-  name: "morgue_wall_brickConnector01"
-  gridPoint {
-    x: 72
-    y: 0
-    z: 12
-  }
-  orientation: ORIENTATION_W
-  idRef {
-    id: "5c72a4ac643431c715b7ad0c"
-  }
-  lod: 0
-}
-props {
-  name: "diveBar_wall_brickEndTop"
-  gridPoint {
-    x: 83
-    y: 0
-    z: 9
-  }
-  orientation: ORIENTATION_W
-  idRef {
-    id: "5c72a4c8643431c715b7ad0d"
-  }
-  lod: 0
-}
-props {
-  name: "diveBar_wall_brickEndTop"
-  gridPoint {
-    x: 80
-    y: 0
-    z: 12
-  }
-  orientation: ORIENTATION_N
-  idRef {
-    id: "5c72a4cb643431c715b7ad0e"
-  }
-  lod: 0
-}
-props {
-  name: "diveBar_wall_brickEndTop"
-  gridPoint {
-    x: 83
-    y: 0
-    z: 12
-  }
-  orientation: ORIENTATION_N
-  idRef {
-    id: "5c72a4ce643431c715b7ad0f"
-  }
-  lod: 0
-}
-props {
-  name: "diveBar_wall_brickConnectorTop"
-  gridPoint {
-    x: 81
-    y: 0
-    z: 9
-  }
-  orientation: ORIENTATION_E
-  lod: 0
-}
-props {
-  name: "diveBar_wall_brickConnectorTop"
-  gridPoint {
-    x: 83
-    y: 0
-    z: 12
-  }
-  orientation: ORIENTATION_W
-  idRef {
-    id: "5c72a4e3643431c715b7ad10"
-  }
-  lod: 0
-}
-props {
-  name: "diveBar_wall_brickConnectorTop"
-  gridPoint {
-    x: 81
-    y: 0
-    z: 12
-  }
-  orientation: ORIENTATION_E
-  idRef {
-    id: "5c72a533643431c715b7ad11"
-  }
-  lod: 0
-}
-props {
-  name: "diveBar_wall_brickConnectorTop"
-  gridPoint {
-    x: 83
-    y: 0
-    z: 10
-  }
-  orientation: ORIENTATION_S
-  idRef {
-    id: "5c72a574643431c715b7ad12"
-  }
-  lod: 0
-}
-props {
-  name: "diveBar_wall_brickConnectorBottom"
-  gridPoint {
-    x: 74
-    y: 0
-    z: 15
-  }
-  orientation: ORIENTATION_W
-  lod: 0
-}
-props {
-  name: "diveBar_wall_brickEndBottom"
-  gridPoint {
     x: 13
     y: 0
     z: 4
@@ -1166,32 +950,6 @@ props {
   orientation: ORIENTATION_S
   idRef {
     id: "5c72a593643431c715b7ad13"
-  }
-  lod: 0
-}
-props {
-  name: "diveBar_wall_brickEndBottom"
-  gridPoint {
-    x: 71
-    y: 0
-    z: 18
-  }
-  orientation: ORIENTATION_E
-  idRef {
-    id: "5c72a595643431c715b7ad14"
-  }
-  lod: 0
-}
-props {
-  name: "diveBar_wall_brickEndBottom"
-  gridPoint {
-    x: 74
-    y: 0
-    z: 18
-  }
-  orientation: ORIENTATION_W
-  idRef {
-    id: "5c72a596643431c715b7ad15"
   }
   lod: 0
 }
@@ -1205,32 +963,6 @@ props {
   orientation: ORIENTATION_E
   idRef {
     id: "5c72a5a0643431c715b7ad16"
-  }
-  lod: 0
-}
-props {
-  name: "diveBar_wall_brickConnectorBottom"
-  gridPoint {
-    x: 71
-    y: 0
-    z: 18
-  }
-  orientation: ORIENTATION_N
-  idRef {
-    id: "5c72a5cc643431c715b7ad17"
-  }
-  lod: 0
-}
-props {
-  name: "diveBar_wall_brickConnectorBottom"
-  gridPoint {
-    x: 74
-    y: 0
-    z: 18
-  }
-  orientation: ORIENTATION_N
-  idRef {
-    id: "5c72a5e3643431c715b7ad18"
   }
   lod: 0
 }
@@ -1619,19 +1351,6 @@ props {
   orientation: ORIENTATION_E
   idRef {
     id: "5c72a8b0643431c715b7ad42"
-  }
-  lod: 0
-}
-props {
-  name: "diveBar_wall_brickEdge02Bottom"
-  gridPoint {
-    x: 26
-    y: 0
-    z: 4
-  }
-  orientation: ORIENTATION_S
-  idRef {
-    id: "5c72a91a643431c715b7ad4a"
   }
   lod: 0
 }
@@ -2264,19 +1983,6 @@ props {
   lod: 0
 }
 props {
-  name: "diveBar_wall_brickEdge02Top"
-  gridPoint {
-    x: -4
-    y: 0
-    z: -26
-  }
-  orientation: ORIENTATION_E
-  idRef {
-    id: "5c72ab60643431c715b7ad93"
-  }
-  lod: 0
-}
-props {
   name: "diveBar_wall_brickEdge01Top"
   gridPoint {
     x: -6
@@ -2305,9 +2011,9 @@ props {
 props {
   name: "diveBar_wall_brickEdge03Top"
   gridPoint {
-    x: 8
+    x: 9
     y: 0
-    z: -26
+    z: -22
   }
   orientation: ORIENTATION_E
   idRef {
@@ -2318,9 +2024,9 @@ props {
 props {
   name: "diveBar_wall_brickEdge02Top"
   gridPoint {
-    x: 10
+    x: 11
     y: 0
-    z: -26
+    z: -22
   }
   orientation: ORIENTATION_E
   idRef {
@@ -2342,19 +2048,6 @@ props {
   lod: 0
 }
 props {
-  name: "diveBar_wall_brickConnectorTop"
-  gridPoint {
-    x: 26
-    y: 0
-    z: -7
-  }
-  orientation: ORIENTATION_S
-  idRef {
-    id: "5c72ac47643431c715b7ad9f"
-  }
-  lod: 0
-}
-props {
   name: "diveBar_wall_brickEndTop"
   gridPoint {
     x: 26
@@ -2372,7 +2065,7 @@ props {
   gridPoint {
     x: 26
     y: 0
-    z: -4
+    z: -7
   }
   orientation: ORIENTATION_S
   idRef {
@@ -2385,17 +2078,7 @@ props {
   gridPoint {
     x: 26
     y: 0
-    z: 0
-  }
-  orientation: ORIENTATION_S
-  lod: 0
-}
-props {
-  name: "morgue_wall_brickEdge04b"
-  gridPoint {
-    x: 26
-    y: 0
-    z: -2
+    z: -5
   }
   orientation: ORIENTATION_S
   lod: 0
@@ -2405,7 +2088,7 @@ props {
   gridPoint {
     x: 26
     y: 0
-    z: 2
+    z: 3
   }
   orientation: ORIENTATION_S
   lod: 0
@@ -2415,7 +2098,7 @@ props {
   gridPoint {
     x: 26
     y: 0
-    z: -6
+    z: -3
   }
   orientation: ORIENTATION_S
   idRef {
@@ -2855,58 +2538,6 @@ props {
 props {
   name: "barrens_ground_brickpavement01"
   gridPoint {
-    x: -6
-    y: 0
-    z: -19
-  }
-  orientation: ORIENTATION_E
-  idRef {
-    id: "5c72aeb3643431c715b7add9"
-  }
-  lod: 0
-}
-props {
-  name: "barrens_ground_brickpavement03"
-  gridPoint {
-    x: -6
-    y: 0
-    z: -22
-  }
-  orientation: ORIENTATION_S
-  idRef {
-    id: "5c72aeb3643431c715b7addb"
-  }
-  lod: 0
-}
-props {
-  name: "barrens_ground_brickpavement03"
-  gridPoint {
-    x: -9
-    y: 0
-    z: -19
-  }
-  orientation: ORIENTATION_S
-  idRef {
-    id: "5c72aeb3643431c715b7addc"
-  }
-  lod: 0
-}
-props {
-  name: "barrens_ground_brickpavement03"
-  gridPoint {
-    x: -9
-    y: 0
-    z: -22
-  }
-  orientation: ORIENTATION_S
-  idRef {
-    id: "5c72aeb3643431c715b7addd"
-  }
-  lod: 0
-}
-props {
-  name: "barrens_ground_brickpavement01"
-  gridPoint {
     x: 0
     y: 0
     z: -16
@@ -2927,32 +2558,6 @@ props {
   orientation: ORIENTATION_S
   idRef {
     id: "5c72aebf643431c715b7addf"
-  }
-  lod: 0
-}
-props {
-  name: "barrens_ground_brickpavement01"
-  gridPoint {
-    x: -6
-    y: 0
-    z: -16
-  }
-  orientation: ORIENTATION_E
-  idRef {
-    id: "5c72aebf643431c715b7ade0"
-  }
-  lod: 0
-}
-props {
-  name: "barrens_ground_brickpavement03"
-  gridPoint {
-    x: -9
-    y: 0
-    z: -16
-  }
-  orientation: ORIENTATION_S
-  idRef {
-    id: "5c72aebf643431c715b7ade1"
   }
   lod: 0
 }
@@ -3221,7 +2826,7 @@ props {
   gridPoint {
     x: 26
     y: 0
-    z: 6
+    z: 1
   }
   orientation: ORIENTATION_S
   idRef {
@@ -3330,32 +2935,6 @@ props {
   orientation: ORIENTATION_S
   idRef {
     id: "5c72b0fb643431c715b7ae13"
-  }
-  lod: 0
-}
-props {
-  name: "barrens_ground_brickpavement01"
-  gridPoint {
-    x: -6
-    y: 0
-    z: -25
-  }
-  orientation: ORIENTATION_E
-  idRef {
-    id: "5c72b0fb643431c715b7ae14"
-  }
-  lod: 0
-}
-props {
-  name: "barrens_ground_brickpavement03"
-  gridPoint {
-    x: -9
-    y: 0
-    z: -25
-  }
-  orientation: ORIENTATION_S
-  idRef {
-    id: "5c72b0fb643431c715b7ae15"
   }
   lod: 0
 }
@@ -3582,32 +3161,6 @@ props {
   lod: 0
 }
 props {
-  name: "diveBar_wall_brickConnectorBottom"
-  gridPoint {
-    x: 71
-    y: 0
-    z: 14
-  }
-  orientation: ORIENTATION_E
-  idRef {
-    id: "5c72b29b643431c715b7ae24"
-  }
-  lod: 0
-}
-props {
-  name: "diveBar_wall_brickEndBottom"
-  gridPoint {
-    x: 70
-    y: 0
-    z: 14
-  }
-  orientation: ORIENTATION_S
-  idRef {
-    id: "5c72b29b643431c715b7ae25"
-  }
-  lod: 0
-}
-props {
   name: "morgue_appliance_medicinalFreezer"
   gridPoint {
     x: -1
@@ -3763,19 +3316,6 @@ props {
   orientation: ORIENTATION_E
   idRef {
     id: "5c72b4f0643431c715b7ae28"
-  }
-  lod: 0
-}
-props {
-  name: "diveBar_wall_brickEdge02Bottom"
-  gridPoint {
-    x: 25
-    y: 0
-    z: 4
-  }
-  orientation: ORIENTATION_E
-  idRef {
-    id: "5c72b4f3643431c715b7ae29"
   }
   lod: 0
 }
@@ -10654,6 +10194,426 @@ props {
   orientation: ORIENTATION_N
   idRef {
     id: "5c72c52b643431c715b7b187"
+  }
+  lod: 0
+}
+props {
+  name: "morgue_wall_brickEdge05"
+  gridPoint {
+    x: 26
+    y: 0
+    z: -1
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "5c72e0cd643431c417e50a05"
+  }
+  lod: 0
+}
+props {
+  name: "diveBar_wall_brickEndBottom"
+  gridPoint {
+    x: 26
+    y: 0
+    z: 4
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "5c72e104643431c417e50a06"
+  }
+  lod: 0
+}
+props {
+  name: "diveBar_wall_brickEdge02Bottom"
+  gridPoint {
+    x: 25
+    y: 0
+    z: 4
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "5c72e11d643431c417e50a09"
+  }
+  lod: 0
+}
+props {
+  name: "diveBar_wall_brickEdge02Bottom"
+  gridPoint {
+    x: 26
+    y: 0
+    z: 6
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "5c72e127643431c417e50a0a"
+  }
+  lod: 0
+}
+props {
+  name: "diveBar_wall_brickEdge03Top"
+  gridPoint {
+    x: -4
+    y: 0
+    z: -16
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "5c72e146643431c417e50a0b"
+  }
+  lod: 0
+}
+props {
+  name: "diveBar_wall_brickEdge03Top"
+  gridPoint {
+    x: -4
+    y: 0
+    z: -18
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "5c72e146643431c417e50a0c"
+  }
+  lod: 0
+}
+props {
+  name: "diveBar_wall_brickEdge03Top"
+  gridPoint {
+    x: -4
+    y: 0
+    z: -24
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "5c72e14a643431c417e50a0f"
+  }
+  lod: 0
+}
+props {
+  name: "diveBar_wall_brickEdge01Top"
+  gridPoint {
+    x: -4
+    y: 0
+    z: -26
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "5c72e170643431c417e50a11"
+  }
+  lod: 0
+}
+props {
+  name: "diveBar_wall_brickConnectorTop"
+  gridPoint {
+    x: -4
+    y: 0
+    z: -25
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "5c72e187643431c417e50a12"
+  }
+  lod: 0
+}
+props {
+  name: "secretLab_wall_door01Back"
+  gridPoint {
+    x: -4
+    y: 0
+    z: -20
+  }
+  orientation: ORIENTATION_E
+  lod: 0
+}
+props {
+  name: "secretLab_wall_door01Front"
+  gridPoint {
+    x: -4
+    y: 0
+    z: -19
+  }
+  orientation: ORIENTATION_E
+  lod: 0
+}
+props {
+  name: "diveBar_wall_brickEdge03Top"
+  gridPoint {
+    x: -4
+    y: 0
+    z: -22
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "5c72e1cc643431c417e50a13"
+  }
+  lod: 0
+}
+props {
+  name: "secretLab_wall_doorWide01Mid"
+  gridPoint {
+    x: -4
+    y: 0
+    z: -20
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "5c72e442643431c417e50a39"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    transitionPoint {
+      scene_name: "apartment"
+      confirmation_text: "Ready to visit your apartment?"
+    }
+  }
+  lod: 0
+}
+props {
+  name: "diveBar_wall_brickEdge03Top"
+  gridPoint {
+    x: 0
+    y: 0
+    z: -22
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "5c72e229643431c417e50a1d"
+  }
+  lod: 0
+}
+props {
+  name: "diveBar_wall_brickEdge03Top"
+  gridPoint {
+    x: 2
+    y: 0
+    z: -22
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "5c72e237643431c417e50a1f"
+  }
+  lod: 0
+}
+props {
+  name: "diveBar_wall_brickEdge03Top"
+  gridPoint {
+    x: 8
+    y: 0
+    z: -26
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "5c72e246643431c417e50a23"
+  }
+  lod: 0
+}
+props {
+  name: "diveBar_wall_brickEdge02Top"
+  gridPoint {
+    x: 10
+    y: 0
+    z: -26
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "5c72e246643431c417e50a24"
+  }
+  lod: 0
+}
+props {
+  name: "diveBar_wall_brickEdge03Top"
+  gridPoint {
+    x: 13
+    y: 0
+    z: -22
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "5c72e24a643431c417e50a25"
+  }
+  lod: 0
+}
+props {
+  name: "secretLab_wall_doorWide02Door"
+  gridPoint {
+    x: 4.2
+    y: -0.4
+    z: -22
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "5c72e465643431c417e50a3b"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    transitionPoint {
+      scene_name: "downtownseattle"
+      confirmation_text: ""
+    }
+  }
+  lod: 0
+}
+props {
+  name: "secretLab_wall_doorWide02Front"
+  gridPoint {
+    x: 7
+    y: 0
+    z: -22
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "secretLab_wall_doorWide02Back"
+  gridPoint {
+    x: 4
+    y: 0
+    z: -22
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "diveBar_wall_brickEdge03Top"
+  gridPoint {
+    x: -2
+    y: 0
+    z: -22
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "5c72e28d643431c417e50a27"
+  }
+  lod: 0
+}
+props {
+  name: "barrens_ground_brickpavement03"
+  gridPoint {
+    x: -6
+    y: 0
+    z: -16
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "5c72e2b8643431c417e50a29"
+  }
+  lod: 0
+}
+props {
+  name: "barrens_ground_brickpavement03"
+  gridPoint {
+    x: -6
+    y: 0
+    z: -19
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "5c72e2b8643431c417e50a2a"
+  }
+  lod: 0
+}
+props {
+  name: "barrens_ground_brickpavement03"
+  gridPoint {
+    x: -9
+    y: 0
+    z: -16
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "5c72e2b8643431c417e50a2b"
+  }
+  lod: 0
+}
+props {
+  name: "barrens_ground_brickpavement03"
+  gridPoint {
+    x: -9
+    y: 0
+    z: -19
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "5c72e2b8643431c417e50a2c"
+  }
+  lod: 0
+}
+props {
+  name: "barrens_ground_brickpavement01"
+  gridPoint {
+    x: -6
+    y: 0
+    z: -22
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "5c72e2b8643431c417e50a2d"
+  }
+  lod: 0
+}
+props {
+  name: "barrens_ground_brickpavement03"
+  gridPoint {
+    x: -9
+    y: 0
+    z: -22
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "5c72e2b8643431c417e50a2e"
+  }
+  lod: 0
+}
+props {
+  name: "barrens_ground_brickpavement01"
+  gridPoint {
+    x: -6
+    y: 0
+    z: -25
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "5c72e2b8643431c417e50a2f"
+  }
+  lod: 0
+}
+props {
+  name: "barrens_ground_brickpavement03"
+  gridPoint {
+    x: -9
+    y: 0
+    z: -25
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "5c72e2b8643431c417e50a30"
+  }
+  lod: 0
+}
+props {
+  name: "diveBar_wall_brickConnectorTop"
+  gridPoint {
+    x: -4
+    y: 0
+    z: -14
+  }
+  orientation: ORIENTATION_N
+  idRef {
+    id: "5c72e37b643431c417e50a36"
+  }
+  lod: 0
+}
+props {
+  name: "diveBar_wall_brickConnectorTop"
+  gridPoint {
+    x: -3
+    y: 0
+    z: -22
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "5c72e39d643431c417e50a37"
   }
   lod: 0
 }

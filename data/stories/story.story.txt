@@ -1,4 +1,16 @@
 id: ""
+variables {
+  name: "isNight"
+  typeName: "bool"
+  defaultValue {
+    bool_value: true
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "isNight"
+      typeName: "bool"
+    }
+  }
+}
 startScene: "OpenWorld"
 resalePercent: 75
 upgradeToThreeApLevel: 117
