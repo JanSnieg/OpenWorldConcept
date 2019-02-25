@@ -1,0 +1,69 @@
+idRef {
+  id: "5c740df7643431f71ba40477"
+}
+ui_name: "con_Sara"
+nodes {
+  idRef {
+    id: "5c740e06643431f71ba4047d"
+  }
+  index: 0
+  text: "What can I do for you sweety?"
+  branches {
+    responseText: "What do you do for a living?"
+    nextNodeIndex: 1
+  }
+  branches {
+    responseText: "I want to buy something."
+    nextNodeIndex: 2
+  }
+  branches {
+    responseText: "See ya!"
+    nextNodeIndex: 3
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5c740e4b643431f71ba40484"
+  }
+  index: 1
+  text: "Just an ordinary think, I sell stuff to heros like you.\nIsn\'t it wonderfull, sweety?"
+  branches {
+    responseText: ""
+    nextNodeIndex: 0
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5c740e8f643431f71ba40491"
+  }
+  index: 2
+  text: "Take a look, but don\'t touch anythink my dear!"
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Open Store Screen From Actor"
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor)"
+          args {
+            string_value: "5c73cc85643431bd1aa404c8"
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "5c740e3c643431f71ba40482"
+  }
+  index: 3
+  text: "Bye sweeheart!"
+  nodeType: ConversationNodeType_Simple
+}
+roots {
+  nextNodeIndex: 0
+}

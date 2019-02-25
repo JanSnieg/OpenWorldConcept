@@ -1,0 +1,16 @@
+idRef {
+  id: "5c73b7f6643431bd1aa4044e"
+}
+ui_name: "con_lastWarning"
+nodes {
+  idRef {
+    id: "5c73b82a643431bd1aa40458"
+  }
+  index: 0
+  text: "This was last warning.\nPrepere to die, {{CC}}#$%&{{/CC}}"
+  nodeType: ConversationNodeType_Simple
+}
+roots {
+  responseText: ""
+  nextNodeIndex: 0
+}

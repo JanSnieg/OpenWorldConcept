@@ -1,5 +1,17 @@
 id: ""
 variables {
+  name: "fromWhere"
+  typeName: "string"
+  defaultValue {
+    string_value: "monorail"
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "fromWhere"
+      typeName: "string"
+    }
+  }
+}
+variables {
   name: "isNight"
   typeName: "bool"
   defaultValue {
@@ -12,6 +24,8 @@ variables {
   }
 }
 startScene: "OpenWorld"
+allowCharacterGen: true
+useDefaultEquipment: false
 resalePercent: 75
 upgradeToThreeApLevel: 117
 show_conversation_triggering_actor: true

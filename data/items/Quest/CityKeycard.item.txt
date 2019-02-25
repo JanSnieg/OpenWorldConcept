@@ -1,0 +1,10 @@
+id: "CityKeycard"
+type: ItemType_QuestItem
+uirep {
+  name: "Keycard to Lonestar barrier"
+}
+credentials: 0
+sorting_group: "Quest"
+closeupImage {
+  filename: "office/office_tech_keycardlanyard_s@2x"
+}

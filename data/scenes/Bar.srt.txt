@@ -22,7 +22,7 @@ triggers {
         }
       }
       args {
-        string_value: "elevator"
+        string_value: "bar"
       }
     }
   }
@@ -37,13 +37,13 @@ triggers {
 characters {
   name: "system_spawner_playerSpawner"
   gridPoint {
-    x: 5
+    x: 8
     y: 0
-    z: -3
+    z: 4
   }
-  orientation: ORIENTATION_N
+  orientation: ORIENTATION_W
   idRef {
-    id: "5c72f3fa6434315b18e50a59"
+    id: "5c73f2a8643431821be50b17"
   }
   lod: 0
   character_instance {
@@ -63,14 +63,14 @@ worldMapLocation {
     y: 0
   }
 }
-mapName: "Apartment"
+mapName: "Bar"
 parentStory: ""
-scene_title: "Apartment"
+scene_title: "Bar"
 scene_subtitle: ""
 scene_synopsis: ""
 scene_image: ""
 scene_continue_button_skip: false
-scene_restore_runner_health: false
+scene_restore_runner_health: true
 directional_light_dir {
   x: -0.5
   y: -1

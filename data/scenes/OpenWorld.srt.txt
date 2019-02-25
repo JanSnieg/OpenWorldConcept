@@ -157,7 +157,7 @@ triggers {
       functionName: "AND"
       args {
         call_value {
-          functionName: "Comparison (Actor)"
+          functionName: "Compare Actor Team"
           args {
             call_value {
               functionName: "Triggering Actor"
@@ -176,7 +176,21 @@ triggers {
           }
           args {
             call_value {
-              functionName: "Active Actor"
+              functionName: "Get Preset Value (string)"
+              args {
+                string_value: "FactionList"
+              }
+              args {
+                int_value: 0
+              }
+            }
+          }
+          args {
+            call_value {
+              functionName: "Get Map Item (SceneDimension)"
+              args {
+                string_value: "Default"
+              }
             }
           }
         }
@@ -322,7 +336,7 @@ triggers {
         call_value {
           functionName: "Get Map Item (Conversation)"
           args {
-            string_value: "5c72c66d643431c715b7b18b"
+            string_value: "5c73b7f6643431bd1aa4044e"
           }
         }
       }
@@ -361,8 +375,76 @@ triggers {
         }
       }
     }
+    ops {
+      functionName: "Change Actor Team"
+      args {
+        call_value {
+          functionName: "All Actors With Tag"
+          args {
+            call_value {
+              functionName: "Get Map Item (SenseTagList)"
+              args {
+                string_value: "warden"
+              }
+            }
+          }
+          args {
+            call_value {
+              functionName: "Get Preset Value (int)"
+              args {
+                string_value: "AllOrAny"
+              }
+              args {
+                int_value: 0
+              }
+            }
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (string)"
+          args {
+            string_value: "FactionList"
+          }
+          args {
+            int_value: 2
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (SceneDimension)"
+          args {
+            string_value: "Default"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Set Region Enabled"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "EnableOrDisable"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (Region)"
+          args {
+            string_value: "5c71643f643431bc1131b7c1"
+          }
+        }
+      }
+    }
   }
-  is_oneshot: true
+  is_oneshot: false
 }
 triggers {
   name: "conMerchantStart"
@@ -476,7 +558,7 @@ triggers {
   }
   elseActions {
   }
-  is_oneshot: true
+  is_oneshot: false
 }
 triggers {
   name: "onExitDangerZone"
@@ -495,65 +577,39 @@ triggers {
   }
   conditions {
     ops {
-      functionName: "AND"
+      functionName: "Compare Actor Team"
       args {
         call_value {
-          functionName: "Comparison (Actor)"
+          functionName: "Triggering Actor"
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
           args {
-            call_value {
-              functionName: "Triggering Actor"
-            }
+            string_value: "IsOrIsNot"
           }
           args {
-            call_value {
-              functionName: "Get Preset Value (int)"
-              args {
-                string_value: "IsOrIsNot"
-              }
-              args {
-                int_value: 1
-              }
-            }
-          }
-          args {
-            call_value {
-              functionName: "Active Actor"
-            }
+            int_value: 1
           }
         }
       }
       args {
         call_value {
-          functionName: "Comparison (bool)"
+          functionName: "Get Preset Value (string)"
           args {
-            call_value {
-              functionName: "Get Variable (bool)"
-              args {
-                string_value: "bool_wasInDangerZone"
-              }
-            }
+            string_value: "FactionList"
           }
           args {
-            call_value {
-              functionName: "Get Preset Value (int)"
-              args {
-                string_value: "IsOrIsNot"
-              }
-              args {
-                int_value: 1
-              }
-            }
+            int_value: 0
           }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (SceneDimension)"
           args {
-            call_value {
-              functionName: "Get Preset Value (int)"
-              args {
-                string_value: "bool"
-              }
-              args {
-                int_value: 0
-              }
-            }
+            string_value: "Default"
           }
         }
       }
@@ -589,7 +645,7 @@ triggers {
   }
   elseActions {
   }
-  is_oneshot: true
+  is_oneshot: false
 }
 triggers {
   name: "onConEnd"
@@ -671,6 +727,140 @@ triggers {
   isActive: true
   idRef {
     id: "5c72c98b643431c715b7b209"
+  }
+  elseActions {
+  }
+  is_oneshot: true
+}
+triggers {
+  name: "dropKeyCard"
+  events {
+    ops {
+      functionName: "On Actor Death"
+    }
+  }
+  conditions {
+    ops {
+      functionName: "Compare Actor Team"
+      args {
+        call_value {
+          functionName: "Triggering Target Actor"
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (string)"
+          args {
+            string_value: "FactionList"
+          }
+          args {
+            int_value: 2
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (SceneDimension)"
+          args {
+            string_value: "Default"
+          }
+        }
+      }
+    }
+  }
+  actions {
+    ops {
+      functionName: "Add Item to Team"
+      args {
+        call_value {
+          functionName: "Get Map Item (Item)"
+          args {
+            string_value: "CityKeycard"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (string)"
+          args {
+            string_value: "FactionList"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (SceneDimension)"
+          args {
+            string_value: "Default"
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "5c73ba26643431bd1aa4045e"
+  }
+  elseActions {
+  }
+  is_oneshot: true
+}
+triggers {
+  name: "changePlayerLoaction"
+  events {
+    ops {
+      functionName: "On Map Start"
+    }
+  }
+  conditions {
+  }
+  actions {
+    ops {
+      functionName: "Set Variable (string)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (string)"
+          args {
+            string_value: "5c6fd5ec6434311e0cb7acda"
+          }
+          args {
+            string_value: "fromWhere"
+          }
+        }
+      }
+      args {
+        string_value: "monorail"
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "5c73e724643431821be50a90"
   }
   elseActions {
   }
@@ -909,7 +1099,7 @@ characters {
       }
       archetypeName: "Guard - Protect"
     }
-    team_id: "LoneStar"
+    team_id: "Civilians"
     char_name: "Lonestar Heavy Gunner"
     GeneralTags: "warden"
     pc_spawn_number: -1
@@ -917,7 +1107,7 @@ characters {
     portrait {
       filename: ""
     }
-    is_prop_character: true
+    is_prop_character: false
   }
 }
 characters {
@@ -952,7 +1142,7 @@ characters {
       specializations {
       }
     }
-    team_id: "LoneStar"
+    team_id: "Civilians"
     char_name: "Lonestar Enforcer"
     GeneralTags: "warden"
     pc_spawn_number: -1
@@ -960,7 +1150,7 @@ characters {
     portrait {
       filename: ""
     }
-    is_prop_character: true
+    is_prop_character: false
   }
 }
 variables {

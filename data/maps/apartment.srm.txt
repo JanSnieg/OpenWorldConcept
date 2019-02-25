@@ -192,9 +192,9 @@ props {
 props {
   name: "tenements_appliance_modernShower"
   gridPoint {
-    x: 0.099999905
+    x: 0.1999999
     y: 0
-    z: -7
+    z: -6.6
   }
   orientation: ORIENTATION_E
   idRef {
@@ -310,7 +310,7 @@ props {
   name: "tenements_decor_framedPoster02"
   gridPoint {
     x: -3
-    y: 0
+    y: -0.15
     z: -7
   }
   orientation: ORIENTATION_S
@@ -466,7 +466,7 @@ props {
   name: "tenements_decor_framedPoster03"
   gridPoint {
     x: -8
-    y: 0
+    y: -0.14
     z: -6
   }
   orientation: ORIENTATION_E
@@ -959,9 +959,9 @@ props {
 props {
   name: "tenements_decor_poster02"
   gridPoint {
-    x: -8
+    x: -7.9
     y: 0
-    z: -1
+    z: -0.8
   }
   orientation: ORIENTATION_S
   idRef {
@@ -1135,4 +1135,25 @@ props {
     }
     intensity: 8
   }
+}
+props {
+  name: "pikePlace_buildingOrnament_panelBox01"
+  gridPoint {
+    x: 5
+    y: 0
+    z: -2
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "5c73c622643431bd1aa40487"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    transitionPoint {
+      scene_name: "Survivor Camp"
+      confirmation_text: "Ready to take elevator down to camp?"
+    }
+  }
+  lod: 0
 }

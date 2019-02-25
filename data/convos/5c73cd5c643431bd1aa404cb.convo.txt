@@ -1,0 +1,288 @@
+idRef {
+  id: "5c73cd5c643431bd1aa404cb"
+}
+ui_name: "con_campWelcome"
+nodes {
+  idRef {
+    id: "5c73cd7b643431bd1aa404d2"
+  }
+  index: 0
+  text: "Welcome home... wait, what?\nWho are you?"
+  branches {
+    responseText: "I\'m new here."
+    nextNodeIndex: 1
+  }
+  branches {
+    responseText: "Tell me something."
+    nextNodeIndex: 7
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5c73cde6643431bd1aa404d6"
+  }
+  index: 1
+  text: "You better tell me you are not with those bastards from the city."
+  branches {
+    responseText: "I.. AM.. NOT!!"
+    nextNodeIndex: 2
+  }
+  branches {
+    responseText: "Do I look like some {{CC}}#$%&er{{/CC}}?"
+    nextNodeIndex: 2
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "Easy man. I had an accident in the city, and I\'m looking for a safe place."
+    nextNodeIndex: 2
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5c73cf91643431bd1aa404db"
+  }
+  index: 2
+  text: "Welcome in our camp than.\nThis is propably only safe place in the city. Once this was psyciatry hospital, but now we are here.\nDo you need a quick tour around?"
+  branches {
+    responseText: "Sure."
+    nextNodeIndex: 3
+  }
+  branches {
+    responseText: "Nah, I\'m good."
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5c73d04d643431bd1aa404e3"
+  }
+  index: 3
+  text: "Here, at the dock, you can find monorail that will take you back to the city..."
+  branches {
+    responseText: ""
+    nextNodeIndex: 4
+  }
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Set Waypoint on Prop"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "PrimaryOrSecondary"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (Prop)"
+          args {
+            string_value: "5c73d783643431bd1aa40610"
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "5c73d82a643431bd1aa4064d"
+  }
+  index: 4
+  text: "... and a few shops where you can buy some useful stuff."
+  branches {
+    responseText: ""
+    nextNodeIndex: 5
+  }
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Set Waypoint on Actor"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "PrimaryOrSecondary"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor)"
+          args {
+            string_value: "5c73cc85643431bd1aa404c8"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Set Waypoint on Actor"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "PrimaryOrSecondary"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor)"
+          args {
+            string_value: "5c73cc98643431bd1aa404c9"
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "5c73d857643431bd1aa40650"
+  }
+  index: 5
+  text: "... If you will go further, you will see the bar, where you can... you know what to do in the bar, right?"
+  branches {
+    responseText: ""
+    nextNodeIndex: 6
+  }
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Set Waypoint on Prop"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "PrimaryOrSecondary"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (Prop)"
+          args {
+            string_value: "5c73d8bc643431bd1aa40677"
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "5c73d872643431bd1aa40654"
+  }
+  index: 6
+  text: "Straight west from here, are elevators to apartments.\nOh... I almost forgot you can take one of them, This is not perfect, but at least you can get some sleep."
+  branches {
+    responseText: ""
+    nextNodeIndex: 7
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Set Waypoint on Prop"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "PrimaryOrSecondary"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (Prop)"
+          args {
+            string_value: "5c73c7d5643431bd1aa404a9"
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "5c73d3e1643431bd1aa40552"
+  }
+  index: 7
+  text: "Any questions?"
+  branches {
+    responseText: "Can you tell me more about this camp?"
+    nextNodeIndex: 3
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "Why hospital? Wasn\'t there any less creepy place to set up a camp?"
+    nextNodeIndex: 8
+    onlyOnce: true
+    idRef {
+      id: "5c73d66e643431bd1aa40588"
+    }
+  }
+  branches {
+    responseText: "No more questions for you. Thanks, and bye!"
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Teleport Camera To Actor"
+      args {
+        call_value {
+          functionName: "Triggering Actor"
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "5c73d4f6643431bd1aa40579"
+  }
+  index: 8
+  text: "Actually, it is not as bad as it seems.\nWe have medical resources, dock, ship and most importantly we are on the {{CC}}#$%&ing{{/CC}} island, so we are safe."
+  branches {
+    responseText: "...but?"
+    nextNodeIndex: 9
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5c73d5c9643431bd1aa4057c"
+  }
+  index: 9
+  text: "But from time to time at night we can hear screems.\nThat is why we all have earplugs, you better find yourself one pair too."
+  branches {
+    responseText: "Okeeeey...."
+    nextNodeIndex: 7
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+roots {
+  nextNodeIndex: 0
+}
