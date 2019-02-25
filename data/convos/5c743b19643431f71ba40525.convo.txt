@@ -1,0 +1,220 @@
+idRef {
+  id: "5c743b19643431f71ba40525"
+}
+ui_name: "con_Travis"
+nodes {
+  idRef {
+    id: "5c743b3b643431f71ba4052e"
+  }
+  index: 0
+  text: "We need to talk."
+  branches {
+    responseText: "Yea?"
+    nextNodeIndex: 1
+  }
+  branches {
+    responseText: "Who are you?"
+    nextNodeIndex: 8
+  }
+  branches {
+    responseText: "Can you tell me about this place?"
+    nextNodeIndex: 9
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5c743b61643431f71ba40535"
+  }
+  index: 1
+  text: "I\'m secirity chief here.\nDespite the cheerful atmosphere where we need to be cautious."
+  branches {
+    responseText: "is it cheerful, really?"
+    nextNodeIndex: 2
+  }
+  branches {
+    responseText: "Sir, yes sir!"
+    nextNodeIndex: 3
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5c743c36643431f71ba4053b"
+  }
+  index: 2
+  text: "Whatever..."
+  branches {
+    responseText: ""
+    nextNodeIndex: 4
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5c743c17643431f71ba40539"
+  }
+  index: 3
+  text: "That is good attitude."
+  branches {
+    responseText: ""
+    nextNodeIndex: 4
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5c743c47643431f71ba4053e"
+  }
+  index: 4
+  text: "First of all I need your eye.\nI mean you have to do eyescan so we know exactly who you are."
+  branches {
+    responseText: "That is wierd."
+    nextNodeIndex: 5
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "..."
+    nextNodeIndex: 5
+  }
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Set Goal Status"
+      args {
+        call_value {
+          functionName: "Get Map Item (Goal)"
+          args {
+            string_value: "EyeScan"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "GoalStatus"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Set Waypoint on Prop"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "PrimaryOrSecondary"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (Prop)"
+          args {
+            string_value: "5c743f11643431f71ba4057a"
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "5c743cc7643431f71ba40546"
+  }
+  index: 5
+  text: "We have day/night cicle here.\nAt day we are all here, outside doing our job, as you should.\nAt night most of us is sleeping, rest patroling teritory.\nIf you need to do anything in this area, better do it at day.\nBut if you want to shoot some gangsters, do it at night, get it?"
+  branches {
+    responseText: ""
+    nextNodeIndex: 6
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5c743da8643431f71ba4054c"
+  }
+  index: 6
+  text: "Good.\nWe are now in warden rooms, be careful, coz here are some leftovers from mad scientists that was here not so long ago."
+  branches {
+    responseText: "Is it everything?"
+    nextNodeIndex: 7
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5c743fc8643431f71ba405a5"
+  }
+  index: 7
+  text: "I think yes."
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5c743fe3643431f71ba405a7"
+  }
+  index: 8
+  text: "I\'m secirity chief here.\nMy name is Travis.\nIf enythink go wrong, you tell me, get it?"
+  branches {
+    responseText: ""
+    nextNodeIndex: 0
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5c74405e643431f71ba405e9"
+  }
+  index: 9
+  text: "We have day/night cicle here.\nAt day we are all here, outside doing our job, as you should.\nAt night most of us is sleeping, rest patroling teritory.\nIf you need to do anything in this area, better do it at day.\nBut if you want to shoot some gangsters, do it at night, get it?"
+  branches {
+    responseText: ""
+    nextNodeIndex: 10
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5c74405e643431f71ba405ec"
+  }
+  index: 10
+  text: "Good.\nWe are now in warden rooms, be careful, coz here are some leftovers from mad scientists that was here not so long ago."
+  branches {
+    responseText: "Is it everything?"
+    nextNodeIndex: 11
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5c74405e643431f71ba405ef"
+  }
+  index: 11
+  text: "I think yes."
+  nodeType: ConversationNodeType_Simple
+}
+roots {
+  responseText: ""
+  nextNodeIndex: 0
+}

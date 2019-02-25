@@ -147,7 +147,7 @@ triggers {
             float_value: 12
           }
           args {
-            float_value: 39
+            float_value: 38
           }
         }
       }
@@ -451,7 +451,7 @@ triggers {
   is_oneshot: true
 }
 triggers {
-  name: "dockActorSpawner"
+  name: "startPatroling"
   events {
     ops {
       functionName: "On Map Start"
@@ -461,7 +461,7 @@ triggers {
   }
   actions {
     ops {
-      functionName: "Order Actor to Patrol"
+      functionName: "Set Actor In Passive Mode"
       args {
         call_value {
           functionName: "All Actors With Tag"
@@ -469,7 +469,7 @@ triggers {
             call_value {
               functionName: "Get Map Item (SenseTagList)"
               args {
-                string_value: "randomDocker"
+                string_value: "warden"
               }
             }
           }
@@ -488,9 +488,167 @@ triggers {
       }
       args {
         call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Order Actor to Patrol"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Get Map Item (Actor)"
+              args {
+                string_value: "5c7434e6643431f71ba4051c"
+              }
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        call_value {
           functionName: "Get Map Item (PatrolRoute)"
           args {
-            string_value: "5c7412de643431f71ba40512"
+            string_value: "5c743553643431f71ba4051f"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Order Actor to Patrol"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Get Map Item (Actor)"
+              args {
+                string_value: "5c7434f6643431f71ba4051d"
+              }
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (PatrolRoute)"
+          args {
+            string_value: "5c743528643431f71ba4051e"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "End Current Team Round"
+    }
+  }
+  isActive: true
+  idRef {
+    id: "5c7437c2643431f71ba40521"
+  }
+  elseActions {
+  }
+  is_oneshot: true
+}
+triggers {
+  name: "wardenOffice"
+  events {
+    ops {
+      functionName: "On Region Enter"
+      args {
+        call_value {
+          functionName: "Get Map Item (Region)"
+          args {
+            string_value: "5c744096643431f71ba4060f"
+          }
+        }
+      }
+    }
+  }
+  conditions {
+    ops {
+      functionName: "Compare Actor Team"
+      args {
+        call_value {
+          functionName: "Triggering Actor"
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (string)"
+          args {
+            string_value: "FactionList"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (SceneDimension)"
+          args {
+            string_value: "Default"
+          }
+        }
+      }
+    }
+  }
+  actions {
+    ops {
+      functionName: "Start Conversation Between Actors"
+      args {
+        call_value {
+          functionName: "Get Map Item (Conversation)"
+          args {
+            string_value: "5c743b19643431f71ba40525"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Triggering Actor"
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor)"
+          args {
+            string_value: "5c743ac5643431f71ba40523"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 1
           }
         }
       }
@@ -498,7 +656,7 @@ triggers {
   }
   isActive: true
   idRef {
-    id: "5c74136e643431f71ba40514"
+    id: "5c7440ce643431f71ba40610"
   }
   elseActions {
   }
@@ -548,90 +706,113 @@ regions {
   loop_combat_music: true
   loop_default_music: false
 }
+regions {
+  name: "warden office"
+  position {
+    x: 0
+    y: 5
+    width: 27
+    height: 6
+  }
+  enabledAtStart: true
+  is_camera_region: false
+  idRef {
+    id: "5c744096643431f71ba4060f"
+  }
+  highlight_color {
+    r: 0
+    g: 0
+    b: 0
+    a: 1
+  }
+  visible_at_start: false
+  is_teleporter_region: false
+  directional_light_dir {
+    x: -0.5
+    y: -1
+    z: -0.75
+  }
+  directional_light_color {
+    r: 0.50196081
+    g: 0.50196081
+    b: 0.50196081
+    a: 1
+  }
+  ambient_light_color {
+    r: 0.50196081
+    g: 0.50196081
+    b: 0.50196081
+    a: 1
+  }
+  ambience_template: ""
+  combat_music: ""
+  default_music: ""
+  loop_combat_music: true
+  loop_default_music: false
+}
 patrolRoutes {
-  name: "dockRoute01"
+  name: "path_warden1"
   pathType: 1
   nodes {
     position {
-      x: 33
-      z: 30
+      x: 22
+      z: 6
     }
     index: 0
   }
   nodes {
     position {
-      x: 24
-      z: 19
+      x: 0
+      z: 7
     }
     index: 1
   }
-  nodes {
-    position {
-      x: 29
-      z: 37
-    }
-    index: 2
-  }
-  can_move_beyond_node: true
+  can_move_beyond_node: false
   idRef {
-    id: "5c741280643431f71ba40511"
+    id: "5c743528643431f71ba4051e"
   }
 }
 patrolRoutes {
-  name: "dockRoute02"
-  pathType: 0
+  name: "path_warden2"
+  pathType: 1
   nodes {
     position {
-      x: 13
-      z: 19
+      x: 1
+      z: 9
     }
     index: 0
   }
   nodes {
     position {
-      x: 7
-      z: 18
+      x: 19
+      z: 7
     }
     index: 1
   }
   nodes {
     position {
-      x: 8
-      z: 38
+      x: -22
+      z: 0
     }
     index: 2
   }
   nodes {
     position {
-      x: 29
-      z: 44
+      x: -4
+      z: -7
     }
     index: 3
   }
   nodes {
     position {
-      x: 17
-      z: 26
+      x: 22
+      z: -2
     }
     index: 4
   }
-  nodes {
-    position {
-      x: 42
-      z: 20
-    }
-    index: 5
-  }
-  nodes {
-    position {
-      x: 41
-      z: 43
-    }
-    index: 6
-  }
-  can_move_beyond_node: true
+  can_move_beyond_node: false
   idRef {
-    id: "5c7412de643431f71ba40512"
+    id: "5c743553643431f71ba4051f"
   }
 }
 characters {
@@ -896,11 +1077,11 @@ characters {
 characters {
   name: "chars_icon_playerIcon"
   gridPoint {
-    x: 42
+    x: 35
     y: 0
-    z: 20
+    z: 36
   }
-  orientation: ORIENTATION_S
+  orientation: ORIENTATION_N
   GeneralTags: "randomDocker"
   idRef {
     id: "5c741a66643431f71ba40517"
@@ -932,10 +1113,11 @@ characters {
       }
       specializations {
       }
+      archetypeName: "Non-Combatant"
       vulnerabilities {
       }
     }
-    team_id: "Civilians"
+    team_id: "Survivors"
     char_name: "Civilian"
     GeneralTags: "randomDocker"
     patrolRoute: "dockRoute01"
@@ -947,9 +1129,9 @@ characters {
 characters {
   name: "chars_icon_playerIcon"
   gridPoint {
-    x: 17
+    x: 18
     y: 0
-    z: 26
+    z: 27
   }
   orientation: ORIENTATION_S
   GeneralTags: "randomDocker"
@@ -983,10 +1165,11 @@ characters {
       }
       specializations {
       }
+      archetypeName: "Non-Combatant"
       vulnerabilities {
       }
     }
-    team_id: "Civilians"
+    team_id: "Survivors"
     char_name: "Civilian"
     GeneralTags: "randomDocker"
     patrolRoute: "dockRoute02"
@@ -998,11 +1181,11 @@ characters {
 characters {
   name: "chars_icon_playerIcon"
   gridPoint {
-    x: 25
+    x: 24
     y: 0
-    z: 20
+    z: 31
   }
-  orientation: ORIENTATION_S
+  orientation: ORIENTATION_E
   GeneralTags: "randomDocker"
   idRef {
     id: "5c741a93643431f71ba4051a"
@@ -1034,10 +1217,11 @@ characters {
       }
       specializations {
       }
+      archetypeName: "Non-Combatant"
       vulnerabilities {
       }
     }
-    team_id: "Civilians"
+    team_id: "Survivors"
     char_name: "Civilian"
     GeneralTags: "randomDocker"
     patrolRoute: "dockRoute02"
@@ -1049,11 +1233,11 @@ characters {
 characters {
   name: "chars_icon_playerIcon"
   gridPoint {
-    x: 7
+    x: 13
     y: 0
-    z: 18
+    z: 20
   }
-  orientation: ORIENTATION_S
+  orientation: ORIENTATION_N
   GeneralTags: "randomDocker"
   idRef {
     id: "5c741a95643431f71ba4051b"
@@ -1085,10 +1269,11 @@ characters {
       }
       specializations {
       }
+      archetypeName: "Non-Combatant"
       vulnerabilities {
       }
     }
-    team_id: "Civilians"
+    team_id: "Survivors"
     char_name: "Civilian"
     GeneralTags: "randomDocker"
     patrolRoute: "dockRoute01"
@@ -1097,13 +1282,367 @@ characters {
     hiring_set_randomizer: "human_adept"
   }
 }
-variables {
-  int_value: 0
-  variableref_value {
-    scope: TsVariableScope_Scene
-    name: "dockActorCounter"
-    typeName: "int"
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: 21
+    y: 0
+    z: 6
   }
+  orientation: ORIENTATION_E
+  GeneralTags: "warden"
+  idRef {
+    id: "5c7434e6643431f71ba4051c"
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "Seattle:Core/HumanMale"
+    character_sheet_id: "Lvl4_Human_Decker"
+    character_mod {
+      stats {
+        body: 0
+        quickness: 0
+        strength: 0
+        charisma: 0
+        intelligence: 0
+        willpower: 0
+        essence: 0
+        magic: 0
+        hp: 0
+        ap: 0
+        armor: 0
+        force: 0
+        morale: 0
+        discipline: 0
+        awareness: 0
+        perception: 0
+        authority: 0
+        protect_tether_range: 0
+        move_speed: 0
+      }
+      skills {
+        ranged_combat: 0
+        close_combat: 0
+        throwing_weapons: 0
+        spellcasting: 0
+        decking: 0
+        conjuring: 0
+        spirit_summoning: 0
+        drone_control: 0
+        biotech: 0
+        dodge: 0
+        etiquette_corporate: 0
+        etiquette_security: 0
+        etiquette_gang: 0
+        etiquette_socialite: 0
+        chi_casting: 0
+        etiquette_shadowrunner: 0
+        etiquette_street: 0
+        etiquette_academic: 0
+      }
+      specializations {
+        pistol: 0
+        rifle: 0
+        shotgun: 0
+        smg: 0
+        edged: 0
+        unarmed: 0
+        spirit_control: 0
+        esp_control: 0
+        drone_combat: 0
+      }
+      archetypeName: "Guard - Protect"
+      attitude: AttitudeAggressive
+      vulnerabilities {
+      }
+    }
+    equipment {
+      prefab_name: "CyberdeckKraftwerk1"
+    }
+    equipment {
+      prefab_name: "ESP Assassin"
+    }
+    equipment {
+      prefab_name: "ESP Shield"
+    }
+    equipment {
+      prefab_name: "PR Supression 1"
+    }
+    equipment {
+      prefab_name: "PR Firewall 2"
+    }
+    equipment {
+      prefab_name: "PR Killer 2"
+    }
+    equipment {
+      prefab_name: "PR Medic 2"
+    }
+    equipment {
+      prefab_name: "SMG 2 Ingram Smartgun"
+    }
+    equipment {
+      prefab_name: "HealthPack_med"
+    }
+    equipment {
+      prefab_name: "HealthPack"
+    }
+    team_id: "Survivors"
+    char_name: "Guard01"
+    GeneralTags: "warden"
+    patrolRoute: "path_warden1"
+    pc_spawn_number: -1
+    hiring_type: HiringType_Hireable
+    cyberware_jack: "Datajack"
+    cyberware_right_leg: "Obvious Cyberleg 2"
+    karma: 4
+    hiring_cost_override: 1600
+    hiring_set_randomizer: "human_decker"
+    hiring_tag: "Decker"
+    id: "Lvl4_Human_Decker"
+  }
+}
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: 2
+    y: 0
+    z: 8
+  }
+  orientation: ORIENTATION_E
+  GeneralTags: "warden"
+  idRef {
+    id: "5c7434f6643431f71ba4051d"
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "Seattle:Core/HumanMale"
+    character_sheet_id: "Lvl4_Merc_Human_AllMagic"
+    character_mod {
+      stats {
+        body: 0
+        quickness: 0
+        strength: 0
+        charisma: 0
+        intelligence: 0
+        willpower: 0
+        essence: 0
+        magic: 0
+        hp: 0
+        ap: 0
+        armor: 0
+        force: 0
+        morale: 0
+        discipline: 0
+        awareness: 0
+        perception: 0
+        authority: 0
+        protect_tether_range: 0
+        move_speed: 0
+      }
+      skills {
+        ranged_combat: 0
+        close_combat: 0
+        throwing_weapons: 0
+        spellcasting: 0
+        decking: 0
+        conjuring: 0
+        spirit_summoning: 0
+        drone_control: 0
+        biotech: 0
+        dodge: 0
+        etiquette_corporate: 0
+        etiquette_security: 0
+        etiquette_gang: 0
+        etiquette_socialite: 0
+        chi_casting: 0
+        etiquette_shadowrunner: 0
+        etiquette_street: 0
+        etiquette_academic: 0
+      }
+      specializations {
+        pistol: 0
+        rifle: 0
+        shotgun: 0
+        smg: 0
+        edged: 0
+        unarmed: 0
+        spirit_control: 0
+        esp_control: 0
+        drone_combat: 0
+      }
+      archetypeName: "Guard - Protect"
+      attitude: AttitudeAggressive
+      vulnerabilities {
+      }
+    }
+    equipment {
+      prefab_name: "Sh 3 Enfield AS-7"
+    }
+    equipment {
+      prefab_name: "Pi 2 Cavalier Deputy"
+    }
+    equipment {
+      prefab_name: "Grenade 2 (Frag)"
+    }
+    equipment {
+      prefab_name: "Grenade 2 (Frag)"
+    }
+    equipment {
+      prefab_name: "Grenade (Phosphorus)"
+    }
+    equipment {
+      prefab_name: "Nitro"
+    }
+    team_id: "Survivors"
+    char_name: "Guard02"
+    GeneralTags: "warden"
+    patrolRoute: "path_warden2"
+    pc_spawn_number: -1
+    hiring_type: HiringType_Hireable
+    cyberware_eyes: "Vision Magnification Eyes"
+    cyberware_body: "Bone Lacing Kevlar"
+    cyberware_right_arm: "Obvious Cyberarm"
+    karma: 4
+    hiring_cost_override: 1800
+    hiring_set_randomizer: "human_decker"
+    hiring_tag: "Samurai"
+    id: "Lvl4_Human_Samurai"
+  }
+}
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: 9
+    y: 0
+    z: 4
+  }
+  orientation: ORIENTATION_E
+  GeneralTags: "warden"
+  idRef {
+    id: "5c743ac5643431f71ba40523"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    conversationPoint {
+      conversationID: "5c743b19643431f71ba40525"
+      turnToFace: true
+    }
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "Seattle:Security/DwarfMaleExecSecurity"
+    character_sheet_id: "Lvl4_Human_Decker"
+    character_mod {
+      stats {
+        body: 0
+        quickness: 0
+        strength: 0
+        charisma: 0
+        intelligence: 0
+        willpower: 0
+        essence: 0
+        magic: 0
+        hp: 0
+        ap: 0
+        armor: 0
+        force: 0
+        morale: 0
+        discipline: 0
+        awareness: 0
+        perception: 0
+        authority: 0
+        protect_tether_range: 0
+        move_speed: 0
+      }
+      skills {
+        ranged_combat: 0
+        close_combat: 0
+        throwing_weapons: 0
+        spellcasting: 0
+        decking: 0
+        conjuring: 0
+        spirit_summoning: 0
+        drone_control: 0
+        biotech: 0
+        dodge: 0
+        etiquette_corporate: 0
+        etiquette_security: 0
+        etiquette_gang: 0
+        etiquette_socialite: 0
+        chi_casting: 0
+        etiquette_shadowrunner: 0
+        etiquette_street: 0
+        etiquette_academic: 0
+      }
+      specializations {
+        pistol: 0
+        rifle: 0
+        shotgun: 0
+        smg: 0
+        edged: 0
+        unarmed: 0
+        spirit_control: 0
+        esp_control: 0
+        drone_combat: 0
+      }
+      archetypeName: "Guard - Protect"
+      attitude: AttitudeAggressive
+      vulnerabilities {
+      }
+    }
+    equipment {
+      prefab_name: "CyberdeckKraftwerk1"
+    }
+    equipment {
+      prefab_name: "ESP Assassin"
+    }
+    equipment {
+      prefab_name: "ESP Shield"
+    }
+    equipment {
+      prefab_name: "PR Supression 1"
+    }
+    equipment {
+      prefab_name: "PR Firewall 2"
+    }
+    equipment {
+      prefab_name: "PR Killer 2"
+    }
+    equipment {
+      prefab_name: "PR Medic 2"
+    }
+    equipment {
+      prefab_name: "SMG 2 Ingram Smartgun"
+    }
+    equipment {
+      prefab_name: "HealthPack_med"
+    }
+    equipment {
+      prefab_name: "HealthPack"
+    }
+    team_id: "Survivors"
+    char_name: "Travis"
+    GeneralTags: "warden"
+    patrolRoute: "None"
+    pc_spawn_number: -1
+    hiring_type: HiringType_Hireable
+    cyberware_jack: "Datajack"
+    cyberware_right_leg: "Obvious Cyberleg 2"
+    portrait {
+      filename: "backer_dwarfmale_davidfry"
+    }
+    karma: 4
+    hiring_cost_override: 1600
+    hiring_tag: "Decker"
+    id: "Lvl4_Human_Decker"
+  }
+}
+goals {
+  name: "EyeScan"
+  type: GoalType_Primary
+  status: GoalStatus_Hidden
+  description: "Scan your eye in warden office"
 }
 worldMapLocation {
   filename: ""
@@ -1142,6 +1681,7 @@ team_affiliations {
   affiliation: 1
   affiliation: 1
   affiliation: 0
+  affiliation: 0
 }
 team_affiliations {
   team_name: "Gangers"
@@ -1149,11 +1689,13 @@ team_affiliations {
   affiliation: 0
   affiliation: 1
   affiliation: 0
+  affiliation: 0
 }
 team_affiliations {
   team_name: "LoneStar"
   affiliation: 1
   affiliation: 1
+  affiliation: 0
   affiliation: 0
   affiliation: 0
 }
@@ -1163,11 +1705,18 @@ team_affiliations {
   affiliation: 0
   affiliation: 0
   affiliation: 0
+  affiliation: 0
+}
+team_affiliations {
+  team_name: "Survivors"
+  affiliation: 0
+  affiliation: 1
+  affiliation: 1
+  affiliation: 0
+  affiliation: 0
 }
 scene_dimensions {
   dimension_name: "Default"
-}
-character_roster {
 }
 show_hiring_screen_on_scene_load: false
 scene_hiring_prerequisites {

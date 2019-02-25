@@ -3132,11 +3132,11 @@ props {
 props {
   name: "morgue_furniture_gurney02"
   gridPoint {
-    x: 15
+    x: 22
     y: 0
     z: 6
   }
-  orientation: ORIENTATION_S
+  orientation: ORIENTATION_E
   lod: 0
 }
 props {
@@ -3307,7 +3307,7 @@ props {
 props {
   name: "morgue_appliance_mobileWashbasin"
   gridPoint {
-    x: 15
+    x: 18
     y: 0
     z: 6
   }
@@ -11101,5 +11101,26 @@ props {
     z: 29
   }
   orientation: ORIENTATION_E
+  lod: 0
+}
+props {
+  name: "office_tech_computer01"
+  gridPoint {
+    x: 15.2
+    y: 1
+    z: 5.1
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "5c743f11643431f71ba4057a"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    conversationPoint {
+      conversationID: "5c743f15643431f71ba4057b"
+      turnToFace: true
+    }
+  }
   lod: 0
 }
