@@ -450,6 +450,60 @@ triggers {
   }
   is_oneshot: true
 }
+triggers {
+  name: "dockActorSpawner"
+  events {
+    ops {
+      functionName: "On Map Start"
+    }
+  }
+  conditions {
+  }
+  actions {
+    ops {
+      functionName: "Order Actor to Patrol"
+      args {
+        call_value {
+          functionName: "All Actors With Tag"
+          args {
+            call_value {
+              functionName: "Get Map Item (SenseTagList)"
+              args {
+                string_value: "randomDocker"
+              }
+            }
+          }
+          args {
+            call_value {
+              functionName: "Get Preset Value (int)"
+              args {
+                string_value: "AllOrAny"
+              }
+              args {
+                int_value: 0
+              }
+            }
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (PatrolRoute)"
+          args {
+            string_value: "5c7412de643431f71ba40512"
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "5c74136e643431f71ba40514"
+  }
+  elseActions {
+  }
+  is_oneshot: true
+}
 regions {
   name: "startRegion"
   position {
@@ -493,6 +547,92 @@ regions {
   default_music: ""
   loop_combat_music: true
   loop_default_music: false
+}
+patrolRoutes {
+  name: "dockRoute01"
+  pathType: 1
+  nodes {
+    position {
+      x: 33
+      z: 30
+    }
+    index: 0
+  }
+  nodes {
+    position {
+      x: 24
+      z: 19
+    }
+    index: 1
+  }
+  nodes {
+    position {
+      x: 29
+      z: 37
+    }
+    index: 2
+  }
+  can_move_beyond_node: true
+  idRef {
+    id: "5c741280643431f71ba40511"
+  }
+}
+patrolRoutes {
+  name: "dockRoute02"
+  pathType: 0
+  nodes {
+    position {
+      x: 13
+      z: 19
+    }
+    index: 0
+  }
+  nodes {
+    position {
+      x: 7
+      z: 18
+    }
+    index: 1
+  }
+  nodes {
+    position {
+      x: 8
+      z: 38
+    }
+    index: 2
+  }
+  nodes {
+    position {
+      x: 29
+      z: 44
+    }
+    index: 3
+  }
+  nodes {
+    position {
+      x: 17
+      z: 26
+    }
+    index: 4
+  }
+  nodes {
+    position {
+      x: 42
+      z: 20
+    }
+    index: 5
+  }
+  nodes {
+    position {
+      x: 41
+      z: 43
+    }
+    index: 6
+  }
+  can_move_beyond_node: true
+  idRef {
+    id: "5c7412de643431f71ba40512"
+  }
 }
 characters {
   name: "system_spawner_playerSpawner"
@@ -727,12 +867,242 @@ characters {
     prefab_name: "Seattle:Story/MrJohnson"
     character_sheet_id: "Generic_Lv2_Human_Melee"
     equipment_sheet_id: "Class S Attack Drone Gear"
+    character_mod {
+      stats {
+        morale: 0
+        discipline: 0
+        awareness: 0
+        perception: 0
+        authority: 0
+        protect_tether_range: 0
+        move_speed: 0
+      }
+      skills {
+      }
+      specializations {
+      }
+      vulnerabilities {
+      }
+    }
     team_id: "Civilians"
     char_name: "mr. Johnson"
     pc_spawn_number: -1
     portrait {
-      filename: ""
+      filename: "npc_humanmale_samwatts"
     }
+    karma: 41
+  }
+}
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: 42
+    y: 0
+    z: 20
+  }
+  orientation: ORIENTATION_S
+  GeneralTags: "randomDocker"
+  idRef {
+    id: "5c741a66643431f71ba40517"
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "Seattle:Core/HumanMale"
+    character_sheet_id: "BaseCivilian"
+    character_mod {
+      stats {
+        body: 0
+        quickness: 0
+        strength: 0
+        charisma: 0
+        intelligence: 0
+        willpower: 0
+        essence: 0
+        hp: 0
+        ap: 0
+        morale: 0
+        discipline: 0
+        awareness: 0
+        perception: 0
+        authority: 0
+        protect_tether_range: 0
+        move_speed: 0
+      }
+      skills {
+      }
+      specializations {
+      }
+      vulnerabilities {
+      }
+    }
+    team_id: "Civilians"
+    char_name: "Civilian"
+    GeneralTags: "randomDocker"
+    patrolRoute: "dockRoute01"
+    pc_spawn_number: -1
+    karma: 6
+    hiring_set_randomizer: "human_adept"
+  }
+}
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: 17
+    y: 0
+    z: 26
+  }
+  orientation: ORIENTATION_S
+  GeneralTags: "randomDocker"
+  idRef {
+    id: "5c741a89643431f71ba40518"
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "Seattle:Core/HumanMale"
+    character_sheet_id: "BaseCivilian"
+    character_mod {
+      stats {
+        body: 0
+        quickness: 0
+        strength: 0
+        charisma: 0
+        intelligence: 0
+        willpower: 0
+        essence: 0
+        hp: 0
+        ap: 0
+        morale: 0
+        discipline: 0
+        awareness: 0
+        perception: 0
+        authority: 0
+        protect_tether_range: 0
+        move_speed: 0
+      }
+      skills {
+      }
+      specializations {
+      }
+      vulnerabilities {
+      }
+    }
+    team_id: "Civilians"
+    char_name: "Civilian"
+    GeneralTags: "randomDocker"
+    patrolRoute: "dockRoute02"
+    pc_spawn_number: -1
+    karma: 6
+    hiring_set_randomizer: "human_adept"
+  }
+}
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: 25
+    y: 0
+    z: 20
+  }
+  orientation: ORIENTATION_S
+  GeneralTags: "randomDocker"
+  idRef {
+    id: "5c741a93643431f71ba4051a"
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "Seattle:Core/HumanMale"
+    character_sheet_id: "BaseCivilian"
+    character_mod {
+      stats {
+        body: 0
+        quickness: 0
+        strength: 0
+        charisma: 0
+        intelligence: 0
+        willpower: 0
+        essence: 0
+        hp: 0
+        ap: 0
+        morale: 0
+        discipline: 0
+        awareness: 0
+        perception: 0
+        authority: 0
+        protect_tether_range: 0
+        move_speed: 0
+      }
+      skills {
+      }
+      specializations {
+      }
+      vulnerabilities {
+      }
+    }
+    team_id: "Civilians"
+    char_name: "Civilian"
+    GeneralTags: "randomDocker"
+    patrolRoute: "dockRoute02"
+    pc_spawn_number: -1
+    karma: 6
+    hiring_set_randomizer: "human_adept"
+  }
+}
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: 7
+    y: 0
+    z: 18
+  }
+  orientation: ORIENTATION_S
+  GeneralTags: "randomDocker"
+  idRef {
+    id: "5c741a95643431f71ba4051b"
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "Seattle:Core/HumanMale"
+    character_sheet_id: "BaseCivilian"
+    character_mod {
+      stats {
+        body: 0
+        quickness: 0
+        strength: 0
+        charisma: 0
+        intelligence: 0
+        willpower: 0
+        essence: 0
+        hp: 0
+        ap: 0
+        morale: 0
+        discipline: 0
+        awareness: 0
+        perception: 0
+        authority: 0
+        protect_tether_range: 0
+        move_speed: 0
+      }
+      skills {
+      }
+      specializations {
+      }
+      vulnerabilities {
+      }
+    }
+    team_id: "Civilians"
+    char_name: "Civilian"
+    GeneralTags: "randomDocker"
+    patrolRoute: "dockRoute01"
+    pc_spawn_number: -1
+    karma: 6
+    hiring_set_randomizer: "human_adept"
+  }
+}
+variables {
+  int_value: 0
+  variableref_value {
+    scope: TsVariableScope_Scene
+    name: "dockActorCounter"
+    typeName: "int"
   }
 }
 worldMapLocation {
