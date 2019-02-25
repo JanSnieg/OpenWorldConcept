@@ -11,14 +11,28 @@ nodes {
   branches {
     responseText: "Yea?"
     nextNodeIndex: 1
+    hideIfUnavailable: true
+    onlyOnce: true
+    idRef {
+      id: "5c744612643431f71ba4074e"
+    }
   }
   branches {
     responseText: "Who are you?"
     nextNodeIndex: 8
+    hideIfUnavailable: true
+    onlyOnce: true
+    idRef {
+      id: "5c7445f9643431f71ba4074d"
+    }
   }
   branches {
     responseText: "Can you tell me about this place?"
     nextNodeIndex: 9
+  }
+  branches {
+    responseText: "I better go then."
+    nextNodeIndex: -1
   }
   nodeType: ConversationNodeType_Simple
 }
@@ -27,7 +41,7 @@ nodes {
     id: "5c743b61643431f71ba40535"
   }
   index: 1
-  text: "I\'m secirity chief here.\nDespite the cheerful atmosphere where we need to be cautious."
+  text: "I\'m secirity chief here.\nDespite the cheerful atmosphere here we need to be cautious."
   branches {
     responseText: "is it cheerful, really?"
     nextNodeIndex: 2
@@ -167,6 +181,11 @@ nodes {
   }
   index: 7
   text: "I think yes."
+  branches {
+    responseText: ""
+    nextNodeIndex: 0
+    auxiliaryLink: true
+  }
   nodeType: ConversationNodeType_Simple
 }
 nodes {
@@ -212,6 +231,11 @@ nodes {
   }
   index: 11
   text: "I think yes."
+  branches {
+    responseText: ""
+    nextNodeIndex: 0
+    auxiliaryLink: true
+  }
   nodeType: ConversationNodeType_Simple
 }
 roots {
