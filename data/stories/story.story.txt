@@ -12,6 +12,18 @@ variables {
   }
 }
 variables {
+  name: "heardKids"
+  typeName: "bool"
+  defaultValue {
+    bool_value: false
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "heardKids"
+      typeName: "bool"
+    }
+  }
+}
+variables {
   name: "isNight"
   typeName: "bool"
   defaultValue {
@@ -19,6 +31,18 @@ variables {
     variableref_value {
       scope: TsVariableScope_Story
       name: "isNight"
+      typeName: "bool"
+    }
+  }
+}
+variables {
+  name: "isScanned"
+  typeName: "bool"
+  defaultValue {
+    bool_value: false
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "isScanned"
       typeName: "bool"
     }
   }

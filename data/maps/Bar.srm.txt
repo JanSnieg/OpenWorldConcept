@@ -1,7 +1,7 @@
 minX: 1
 minZ: -14
 numX: 16
-numZ: 21
+numZ: 42
 props {
   name: "diveBar_floor_wood01"
   gridPoint {
@@ -577,19 +577,6 @@ props {
   lod: 0
 }
 props {
-  name: "diveBar_wall_parlorConnector"
-  gridPoint {
-    x: 15
-    y: 0
-    z: -14
-  }
-  orientation: ORIENTATION_W
-  idRef {
-    id: "5c73ea5a643431821be50ace"
-  }
-  lod: 0
-}
-props {
   name: "diveBar_wall_parlorEdge03"
   gridPoint {
     x: 9
@@ -899,23 +886,13 @@ props {
   lod: 0
 }
 props {
-  name: "diveBar_furniture_booth01test"
-  gridPoint {
-    x: 13.3
-    y: 0
-    z: -12.9
-  }
-  orientation: ORIENTATION_S
-  lod: 0
-}
-props {
   name: "diveBar_appliance_hangingTV"
   gridPoint {
-    x: 8.9
+    x: 2.1999996
     y: 0
-    z: -12.9
+    z: 1.8000004
   }
-  orientation: ORIENTATION_E
+  orientation: ORIENTATION_S
   lod: 0
 }
 props {
@@ -923,7 +900,7 @@ props {
   gridPoint {
     x: 2.4
     y: 0
-    z: -12.7
+    z: 1.3000002
   }
   orientation: ORIENTATION_S
   lod: 0
@@ -931,9 +908,9 @@ props {
 props {
   name: "diveBar_clutter_bottle01"
   gridPoint {
-    x: 4
-    y: 1.3
-    z: 2
+    x: 3
+    y: 1
+    z: -1
   }
   orientation: ORIENTATION_S
   lod: 0
@@ -951,9 +928,9 @@ props {
 props {
   name: "diveBar_clutter_bottle03"
   gridPoint {
-    x: 3.3
-    y: 1.72
-    z: 2.4
+    x: 5.3
+    y: 1
+    z: -6.6
   }
   orientation: ORIENTATION_S
   lod: 0
@@ -963,7 +940,7 @@ props {
   gridPoint {
     x: 4.9
     y: 1
-    z: 1.6
+    z: -2.4
   }
   orientation: ORIENTATION_S
   lod: 0
@@ -971,9 +948,9 @@ props {
 props {
   name: "diveBar_clutter_bottle05"
   gridPoint {
-    x: 14.1
+    x: 14.8
     y: 1
-    z: -5.7
+    z: -9.2
   }
   orientation: ORIENTATION_S
   lod: 0
@@ -981,19 +958,9 @@ props {
 props {
   name: "diveBar_clutter_cocktail06"
   gridPoint {
-    x: 5
+    x: 15.3
     y: 0.5
-    z: -3
-  }
-  orientation: ORIENTATION_S
-  lod: 0
-}
-props {
-  name: "diveBar_clutter_wineGlass01"
-  gridPoint {
-    x: 14.4
-    y: 0
-    z: -11.7
+    z: -6
   }
   orientation: ORIENTATION_S
   lod: 0
@@ -1001,19 +968,19 @@ props {
 props {
   name: "diveBar_floorDecoration_bearskin"
   gridPoint {
-    x: 5
+    x: 8
     y: 0
-    z: 2
+    z: -10
   }
-  orientation: ORIENTATION_S
+  orientation: ORIENTATION_E
   lod: 0
 }
 props {
   name: "diveBar_floorDecoration_rug02"
   gridPoint {
-    x: 4
+    x: 3
     y: 0
-    z: -12
+    z: 2
   }
   orientation: ORIENTATION_E
   lod: 0
@@ -1132,19 +1099,6 @@ props {
   gridPoint {
     x: 6
     y: 0
-    z: -5
-  }
-  orientation: ORIENTATION_S
-  idRef {
-    id: "5c73ee69643431821be50b08"
-  }
-  lod: 0
-}
-props {
-  name: "diveBar_furniture_barStool01"
-  gridPoint {
-    x: 6
-    y: 0
     z: -4
   }
   orientation: ORIENTATION_S
@@ -1225,29 +1179,9 @@ props {
 props {
   name: "diveBar_furniture_boothSofa02"
   gridPoint {
-    x: 13
+    x: 13.2
     y: 0
-    z: -7
-  }
-  orientation: ORIENTATION_S
-  lod: 0
-}
-props {
-  name: "diveBar_furniture_boothTable02"
-  gridPoint {
-    x: 14
-    y: 0
-    z: -6
-  }
-  orientation: ORIENTATION_S
-  lod: 0
-}
-props {
-  name: "diveBar_furniture_dividerTable"
-  gridPoint {
-    x: 2
-    y: 0
-    z: 2
+    z: -12.9
   }
   orientation: ORIENTATION_S
   lod: 0
@@ -1260,16 +1194,6 @@ props {
     z: -2
   }
   orientation: ORIENTATION_S
-  lod: 0
-}
-props {
-  name: "diveBar_furniture_largePoolTable"
-  gridPoint {
-    x: 10
-    y: 0
-    z: -11
-  }
-  orientation: ORIENTATION_E
   lod: 0
 }
 props {
@@ -1328,7 +1252,7 @@ props {
 props {
   name: "diveBar_tech_dancePodBottom01"
   gridPoint {
-    x: 10
+    x: 9
     y: 0
     z: -4
   }
@@ -1338,11 +1262,11 @@ props {
 props {
   name: "diveBar_tech_jukeBox"
   gridPoint {
-    x: 5.9
+    x: 2.2
     y: 0
-    z: -12.9
+    z: 0.10000038
   }
-  orientation: ORIENTATION_S
+  orientation: ORIENTATION_E
   lod: 0
 }
 props {
@@ -1358,7 +1282,7 @@ props {
 props {
   name: "diveBar_wall_weaponsStore"
   gridPoint {
-    x: 3.5
+    x: 2.5
     y: 0
     z: -12.5
   }
@@ -1368,31 +1292,22 @@ props {
 props {
   name: "diveBar_wallDecor_dartboard01"
   gridPoint {
-    x: 2
+    x: 10
     y: 2
-    z: 0
+    z: -13
   }
-  orientation: ORIENTATION_S
-  lod: 0
-}
-props {
-  name: "diveBar_wallDecoration_adUnit01"
-  gridPoint {
-    x: 2
-    y: 1
-    z: -1.5
-  }
-  orientation: ORIENTATION_W
+  orientation: ORIENTATION_E
   lod: 0
 }
 props {
   name: "diveBar_wallDecoration_exitSign01"
   gridPoint {
-    x: 2
+    x: 4
     y: 2
-    z: 4
+    z: 26
   }
   orientation: ORIENTATION_S
+  displayName: "Exit Sign night"
   idRef {
     id: "5c73f2d7643431821be50b19"
   }
@@ -1423,133 +1338,18 @@ props {
   name: "diveBar_wallDecoration_portrait01"
   gridPoint {
     x: 11
-    y: 0
+    y: 1
     z: -13
   }
   orientation: ORIENTATION_S
-  lod: 0
-}
-props {
-  name: "diveBar_furniture_chair01"
-  gridPoint {
-    x: 2
-    y: 0
-    z: 1
-  }
-  orientation: ORIENTATION_S
-  lod: 0
-}
-props {
-  name: "diveBar_furniture_chair01"
-  gridPoint {
-    x: 3
-    y: 0
-    z: 1
-  }
-  orientation: ORIENTATION_S
-  idRef {
-    id: "5c73f15b643431821be50b10"
-  }
-  lod: 0
-}
-props {
-  name: "diveBar_furniture_chair01"
-  gridPoint {
-    x: 4
-    y: 0
-    z: 1
-  }
-  orientation: ORIENTATION_S
-  idRef {
-    id: "5c73f15c643431821be50b11"
-  }
-  lod: 0
-}
-props {
-  name: "diveBar_furniture_chair01"
-  gridPoint {
-    x: 5
-    y: 0
-    z: 1
-  }
-  orientation: ORIENTATION_S
-  idRef {
-    id: "5c73f15d643431821be50b12"
-  }
-  lod: 0
-}
-props {
-  name: "diveBar_furniture_chair01"
-  gridPoint {
-    x: 5
-    y: 0
-    z: 3
-  }
-  orientation: ORIENTATION_W
-  idRef {
-    id: "5c73f161643431821be50b13"
-  }
-  lod: 0
-}
-props {
-  name: "diveBar_furniture_chair01"
-  gridPoint {
-    x: 4
-    y: 0
-    z: 3
-  }
-  orientation: ORIENTATION_W
-  idRef {
-    id: "5c73f161643431821be50b14"
-  }
-  lod: 0
-}
-props {
-  name: "diveBar_furniture_chair01"
-  gridPoint {
-    x: 3
-    y: 0
-    z: 3
-  }
-  orientation: ORIENTATION_W
-  idRef {
-    id: "5c73f161643431821be50b15"
-  }
-  lod: 0
-}
-props {
-  name: "diveBar_furniture_chair01"
-  gridPoint {
-    x: 2
-    y: 0
-    z: 3
-  }
-  orientation: ORIENTATION_W
-  idRef {
-    id: "5c73f161643431821be50b16"
-  }
-  lod: 0
-}
-props {
-  name: "vfx_fx_dancingWoman"
-  gridPoint {
-    x: 11.7
-    y: 1.25
-    z: -2.3
-  }
-  orientation: ORIENTATION_E
-  properties {
-    property_id: "fxScript"
-    string_value: "DancingWomanBar"
-  }
   lod: 0
 }
 props {
   name: "vfx_fx_fallingsparks"
   gridPoint {
-    x: 6
+    x: 3
     y: 0
-    z: -13
+    z: 0
   }
   orientation: ORIENTATION_S
   properties {
@@ -1561,9 +1361,9 @@ props {
 props {
   name: "vfx_fx_roach"
   gridPoint {
-    x: 4
+    x: 3
     y: 0
-    z: -13
+    z: -12
   }
   orientation: ORIENTATION_S
   properties {
@@ -1689,6 +1489,420 @@ props {
   properties {
     property_id: "fxScript"
     string_value: "EnvironmentLoopFlickeringLightFill"
+  }
+  lod: 0
+}
+props {
+  name: "diveBar_furniture_booth02"
+  gridPoint {
+    x: 14
+    y: 0
+    z: -7
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "5c7546ed643431ea20a407d6"
+  }
+  lod: 0
+}
+props {
+  name: "diveBar_furniture_booth02"
+  gridPoint {
+    x: 14
+    y: 0
+    z: -3
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "5c7546f5643431ea20a407d7"
+  }
+  lod: 0
+}
+props {
+  name: "diveBar_furniture_barStool01"
+  gridPoint {
+    x: 6
+    y: 0
+    z: -10
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "5c754713643431ea20a407d8"
+  }
+  lod: 0
+}
+props {
+  name: "asylum_furniture_wheelchair01"
+  gridPoint {
+    x: 6
+    y: 0
+    z: -13
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "diveBar_clutter_bottle01"
+  gridPoint {
+    x: 14.4
+    y: 0.5
+    z: -6.4
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "diveBar_clutter_bottle01"
+  gridPoint {
+    x: 14.5
+    y: 0.5
+    z: -2.4
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "5c754783643431ea20a407d9"
+  }
+  lod: 0
+}
+props {
+  name: "docks_clutter_drinkShelf"
+  gridPoint {
+    x: 4.5
+    y: 0
+    z: -12.7
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "diveBar_clutter_cocktail06"
+  gridPoint {
+    x: 15.3
+    y: 0.5
+    z: -9
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "5c7547df643431ea20a407da"
+  }
+  lod: 0
+}
+props {
+  name: "diveBar_wallDecoration_hangingRug"
+  gridPoint {
+    x: 2
+    y: 0
+    z: -12.7
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "diveBar_wallDecor_newsTicker01"
+  gridPoint {
+    x: 2.3
+    y: -1.38
+    z: -2.2
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "diveBar_furniture_dividerGroup"
+  gridPoint {
+    x: 14
+    y: 0
+    z: -5
+  }
+  orientation: ORIENTATION_N
+  lod: 0
+}
+props {
+  name: "diveBar_furniture_dividerGroup"
+  gridPoint {
+    x: 14
+    y: 0
+    z: -8
+  }
+  orientation: ORIENTATION_N
+  idRef {
+    id: "5c7548a0643431ea20a407db"
+  }
+  lod: 0
+}
+props {
+  name: "diveBar_clutter_cocktail01"
+  gridPoint {
+    x: 14.8
+    y: 0
+    z: -8.8
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "diveBar_clutter_cocktail01"
+  gridPoint {
+    x: 14.8
+    y: 0
+    z: -2.8000002
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "5c7548d8643431ea20a407dc"
+  }
+  lod: 0
+}
+props {
+  name: "diveBar_clutter_cocktail02"
+  gridPoint {
+    x: 5
+    y: 0
+    z: -8
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "diveBar_clutter_cocktail04"
+  gridPoint {
+    x: 5
+    y: 0
+    z: -6
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "diveBar_clutter_cocktail05"
+  gridPoint {
+    x: 5
+    y: 0
+    z: -10
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "diveBar_clutter_bottle04"
+  gridPoint {
+    x: 2.9
+    y: 1
+    z: -3.4
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "5c7548f4643431ea20a407dd"
+  }
+  lod: 0
+}
+props {
+  name: "diveBar_clutter_bottle01"
+  gridPoint {
+    x: 2.9
+    y: 1
+    z: -2.9
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "5c7548f6643431ea20a407de"
+  }
+  lod: 0
+}
+props {
+  name: "diveBar_clutter_bottle05"
+  gridPoint {
+    x: 2.8000002
+    y: 1
+    z: -8.2
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "5c7548fe643431ea20a407df"
+  }
+  lod: 0
+}
+props {
+  name: "diveBar_clutter_bottle02"
+  gridPoint {
+    x: 2.9
+    y: 1
+    z: -9.4
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "5c754911643431ea20a407e0"
+  }
+  lod: 0
+}
+props {
+  name: "diveBar_clutter_bottle01"
+  gridPoint {
+    x: 2.9
+    y: 1
+    z: -7.9
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "5c754924643431ea20a407e1"
+  }
+  lod: 0
+}
+props {
+  name: "diveBar_clutter_bottle04"
+  gridPoint {
+    x: 2.9
+    y: 1
+    z: -8.4
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "5c754927643431ea20a407e2"
+  }
+  lod: 0
+}
+props {
+  name: "diveBar_furniture_poolTable01"
+  gridPoint {
+    x: 9
+    y: 0
+    z: -10
+  }
+  orientation: ORIENTATION_E
+  lod: 0
+}
+props {
+  name: "diveBar_sign_neonBeer02"
+  gridPoint {
+    x: 2.1
+    y: 0.87
+    z: -2
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "diveBar_storage_box01"
+  gridPoint {
+    x: 2
+    y: 0
+    z: -11
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "vfx_fx_steam"
+  gridPoint {
+    x: 3.3
+    y: 1
+    z: -6.6
+  }
+  orientation: ORIENTATION_S
+  properties {
+    property_id: "fxScript"
+    string_value: "SteamEnvironment"
+  }
+  lod: 0
+}
+props {
+  name: "vfx_fx_tvstatic"
+  gridPoint {
+    x: 2
+    y: 1.5
+    z: 2
+  }
+  orientation: ORIENTATION_S
+  properties {
+    property_id: "fxScript"
+    string_value: "EnvironmentLoopTvStatic"
+  }
+  lod: 0
+}
+props {
+  name: "vfx_fx_dancingWoman"
+  gridPoint {
+    x: 10.4
+    y: 1
+    z: -2.7
+  }
+  orientation: ORIENTATION_S
+  properties {
+    property_id: "fxScript"
+    string_value: "DancingWomanBar"
+  }
+  lod: 0
+}
+props {
+  name: "diveBar_wallDecoration_exitSign01"
+  gridPoint {
+    x: 3
+    y: 2
+    z: 26
+  }
+  orientation: ORIENTATION_S
+  displayName: "Exit Sign day"
+  idRef {
+    id: "5c756031643431b12131b832"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 5
+    transitionPoint {
+      scene_name: "Survivor Camp"
+      confirmation_text: "Leave bar?"
+    }
+  }
+  lod: 0
+}
+props {
+  name: "vfx_fx_SeatedCoupleBarEast"
+  gridPoint {
+    x: 14.7
+    y: 0
+    z: -11.5
+  }
+  orientation: ORIENTATION_E
+  properties {
+    property_id: "fxScript"
+    string_value: "SeatedCoupleBarPatronEast"
+  }
+  idRef {
+    id: "5c756236643431b12131b836"
+  }
+  lod: 0
+}
+props {
+  name: "vfx_fx_barstoolMan"
+  gridPoint {
+    x: 6
+    y: 0
+    z: -7.7999992
+  }
+  orientation: ORIENTATION_E
+  properties {
+    property_id: "fxScript"
+    string_value: "BarStoolManEnvironment"
+  }
+  idRef {
+    id: "5c75624f643431b12131b837"
+  }
+  lod: 0
+}
+props {
+  name: "vfx_fx_SeatedFemaleBarPatronSouth"
+  gridPoint {
+    x: 5.6
+    y: 0
+    z: -9.2999992
+  }
+  orientation: ORIENTATION_S
+  properties {
+    property_id: "fxScript"
+    string_value: "SeatedFemaleBarPatronSouth"
+  }
+  idRef {
+    id: "5c7562b8643431b12131b838"
   }
   lod: 0
 }

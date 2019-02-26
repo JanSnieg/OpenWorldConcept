@@ -37,12 +37,12 @@ nodes {
         }
       }
       ops {
-        functionName: "Fade Camera In"
+        functionName: "Fade Camera Out"
         args {
-          float_value: 5
+          float_value: 2
         }
         args {
-          float_value: 5
+          float_value: 0
         }
       }
     }
@@ -71,18 +71,18 @@ nodes {
               string_value: "bool"
             }
             args {
-              int_value: 0
+              int_value: 1
             }
           }
         }
       }
       ops {
-        functionName: "Fade Camera In"
+        functionName: "Fade Camera Out"
         args {
-          float_value: 5
+          float_value: 2
         }
         args {
-          float_value: 5
+          float_value: 0
         }
       }
     }

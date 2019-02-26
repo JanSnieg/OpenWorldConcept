@@ -1,7 +1,7 @@
 minX: -88
 minZ: -58
 numX: 136
-numZ: 145
+numZ: 132
 props {
   name: "cemetery_ground_dirt01"
   gridPoint {
@@ -100,16 +100,6 @@ props {
     z: -1
   }
   orientation: ORIENTATION_S
-  lod: 0
-}
-props {
-  name: "cemetery_ground_dirtEdge01"
-  gridPoint {
-    x: -15
-    y: 0
-    z: -4
-  }
-  orientation: ORIENTATION_W
   lod: 0
 }
 props {
@@ -3826,6 +3816,28 @@ props {
     z: 42
   }
   orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "pikePlace_vehicle_monorailConnector01"
+  gridPoint {
+    x: 30
+    y: 0.06
+    z: 70
+  }
+  orientation: ORIENTATION_S
+  displayName: "Monorail night"
+  idRef {
+    id: "5c73d783643431bd1aa40610"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    transitionPoint {
+      scene_name: "OpenWorld"
+      confirmation_text: "Sure to leave this island?"
+    }
+  }
   lod: 0
 }
 props {
@@ -10344,9 +10356,9 @@ props {
 props {
   name: "diveBar_wall_saloonDoor01"
   gridPoint {
-    x: 7
+    x: 9
     y: 0
-    z: -18
+    z: -24
   }
   orientation: ORIENTATION_S
   idRef {
@@ -11477,29 +11489,6 @@ props {
   }
 }
 props {
-  name: "system_gizmo_lightbulb"
-  gridPoint {
-    x: 11
-    y: 20
-    z: 11
-  }
-  orientation: ORIENTATION_S
-  displayName: "sun"
-  idRef {
-    id: "5c751e65643431ea20a404c5"
-  }
-  lod: 0
-  light {
-    range: 49
-    color {
-      r: 1
-      g: 1
-      b: 1
-    }
-    intensity: 1
-  }
-}
-props {
   name: "barrens_street_candyMachines"
   gridPoint {
     x: -18
@@ -11753,20 +11742,6 @@ props {
   orientation: ORIENTATION_S
   idRef {
     id: "5c752086643431ea20a404c6"
-  }
-  lod: 0
-}
-props {
-  name: "vfx_fx_firebarrel"
-  gridPoint {
-    x: -14
-    y: 0
-    z: -3
-  }
-  orientation: ORIENTATION_S
-  properties {
-    property_id: "fxScript"
-    string_value: "CrowdBarrelFire"
   }
   lod: 0
 }
@@ -13947,9 +13922,9 @@ props {
 props {
   name: "diveBar_wall_saloonDoor01"
   gridPoint {
-    x: 10
+    x: 12
     y: 0
-    z: -18
+    z: -24
   }
   orientation: ORIENTATION_S
   displayName: "Saloon Door night"
@@ -13969,14 +13944,14 @@ props {
 props {
   name: "pikePlace_vehicle_monorailConnector01"
   gridPoint {
-    x: 32
+    x: 33
     y: 0.06
-    z: 83
+    z: 70
   }
   orientation: ORIENTATION_S
   displayName: "Monorail day"
   idRef {
-    id: "5c755e9e643431b12131b82f"
+    id: "5c755b73643431b12131b820"
   }
   interactionRoot {
     isEnabled: true
@@ -13989,24 +13964,29 @@ props {
   lod: 0
 }
 props {
-  name: "pikePlace_vehicle_monorailConnector01"
+  name: "vfx_fx_firebarrelDuo"
   gridPoint {
-    x: 29
-    y: 0.06
-    z: 83
+    x: -14
+    y: 0
+    z: -2
   }
   orientation: ORIENTATION_S
-  displayName: "Monorail night"
-  idRef {
-    id: "5c755e9e643431b12131b830"
+  properties {
+    property_id: "fxScript"
+    string_value: "CrowdBarrelFireDuo"
   }
-  interactionRoot {
-    isEnabled: true
-    interactionRadius: 1
-    transitionPoint {
-      scene_name: "OpenWorld"
-      confirmation_text: "Sure to leave this island?"
-    }
+  lod: 0
+}
+props {
+  name: "cemetery_ground_dirtEdge01"
+  gridPoint {
+    x: -15
+    y: 0
+    z: -4
+  }
+  orientation: ORIENTATION_W
+  idRef {
+    id: "5c755cfe643431b12131b826"
   }
   lod: 0
 }

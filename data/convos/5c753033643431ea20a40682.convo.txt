@@ -1,0 +1,256 @@
+idRef {
+  id: "5c753033643431ea20a40682"
+}
+ui_name: "con_Barman"
+nodes {
+  idRef {
+    id: "5c753058643431ea20a4068c"
+  }
+  index: 0
+  text: "What can I get you?"
+  branches {
+    responseText: "Finest drink you have in here."
+    nextNodeIndex: 1
+  }
+  branches {
+    responseText: "Cheapest drink you have."
+    nextNodeIndex: 2
+  }
+  branches {
+    responseText: "Actually I would like to talk."
+    nextNodeIndex: 3
+  }
+  branches {
+    responseText: "I better go now."
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5c75310a643431ea20a4069c"
+  }
+  index: 1
+  text: "Androind hunter come right up."
+  branches {
+    responseText: ""
+    nextNodeIndex: 0
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5c7530af643431ea20a40690"
+  }
+  index: 2
+  text: "Peacebear go in now."
+  branches {
+    responseText: ""
+    nextNodeIndex: 0
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5c75314c643431ea20a406a0"
+  }
+  index: 3
+  text: "Yea?"
+  branches {
+    responseText: "I would like to get some info of this place."
+    nextNodeIndex: 4
+  }
+  branches {
+    responseText: "Is there a way to earn some credits?"
+    nextNodeIndex: 10
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5c7534bb643431ea20a406fb"
+  }
+  index: 4
+  text: "Place like any other else. Nothing special around here."
+  branches {
+    responseText: "I\'ve heard that it scares in here."
+    nextNodeIndex: 5
+  }
+  branches {
+    responseText: "But you are safe here, right?"
+    nextNodeIndex: 7
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5c75352d643431ea20a406ff"
+  }
+  index: 5
+  text: "Yea, but earplugs are good enough to stop hearing them.\nAnd if you are despred enough, you can imagine this is a preety girl screaming of joy."
+  branches {
+    responseText: "..."
+    nextNodeIndex: 6
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5c75358c643431ea20a40702"
+  }
+  index: 6
+  text: "Whare were we?\n...\nOk, I remember ..."
+  branches {
+    responseText: ""
+    nextNodeIndex: 4
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5c7535ca643431ea20a4070f"
+  }
+  index: 7
+  text: "Yea, imagine that, every morning you wake up and do same thing.\nYou wake up, open window and hear \"She sells seashells by the seashore\".\nThis toungue twister is fucking my brain...\nSome kids are playing on this {{CC}}#$%&ing{{/CC}} shore EVERY damn morning."
+  branches {
+    responseText: "Woah, dude, chill."
+    nextNodeIndex: 8
+  }
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Set Variable (bool)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (bool)"
+          args {
+            string_value: "5c6fd5ec6434311e0cb7acda"
+          }
+          args {
+            string_value: "heardKids"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "5c753691643431ea20a40712"
+  }
+  index: 8
+  text: "Have you even see any kids here?\nI don\'t, but I\'m selling beer in bar so maybe thats why."
+  branches {
+    responseText: "I... don\'t know."
+    nextNodeIndex: 9
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5c7536d4643431ea20a40715"
+  }
+  index: 9
+  text: "Like we are in this fucking game, doing same day, same talks, same {{CC}}#$%*ing{{/CC}} shit every single day."
+  branches {
+    responseText: "THAT IS ENOUGH!"
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5c7531bf643431ea20a406a4"
+  }
+  index: 10
+  text: "There is a small problem in the sewers in city."
+  branches {
+    responseText: "Now we are talking!\nMore!"
+    nextNodeIndex: 11
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5c7531f2643431ea20a406a7"
+  }
+  index: 11
+  text: "There is a some kind of nest. It wouldn\'t be anything unusual, but if you could take care of that, there will be clear passage to {{CC}}The Tower{{/CC}}."
+  branches {
+    responseText: "Go on."
+    nextNodeIndex: 12
+  }
+  branches {
+    responseText: "The Tower? What is this tower?"
+    nextNodeIndex: 14
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5c753286643431ea20a406ad"
+  }
+  index: 12
+  text: "With that we could take care of those gangster once and for all."
+  branches {
+    responseText: ""
+    nextNodeIndex: 13
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5c7532a5643431ea20a406b0"
+  }
+  index: 13
+  text: "We could leave this damned island and have a quality life at last."
+  branches {
+    responseText: ""
+    nextNodeIndex: 11
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5c7532e7643431ea20a406b2"
+  }
+  index: 14
+  text: "{{CC}}The Tower{{/CC}} is where {{CC}}The Fucker{{/CC}} leaves.\nHe is boss of every single gangster in this god forgotten city."
+  branches {
+    responseText: ""
+    nextNodeIndex: 15
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5c7533c0643431ea20a406d0"
+  }
+  index: 15
+  text: "If you... or someone will kill {{CC}}The Fucker{{/CC}}... this is his actual name btw....\nAll gangster will turn against each other, and gangster problem will disappear like a fart on the wind."
+  branches {
+    responseText: "{{GM}}And I clould become some kind of hero to those peaople{{/GM}}"
+    nextNodeIndex: 0
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+roots {
+  responseText: "Barman!"
+  nextNodeIndex: 0
+}

@@ -96,169 +96,7 @@ triggers {
         call_value {
           functionName: "Get Map Item (Actor)"
           args {
-            string_value: "5c754a52643431ea20a407e5"
-          }
-        }
-      }
-      args {
-        call_value {
-          functionName: "Get Preset Value (int)"
-          args {
-            string_value: "TextPopupStyle"
-          }
-          args {
-            int_value: 0
-          }
-        }
-      }
-      args {
-        string_value: "How did you get three balls in row?"
-      }
-      args {
-        float_value: 0
-      }
-      args {
-        float_value: 0
-      }
-      args {
-        float_value: 0
-      }
-      args {
-        float_value: 0
-      }
-      args {
-        call_value {
-          functionName: "Random (float)"
-          args {
-            float_value: 3
-          }
-          args {
-            float_value: 4
-          }
-        }
-      }
-      args {
-        float_value: 3
-      }
-      args {
-        float_value: 0
-      }
-    }
-    ops {
-      functionName: "Display Text over Actor"
-      args {
-        call_value {
-          functionName: "Get Map Item (Actor)"
-          args {
-            string_value: "5c754a4e643431ea20a407e4"
-          }
-        }
-      }
-      args {
-        call_value {
-          functionName: "Get Preset Value (int)"
-          args {
-            string_value: "TextPopupStyle"
-          }
-          args {
-            int_value: 0
-          }
-        }
-      }
-      args {
-        string_value: "This is called skillz bby!!"
-      }
-      args {
-        float_value: 0
-      }
-      args {
-        float_value: 30
-      }
-      args {
-        float_value: 30
-      }
-      args {
-        float_value: 0
-      }
-      args {
-        call_value {
-          functionName: "Random (float)"
-          args {
-            float_value: 3
-          }
-          args {
-            float_value: 4
-          }
-        }
-      }
-      args {
-        float_value: 3
-      }
-      args {
-        float_value: 7
-      }
-    }
-    ops {
-      functionName: "Display Text over Actor"
-      args {
-        call_value {
-          functionName: "Get Map Item (Actor)"
-          args {
-            string_value: "5c754a52643431ea20a407e5"
-          }
-        }
-      }
-      args {
-        call_value {
-          functionName: "Get Preset Value (int)"
-          args {
-            string_value: "TextPopupStyle"
-          }
-          args {
-            int_value: 0
-          }
-        }
-      }
-      args {
-        string_value: "Skill?!\nMy skill is to shove this balls in your ass, lucker!"
-      }
-      args {
-        float_value: 0
-      }
-      args {
-        float_value: 0
-      }
-      args {
-        float_value: 0
-      }
-      args {
-        float_value: 0
-      }
-      args {
-        call_value {
-          functionName: "Random (float)"
-          args {
-            float_value: 3
-          }
-          args {
-            float_value: 4
-          }
-        }
-      }
-      args {
-        float_value: 3
-      }
-      args {
-        float_value: 14
-      }
-    }
-    ops {
-      functionName: "Display Text over Actor"
-      args {
-        call_value {
-          functionName: "Get Map Item (Actor)"
-          args {
-            string_value: "5c754a36643431ea20a407e3"
+            string_value: "5c755520643431b12131b813"
           }
         }
       }
@@ -298,10 +136,10 @@ triggers {
         call_value {
           functionName: "Random (float)"
           args {
-            float_value: 14
+            float_value: 0
           }
           args {
-            float_value: 30
+            float_value: 10
           }
         }
       }
@@ -389,7 +227,7 @@ triggers {
   }
   isActive: true
   idRef {
-    id: "5c75614d643431b12131b833"
+    id: "5c755d80643431b12131b829"
   }
   elseActions {
     ops {
@@ -431,7 +269,7 @@ regions {
   enabledAtStart: true
   is_camera_region: false
   idRef {
-    id: "5c754d29643431ea20a407e7"
+    id: "5c755520643431b12131b814"
   }
   highlight_color {
     r: 0
@@ -465,28 +303,6 @@ regions {
   loop_default_music: false
 }
 characters {
-  name: "system_spawner_playerSpawner"
-  gridPoint {
-    x: 8
-    y: 0
-    z: 4
-  }
-  orientation: ORIENTATION_W
-  idRef {
-    id: "5c73f2a8643431821be50b17"
-  }
-  lod: 0
-  character_instance {
-    character_mod {
-      archetypeName: "Player"
-    }
-    team_id: "Shadowrunners"
-    char_name: "New Actor"
-    enabled_at_start: true
-    pc_spawn_number: 0
-  }
-}
-characters {
   name: "chars_icon_playerIcon"
   gridPoint {
     x: 4
@@ -495,7 +311,7 @@ characters {
   }
   orientation: ORIENTATION_S
   idRef {
-    id: "5c753015643431ea20a40681"
+    id: "5c755520643431b12131b812"
   }
   interactionRoot {
     isEnabled: true
@@ -590,7 +406,7 @@ characters {
   }
   orientation: ORIENTATION_W
   idRef {
-    id: "5c754a36643431ea20a407e3"
+    id: "5c755520643431b12131b813"
   }
   lod: 0
   character_instance {
@@ -629,99 +445,25 @@ characters {
   }
 }
 characters {
-  name: "chars_icon_playerIcon"
+  name: "system_spawner_playerSpawner"
   gridPoint {
-    x: 10
+    x: 8
     y: 0
-    z: -8
+    z: 4
   }
-  orientation: ORIENTATION_N
+  orientation: ORIENTATION_W
   idRef {
-    id: "5c754a4e643431ea20a407e4"
+    id: "5c755742643431b12131b81b"
   }
   lod: 0
   character_instance {
-    prefab_name: "Seattle:Core/HumanMale"
-    character_sheet_id: "BaseCivilian"
     character_mod {
-      stats {
-        body: 0
-        quickness: 0
-        strength: 0
-        charisma: 0
-        intelligence: 0
-        willpower: 0
-        essence: 0
-        hp: 0
-        ap: 0
-        morale: 0
-        discipline: 0
-        awareness: 0
-        perception: 0
-        authority: 0
-        protect_tether_range: 0
-        move_speed: 0
-      }
-      skills {
-      }
-      specializations {
-      }
-      vulnerabilities {
-      }
+      archetypeName: "Player"
     }
-    team_id: "Civilians"
-    char_name: "player02"
-    pc_spawn_number: -1
-    karma: 6
-    hiring_set_randomizer: "elf_adept"
-  }
-}
-characters {
-  name: "chars_icon_playerIcon"
-  gridPoint {
-    x: 9
-    y: 0
-    z: -11
-  }
-  orientation: ORIENTATION_E
-  idRef {
-    id: "5c754a52643431ea20a407e5"
-  }
-  lod: 0
-  character_instance {
-    prefab_name: "Seattle:Core/HumanMale"
-    character_sheet_id: "BaseCivilian"
-    character_mod {
-      stats {
-        body: 0
-        quickness: 0
-        strength: 0
-        charisma: 0
-        intelligence: 0
-        willpower: 0
-        essence: 0
-        hp: 0
-        ap: 0
-        morale: 0
-        discipline: 0
-        awareness: 0
-        perception: 0
-        authority: 0
-        protect_tether_range: 0
-        move_speed: 0
-      }
-      skills {
-      }
-      specializations {
-      }
-      vulnerabilities {
-      }
-    }
-    team_id: "Civilians"
-    char_name: "player01"
-    pc_spawn_number: -1
-    karma: 6
-    hiring_set_randomizer: "troll_samurai"
+    team_id: "Shadowrunners"
+    char_name: "New Actor"
+    enabled_at_start: true
+    pc_spawn_number: 0
   }
 }
 worldMapLocation {
@@ -733,12 +475,12 @@ worldMapLocation {
 }
 mapName: "Bar"
 parentStory: ""
-scene_title: "Bar (day)"
+scene_title: "Bar (night)"
 scene_subtitle: ""
 scene_synopsis: ""
 scene_image: ""
 scene_continue_button_skip: false
-scene_restore_runner_health: true
+scene_restore_runner_health: false
 directional_light_dir {
   x: -0.5
   y: -1

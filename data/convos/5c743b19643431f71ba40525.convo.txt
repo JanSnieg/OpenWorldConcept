@@ -10,6 +10,44 @@ nodes {
   text: "We need to talk."
   branches {
     responseText: "Yea?"
+    conditions {
+      ops {
+        functionName: "Comparison (bool)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (bool)"
+            args {
+              string_value: "5c6fd5ec6434311e0cb7acda"
+            }
+            args {
+              string_value: "isScanned"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+    }
     nextNodeIndex: 1
     hideIfUnavailable: true
     onlyOnce: true
@@ -28,11 +66,132 @@ nodes {
   }
   branches {
     responseText: "Can you tell me about this place?"
-    nextNodeIndex: 9
+    nextNodeIndex: 5
+    auxiliaryLink: true
   }
   branches {
-    responseText: "I better go then."
+    responseText: "{{GM}}You need to talk to him{{/GM}}I better go then."
+    conditions {
+      ops {
+        functionName: "Evaluate Goal"
+        args {
+          call_value {
+            functionName: "Get Map Item (Goal)"
+            args {
+              string_value: "EyeScan"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "GoalStatus"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
     nextNodeIndex: -1
+  }
+  branches {
+    responseText: "I would better get some sleep now."
+    conditions {
+      ops {
+        functionName: "Comparison (bool)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (bool)"
+            args {
+              string_value: "5c6fd5ec6434311e0cb7acda"
+            }
+            args {
+              string_value: "isNight"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+    hideIfUnavailable: true
+  }
+  branches {
+    responseText: "Heve you heard kids noises in the distance?"
+    conditions {
+      ops {
+        functionName: "Comparison (bool)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (bool)"
+            args {
+              string_value: "5c6fd5ec6434311e0cb7acda"
+            }
+            args {
+              string_value: "heardKids"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 9
   }
   nodeType: ConversationNodeType_Simple
 }
@@ -41,9 +200,9 @@ nodes {
     id: "5c743b61643431f71ba40535"
   }
   index: 1
-  text: "I\'m secirity chief here.\nDespite the cheerful atmosphere here we need to be cautious."
+  text: "I\'m secirity chief here.\nDespite the cheerful atmosphere here, we need to be cautious."
   branches {
-    responseText: "is it cheerful, really?"
+    responseText: "Is it cheerful?"
     nextNodeIndex: 2
   }
   branches {
@@ -82,7 +241,7 @@ nodes {
     id: "5c743c47643431f71ba4053e"
   }
   index: 4
-  text: "First of all I need your eye.\nI mean you have to do eyescan so we know exactly who you are."
+  text: "First of all I need your eye.\nI mean you have scan your eye so we know exactly who you are."
   branches {
     responseText: "That is wierd."
     nextNodeIndex: 5
@@ -156,7 +315,7 @@ nodes {
     id: "5c743cc7643431f71ba40546"
   }
   index: 5
-  text: "We have day/night cicle here.\nAt day we are all here, outside doing our job, as you should.\nAt night most of us is sleeping, rest patroling teritory.\nIf you need to do anything in this area, better do it at day.\nBut if you want to shoot some gangsters, do it at night, get it?"
+  text: "We have day/night cicle here.\nDuring the day we are all here, outside doing our jobs, as should you.\nAt night most of us are sleeping, rest patroling the teritory.\nIf you need to do anything in this area, better do it during the day.\nBut if you want to shoot some gangsters, do it at night, get it?"
   branches {
     responseText: ""
     nextNodeIndex: 6
@@ -168,7 +327,7 @@ nodes {
     id: "5c743da8643431f71ba4054c"
   }
   index: 6
-  text: "Good.\nWe are now in warden rooms, be careful, coz here are some leftovers from mad scientists that was here not so long ago."
+  text: "Good.\nWe are now in warden rooms, be careful, coz here are some leftovers from mad scientists that were here not so long ago."
   branches {
     responseText: "Is it everything?"
     nextNodeIndex: 7
@@ -193,7 +352,7 @@ nodes {
     id: "5c743fe3643431f71ba405a7"
   }
   index: 8
-  text: "I\'m secirity chief here.\nMy name is Travis.\nIf enythink go wrong, you tell me, get it?"
+  text: "I\'m secirity chief here.\nMy name is Travis.\nIf enything goes wrong, you tell me, get it?"
   branches {
     responseText: ""
     nextNodeIndex: 0
@@ -203,36 +362,75 @@ nodes {
 }
 nodes {
   idRef {
-    id: "5c74405e643431f71ba405e9"
+    id: "5c756383643431b12131b8c0"
   }
   index: 9
-  text: "We have day/night cicle here.\nAt day we are all here, outside doing our job, as you should.\nAt night most of us is sleeping, rest patroling teritory.\nIf you need to do anything in this area, better do it at day.\nBut if you want to shoot some gangsters, do it at night, get it?"
+  text: "What kids?"
   branches {
-    responseText: ""
+    responseText: "I don\'t know. Is there any kids around?"
     nextNodeIndex: 10
+  }
+  branches {
+    responseText: "Nevemind."
+    nextNodeIndex: 0
+    auxiliaryLink: true
   }
   nodeType: ConversationNodeType_Simple
 }
 nodes {
   idRef {
-    id: "5c74405e643431f71ba405ec"
+    id: "5c7563b2643431b12131b8f5"
   }
   index: 10
-  text: "Good.\nWe are now in warden rooms, be careful, coz here are some leftovers from mad scientists that was here not so long ago."
+  text: "I know every one on this dammed island ..."
   branches {
-    responseText: "Is it everything?"
+    responseText: ""
     nextNodeIndex: 11
   }
   nodeType: ConversationNodeType_Simple
 }
 nodes {
   idRef {
-    id: "5c74405e643431f71ba405ef"
+    id: "5c7563c7643431b12131b8f8"
   }
   index: 11
-  text: "I think yes."
+  text: "And I haven\'t seen any child around.\nWhat are you talking about?"
   branches {
-    responseText: ""
+    responseText: "Nevemind."
+    nextNodeIndex: 0
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "I swear I\'ve heard them, They where repeting some tongue twister over and over again."
+    nextNodeIndex: 12
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5c756453643431b12131b8fd"
+  }
+  index: 12
+  text: "I really don\'t know what are you talking about."
+  branches {
+    responseText: "Ask a bartender, he heard them too!"
+    nextNodeIndex: 13
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5c756482643431b12131b901"
+  }
+  index: 13
+  text: "Okey, don\'t freak out. We don\'t have any kids around here.\nNow you should get some sleep and try not to drink this peacebeer at the bar, okey?"
+  branches {
+    responseText: "I will try."
+    nextNodeIndex: 0
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "But..."
     nextNodeIndex: 0
     auxiliaryLink: true
   }

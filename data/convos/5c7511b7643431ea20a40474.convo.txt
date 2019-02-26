@@ -1,0 +1,61 @@
+idRef {
+  id: "5c7511b7643431ea20a40474"
+}
+ui_name: "con_David"
+nodes {
+  idRef {
+    id: "5c7511c1643431ea20a4047a"
+  }
+  index: 0
+  text: "Hello there, why don\'t you take a look over on my gun?"
+  branches {
+    responseText: "I will, show me this firepower!"
+    nextNodeIndex: 1
+  }
+  branches {
+    responseText: "What you doing here?"
+    nextNodeIndex: 2
+  }
+  branches {
+    responseText: "Not now, I have to go."
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5c751282643431ea20a4048e"
+  }
+  index: 1
+  text: "Oh, you took this one? Take care of her, she was my favorite."
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Open Store Screen From Actor"
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor)"
+          args {
+            string_value: "5c751698643431ea20a404a2"
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "5c75121f643431ea20a4047e"
+  }
+  index: 2
+  text: "You know, selling guns to you, so you can sell bullets to those bastards in the city."
+  branches {
+    responseText: ""
+    nextNodeIndex: 0
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+roots {
+  nextNodeIndex: 0
+}
