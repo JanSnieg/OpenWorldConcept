@@ -13818,9 +13818,9 @@ props {
 props {
   name: "pikePlace_street_displayTech02"
   gridPoint {
-    x: 3
+    x: 18
     y: 0
-    z: 15
+    z: 21
   }
   orientation: ORIENTATION_S
   lod: 0
@@ -13858,9 +13858,9 @@ props {
 props {
   name: "pikePlace_street_displayVeggie"
   gridPoint {
-    x: 2
+    x: 20
     y: 0
-    z: -7
+    z: 20
   }
   orientation: ORIENTATION_E
   lod: 0
@@ -13929,16 +13929,6 @@ props {
   lod: 0
 }
 props {
-  name: "office_decor_fakeTrees"
-  gridPoint {
-    x: -4.7
-    y: 0
-    z: -17.7
-  }
-  orientation: ORIENTATION_S
-  lod: 0
-}
-props {
   name: "office_decor_fountain01"
   gridPoint {
     x: -3.9
@@ -13946,19 +13936,6 @@ props {
     z: -24.8
   }
   orientation: ORIENTATION_W
-  lod: 0
-}
-props {
-  name: "office_decor_fakeTrees"
-  gridPoint {
-    x: -4.7
-    y: 0
-    z: -21.7
-  }
-  orientation: ORIENTATION_S
-  idRef {
-    id: "5c752f0b643431ea20a40674"
-  }
   lod: 0
 }
 props {

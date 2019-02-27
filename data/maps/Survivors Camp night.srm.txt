@@ -13645,16 +13645,6 @@ props {
   lod: 0
 }
 props {
-  name: "office_decor_fakeTrees"
-  gridPoint {
-    x: -4.7
-    y: 0
-    z: -17.7
-  }
-  orientation: ORIENTATION_S
-  lod: 0
-}
-props {
   name: "office_decor_fountain01"
   gridPoint {
     x: -3.9
@@ -13662,19 +13652,6 @@ props {
     z: -24.8
   }
   orientation: ORIENTATION_W
-  lod: 0
-}
-props {
-  name: "office_decor_fakeTrees"
-  gridPoint {
-    x: -4.7
-    y: 0
-    z: -21.7
-  }
-  orientation: ORIENTATION_S
-  idRef {
-    id: "5c752f0b643431ea20a40674"
-  }
   lod: 0
 }
 props {

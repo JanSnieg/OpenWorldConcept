@@ -406,7 +406,7 @@ triggers {
   name: "changeSceneTransisions"
   events {
     ops {
-      functionName: "On Map Start"
+      functionName: "On Conversation Complete"
     }
   }
   conditions {
