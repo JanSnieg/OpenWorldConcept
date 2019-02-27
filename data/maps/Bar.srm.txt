@@ -1315,7 +1315,7 @@ props {
     isEnabled: true
     interactionRadius: 5
     transitionPoint {
-      scene_name: "Survivor Camp"
+      scene_name: "Survivors Camp night"
       confirmation_text: "Leave bar?"
     }
   }

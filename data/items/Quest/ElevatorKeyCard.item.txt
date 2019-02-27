@@ -1,0 +1,10 @@
+id: "ElevatorKeyCard"
+type: ItemType_QuestItem
+uirep {
+  name: "KeyCard for elevator"
+}
+credentials: 0
+sorting_group: "Quest"
+closeupImage {
+  filename: "office/office_tech_alarmoff_w@2x"
+}

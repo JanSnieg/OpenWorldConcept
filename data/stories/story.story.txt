@@ -12,13 +12,13 @@ variables {
   }
 }
 variables {
-  name: "heardKids"
+  name: "haveBomb"
   typeName: "bool"
   defaultValue {
-    bool_value: false
+    bool_value: true
     variableref_value {
       scope: TsVariableScope_Story
-      name: "heardKids"
+      name: "haveBomb"
       typeName: "bool"
     }
   }
@@ -44,6 +44,18 @@ variables {
       scope: TsVariableScope_Story
       name: "isScanned"
       typeName: "bool"
+    }
+  }
+}
+variables {
+  name: "kids"
+  typeName: "int"
+  defaultValue {
+    int_value: 0
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "kids"
+      typeName: "int"
     }
   }
 }

@@ -1,0 +1,11 @@
+id: "SaraShellBody"
+type: ItemType_QuestItem
+uirep {
+  name: "Body of Sara Shell"
+  description: "Well preserved body of a little girl. She is still smiling and holding seashell in her hands."
+}
+credentials: 0
+sorting_group: "Quest"
+closeupImage {
+  filename: "pikeplace/pikeplace_decor_corpse03_e@2x"
+}

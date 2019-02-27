@@ -1,0 +1,44 @@
+idRef {
+  id: "5c766df26434317725169f35"
+}
+ui_name: "con_gravedigger"
+nodes {
+  idRef {
+    id: "5c766e2a6434317725169f41"
+  }
+  index: 0
+  text: "I take care of graves, and you?"
+  branches {
+    responseText: "I ... don\'t really know my puprouse here."
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "I see an empty grave here. What is it all about?"
+    nextNodeIndex: 1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5c766e6a6434317725169f47"
+  }
+  index: 1
+  text: "It was empyt all the time I was here."
+  branches {
+    responseText: "This is wierd."
+    nextNodeIndex: 2
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5c7683cc64343165267c3cc0"
+  }
+  index: 2
+  text: "You should get some info in bar."
+  nodeType: ConversationNodeType_Simple
+}
+roots {
+  responseText: "What are you doing here?"
+  nextNodeIndex: 0
+}

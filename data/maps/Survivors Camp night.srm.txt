@@ -536,19 +536,6 @@ props {
   lod: 0
 }
 props {
-  name: "cemetery_ground_dirtEdge01"
-  gridPoint {
-    x: 18
-    y: 0
-    z: 2
-  }
-  orientation: ORIENTATION_E
-  idRef {
-    id: "5c7187b5643431351231b968"
-  }
-  lod: 0
-}
-props {
   name: "barrens_ground_brickpavement01"
   gridPoint {
     x: 6
@@ -3037,26 +3024,6 @@ props {
     z: 5.2
   }
   orientation: ORIENTATION_E
-  lod: 0
-}
-props {
-  name: "morgue_wall_lockerEdge04"
-  gridPoint {
-    x: 19
-    y: 0
-    z: 4
-  }
-  orientation: ORIENTATION_S
-  lod: 0
-}
-props {
-  name: "morgue_wall_lockerEdge01"
-  gridPoint {
-    x: 21
-    y: 0
-    z: 4
-  }
-  orientation: ORIENTATION_S
   lod: 0
 }
 props {
@@ -12544,16 +12511,6 @@ props {
   lod: 0
 }
 props {
-  name: "cemetery_ground_grave02"
-  gridPoint {
-    x: 22
-    y: 0
-    z: -21
-  }
-  orientation: ORIENTATION_E
-  lod: 0
-}
-props {
   name: "cemetery_ground_grave03"
   gridPoint {
     x: 21
@@ -12561,16 +12518,6 @@ props {
     z: -15
   }
   orientation: ORIENTATION_E
-  lod: 0
-}
-props {
-  name: "cemetery_ground_grave04"
-  gridPoint {
-    x: 17
-    y: 0
-    z: -24
-  }
-  orientation: ORIENTATION_S
   lod: 0
 }
 props {
@@ -12583,45 +12530,6 @@ props {
   orientation: ORIENTATION_E
   idRef {
     id: "5c7525b8643431ea20a40600"
-  }
-  lod: 0
-}
-props {
-  name: "cemetery_ground_grave04"
-  gridPoint {
-    x: 17
-    y: 0
-    z: -16
-  }
-  orientation: ORIENTATION_S
-  idRef {
-    id: "5c7525db643431ea20a40602"
-  }
-  lod: 0
-}
-props {
-  name: "cemetery_ground_grave04"
-  gridPoint {
-    x: 17
-    y: 0
-    z: -22
-  }
-  orientation: ORIENTATION_S
-  idRef {
-    id: "5c7525e3643431ea20a40603"
-  }
-  lod: 0
-}
-props {
-  name: "cemetery_ground_grave04"
-  gridPoint {
-    x: 17
-    y: 0
-    z: -14
-  }
-  orientation: ORIENTATION_S
-  idRef {
-    id: "5c7525f0643431ea20a40604"
   }
   lod: 0
 }
@@ -13626,9 +13534,9 @@ props {
 props {
   name: "pikePlace_street_displayTech02"
   gridPoint {
-    x: 3
+    x: 19
     y: 0
-    z: 15
+    z: 21
   }
   orientation: ORIENTATION_S
   lod: 0
@@ -13666,9 +13574,9 @@ props {
 props {
   name: "pikePlace_street_displayVeggie"
   gridPoint {
-    x: 2
+    x: 21
     y: 0
-    z: -7
+    z: 20
   }
   orientation: ORIENTATION_E
   lod: 0
@@ -13767,16 +13675,6 @@ props {
   idRef {
     id: "5c752f0b643431ea20a40674"
   }
-  lod: 0
-}
-props {
-  name: "office_tech_alarmOff"
-  gridPoint {
-    x: 6.2
-    y: 1
-    z: 5
-  }
-  orientation: ORIENTATION_N
   lod: 0
 }
 props {
@@ -13987,6 +13885,371 @@ props {
   orientation: ORIENTATION_W
   idRef {
     id: "5c755cfe643431b12131b826"
+  }
+  lod: 0
+}
+props {
+  name: "office_tech_alarmOff"
+  gridPoint {
+    x: 6.2
+    y: 1
+    z: 5
+  }
+  orientation: ORIENTATION_N
+  idRef {
+    id: "5c7679c564343165267c3c9f"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    prerequisites {
+      ops {
+        functionName: "Comparison (int)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (int)"
+            args {
+              string_value: "5c6fd5ec6434311e0cb7acda"
+            }
+            args {
+              string_value: "kids"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          int_value: 4
+        }
+      }
+    }
+    conversationPoint {
+      conversationID: "5c76592664343177251699c5"
+      turnToFace: true
+    }
+  }
+  lod: 0
+}
+props {
+  name: "morgue_wall_lockerEdge04"
+  gridPoint {
+    x: 19
+    y: 0
+    z: 4
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "5c7679c564343165267c3ca0"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    prerequisites {
+      ops {
+        functionName: "Comparison (int)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (int)"
+            args {
+              string_value: "5c6fd5ec6434311e0cb7acda"
+            }
+            args {
+              string_value: "kids"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          int_value: 6
+        }
+      }
+    }
+    pickupItem {
+      itemName: "SaraShellBody"
+      destroyOnPickup: false
+    }
+  }
+  lod: 0
+}
+props {
+  name: "morgue_wall_lockerEdge01"
+  gridPoint {
+    x: 21
+    y: 0
+    z: 4
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "5c7679c564343165267c3ca1"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    prerequisites {
+      ops {
+        functionName: "Comparison (int)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (int)"
+            args {
+              string_value: "5c6fd5ec6434311e0cb7acda"
+            }
+            args {
+              string_value: "kids"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          int_value: 6
+        }
+      }
+    }
+    inspectInteraction {
+      dispalyTime: 5
+      fadeTime: 3
+      inspectText: "You have found a body of little boy."
+      disableAfterInteracting: true
+    }
+  }
+  lod: 0
+}
+props {
+  name: "cemetery_ground_grave02"
+  gridPoint {
+    x: 22
+    y: 0
+    z: -21
+  }
+  orientation: ORIENTATION_E
+  displayName: "Empty Grave"
+  idRef {
+    id: "5c767a2664343165267c3ca7"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    prerequisites {
+      ops {
+        functionName: "Evaluate Goal"
+        args {
+          call_value {
+            functionName: "Get Map Item (Goal)"
+            args {
+              string_value: "Bury Body"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "GoalStatus"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    inspectInteraction {
+      dispalyTime: 10
+      fadeTime: 4
+      inspectText: "You found an open grave.\nYou placed little Sara body in it, and bury her."
+      disableAfterInteracting: true
+    }
+  }
+  lod: 0
+}
+props {
+  name: "cemetery_ground_grave04"
+  gridPoint {
+    x: 17
+    y: 0
+    z: -24
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "5c767a2664343165267c3ca8"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    inspectInteraction {
+      dispalyTime: 5
+      fadeTime: 3
+      inspectText: "Grave of Sarah and Steve Jobs"
+      disableAfterInteracting: false
+    }
+  }
+  lod: 0
+}
+props {
+  name: "cemetery_ground_grave04"
+  gridPoint {
+    x: 17
+    y: 0
+    z: -22
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "5c767a2664343165267c3ca9"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    inspectInteraction {
+      dispalyTime: 5
+      fadeTime: 3
+      inspectText: "Grave of Eva and Adam Kowalsky."
+      disableAfterInteracting: false
+    }
+  }
+  lod: 0
+}
+props {
+  name: "cemetery_ground_grave04"
+  gridPoint {
+    x: 17
+    y: 0
+    z: -16
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "5c767a2664343165267c3caa"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    inspectInteraction {
+      dispalyTime: 5
+      fadeTime: 3
+      inspectText: "Grave of ... someone called Jay-Z?"
+      disableAfterInteracting: false
+    }
+  }
+  lod: 0
+}
+props {
+  name: "cemetery_ground_grave04"
+  gridPoint {
+    x: 17
+    y: 0
+    z: -14
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "5c767a2664343165267c3cab"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    inspectInteraction {
+      dispalyTime: 5
+      fadeTime: 3
+      inspectText: "Grave of Brat and Sister Pitt."
+      disableAfterInteracting: false
+    }
+  }
+  lod: 0
+}
+props {
+  name: "cemetery_ground_grave01"
+  gridPoint {
+    x: 21
+    y: 0
+    z: -37
+  }
+  orientation: ORIENTATION_E
+  displayName: "SaraGrave"
+  idRef {
+    id: "5c767a4264343165267c3cac"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    prerequisites {
+      ops {
+        functionName: "Evaluate Goal"
+        args {
+          call_value {
+            functionName: "Get Map Item (Goal)"
+            args {
+              string_value: "Bury Body"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "GoalStatus"
+            }
+            args {
+              int_value: 2
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    inspectInteraction {
+      dispalyTime: 5
+      fadeTime: 3
+      inspectText: "This is grave of Sara Shells"
+      disableAfterInteracting: false
+    }
   }
   lod: 0
 }

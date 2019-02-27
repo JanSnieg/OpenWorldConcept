@@ -20,6 +20,50 @@ nodes {
     responseText: "See ya!"
     nextNodeIndex: 3
   }
+  branches {
+    responseText: "What are you doing here?"
+    conditions {
+      ops {
+        functionName: "Evaluate If Actor is Inside Region"
+        args {
+          call_value {
+            functionName: "Specific Actor"
+            args {
+              call_value {
+                functionName: "Get Map Item (Actor)"
+                args {
+                  string_value: "5c73cc85643431bd1aa404c8"
+                }
+              }
+            }
+            args {
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "AreOrAreNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (Region)"
+            args {
+              string_value: "5c767249643431772516a00c"
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 4
+    hideIfUnavailable: true
+  }
   nodeType: ConversationNodeType_Simple
 }
 nodes {
@@ -62,6 +106,14 @@ nodes {
   }
   index: 3
   text: "Bye sweeheart!"
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5c767286643431772516a01c"
+  }
+  index: 4
+  text: "Helping this poor guys to survive."
   nodeType: ConversationNodeType_Simple
 }
 roots {

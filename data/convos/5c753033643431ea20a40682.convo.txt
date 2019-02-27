@@ -24,6 +24,41 @@ nodes {
     responseText: "I better go now."
     nextNodeIndex: -1
   }
+  branches {
+    responseText: "Do you know anything more about those voices?"
+    conditions {
+      ops {
+        functionName: "Comparison (int)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (int)"
+            args {
+              string_value: "5c6fd5ec6434311e0cb7acda"
+            }
+            args {
+              string_value: "kids"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          int_value: 3
+        }
+      }
+    }
+    nextNodeIndex: 16
+    hideIfUnavailable: true
+  }
   nodeType: ConversationNodeType_Simple
 }
 nodes {
@@ -89,7 +124,7 @@ nodes {
     id: "5c75352d643431ea20a406ff"
   }
   index: 5
-  text: "Yea, but earplugs are good enough to stop hearing them.\nAnd if you are despred enough, you can imagine this is a preety girl screaming of joy."
+  text: "Yea, but earplugs are good enough to stop hearing them.\nAnd if you are desperate enough, you can imagine this is a preety girl screaming of joy."
   branches {
     responseText: "..."
     nextNodeIndex: 6
@@ -101,7 +136,7 @@ nodes {
     id: "5c75358c643431ea20a40702"
   }
   index: 6
-  text: "Whare were we?\n...\nOk, I remember ..."
+  text: "Where were we?\n...\nOk, I remember ..."
   branches {
     responseText: ""
     nextNodeIndex: 4
@@ -114,7 +149,7 @@ nodes {
     id: "5c7535ca643431ea20a4070f"
   }
   index: 7
-  text: "Yea, imagine that, every morning you wake up and do same thing.\nYou wake up, open window and hear \"She sells seashells by the seashore\".\nThis toungue twister is fucking my brain...\nSome kids are playing on this {{CC}}#$%&ing{{/CC}} shore EVERY damn morning."
+  text: "Yea, imagine that, every morning you wake up and do same things over and over again.\nYou wake up, open window and hear \"She sells seashells by the seashore\".\nThis toungue twister is fucking my brain...\nSome kids are playing on this {{CC}}#$%&ing{{/CC}} shore EVERY damn morning."
   branches {
     responseText: "Woah, dude, chill."
     nextNodeIndex: 8
@@ -122,28 +157,20 @@ nodes {
   nodeType: ConversationNodeType_Simple
   actions {
     ops {
-      functionName: "Set Variable (bool)"
+      functionName: "Set Variable (int)"
       args {
         call_value {
-          functionName: "Get Story Variable (bool)"
+          functionName: "Get Story Variable (int)"
           args {
             string_value: "5c6fd5ec6434311e0cb7acda"
           }
           args {
-            string_value: "heardKids"
+            string_value: "kids"
           }
         }
       }
       args {
-        call_value {
-          functionName: "Get Preset Value (int)"
-          args {
-            string_value: "bool"
-          }
-          args {
-            int_value: 1
-          }
-        }
+        int_value: 1
       }
     }
   }
@@ -153,7 +180,7 @@ nodes {
     id: "5c753691643431ea20a40712"
   }
   index: 8
-  text: "Have you even see any kids here?\nI don\'t, but I\'m selling beer in bar so maybe thats why."
+  text: "Have you even saw any kids here?\nI don\'t, but I\'m selling beer in bar so maybe thats why."
   branches {
     responseText: "I... don\'t know."
     nextNodeIndex: 9
@@ -249,6 +276,82 @@ nodes {
     auxiliaryLink: true
   }
   nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5c76557664343177251698fc"
+  }
+  index: 16
+  text: "Okey, man listen."
+  branches {
+    responseText: "I am listening."
+    nextNodeIndex: 17
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5c76559764343177251698ff"
+  }
+  index: 17
+  text: "Travis talked to me, and he said we don\'t have any children around here.\nBut I\'ve done some research on my own and I\'ve found out that before this big war here were pactions menatly ill."
+  branches {
+    responseText: "What war?"
+    nextNodeIndex: 18
+    onlyOnce: true
+    idRef {
+      id: "5c7656926434317725169904"
+    }
+  }
+  branches {
+    responseText: "Anything more?"
+    nextNodeIndex: 19
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5c7656296434317725169902"
+  }
+  index: 18
+  text: "Where are you from?\nThis {{CC}}$%&ing{{/CC}} big war that tore down this state. \nThis war that coused us to live like rats in trash.\nYou really didn\'t knew?"
+  branches {
+    responseText: ""
+    nextNodeIndex: 17
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5c7656ef643431772516990e"
+  }
+  index: 19
+  text: "There are few missing death certificates in local system.\nYou can find a acces to that in wall tablet near Travises favorite spot.\nThere is a graveyard in sounth wall of this biulding, you could find anwsers there too."
+  branches {
+    responseText: "Thanks man, I will go right there."
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Set Variable (int)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (int)"
+          args {
+            string_value: "5c6fd5ec6434311e0cb7acda"
+          }
+          args {
+            string_value: "kids"
+          }
+        }
+      }
+      args {
+        int_value: 4
+      }
+    }
+  }
 }
 roots {
   responseText: "Barman!"

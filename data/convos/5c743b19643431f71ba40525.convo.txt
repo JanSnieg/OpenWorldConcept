@@ -71,41 +71,6 @@ nodes {
   }
   branches {
     responseText: "{{GM}}You need to talk to him{{/GM}}I better go then."
-    conditions {
-      ops {
-        functionName: "Evaluate Goal"
-        args {
-          call_value {
-            functionName: "Get Map Item (Goal)"
-            args {
-              string_value: "EyeScan"
-            }
-          }
-        }
-        args {
-          call_value {
-            functionName: "Get Preset Value (int)"
-            args {
-              string_value: "GoalStatus"
-            }
-            args {
-              int_value: 1
-            }
-          }
-        }
-        args {
-          call_value {
-            functionName: "Get Preset Value (int)"
-            args {
-              string_value: "IsOrIsNot"
-            }
-            args {
-              int_value: 1
-            }
-          }
-        }
-      }
-    }
     nextNodeIndex: -1
   }
   branches {
@@ -155,23 +120,31 @@ nodes {
     responseText: "Heve you heard kids noises in the distance?"
     conditions {
       ops {
-        functionName: "Comparison (bool)"
+        functionName: "OR"
         args {
           call_value {
-            functionName: "Get Story Variable (bool)"
+            functionName: "Comparison (int)"
             args {
-              string_value: "5c6fd5ec6434311e0cb7acda"
+              call_value {
+                functionName: "Get Story Variable (int)"
+                args {
+                  string_value: "5c6fd5ec6434311e0cb7acda"
+                }
+                args {
+                  string_value: "kids"
+                }
+              }
             }
             args {
-              string_value: "heardKids"
-            }
-          }
-        }
-        args {
-          call_value {
-            functionName: "Get Preset Value (int)"
-            args {
-              string_value: "IsOrIsNot"
+              call_value {
+                functionName: "Get Preset Value (int)"
+                args {
+                  string_value: "Comparison Ops"
+                }
+                args {
+                  int_value: 0
+                }
+              }
             }
             args {
               int_value: 1
@@ -180,18 +153,111 @@ nodes {
         }
         args {
           call_value {
-            functionName: "Get Preset Value (int)"
+            functionName: "Comparison (int)"
             args {
-              string_value: "bool"
+              call_value {
+                functionName: "Get Story Variable (int)"
+                args {
+                  string_value: "5c6fd5ec6434311e0cb7acda"
+                }
+                args {
+                  string_value: "kids"
+                }
+              }
             }
             args {
-              int_value: 1
+              call_value {
+                functionName: "Get Preset Value (int)"
+                args {
+                  string_value: "Comparison Ops"
+                }
+                args {
+                  int_value: 0
+                }
+              }
+            }
+            args {
+              int_value: 2
             }
           }
         }
       }
     }
+    actions {
+      ops {
+        functionName: "Set Variable (int)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (int)"
+            args {
+              string_value: "5c6fd5ec6434311e0cb7acda"
+            }
+            args {
+              string_value: "kids"
+            }
+          }
+        }
+        args {
+          int_value: 3
+        }
+      }
+    }
     nextNodeIndex: 9
+    hideIfUnavailable: true
+  }
+  branches {
+    responseText: "Did you found any not buried bodies in here?"
+    conditions {
+      ops {
+        functionName: "Comparison (int)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (int)"
+            args {
+              string_value: "5c6fd5ec6434311e0cb7acda"
+            }
+            args {
+              string_value: "kids"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          int_value: 5
+        }
+      }
+    }
+    actions {
+      ops {
+        functionName: "Set Variable (int)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (int)"
+            args {
+              string_value: "5c6fd5ec6434311e0cb7acda"
+            }
+            args {
+              string_value: "kids"
+            }
+          }
+        }
+        args {
+          int_value: 6
+        }
+      }
+    }
+    nextNodeIndex: 14
+    hideIfUnavailable: true
   }
   nodeType: ConversationNodeType_Simple
 }
@@ -352,7 +418,7 @@ nodes {
     id: "5c743fe3643431f71ba405a7"
   }
   index: 8
-  text: "I\'m secirity chief here.\nMy name is Travis.\nIf enything goes wrong, you tell me, get it?"
+  text: "I\'m secirity chief here.\nMy name is Travis.\nIf anything goes wrong, you tell me, got it?"
   branches {
     responseText: ""
     nextNodeIndex: 0
@@ -433,6 +499,18 @@ nodes {
     responseText: "But..."
     nextNodeIndex: 0
     auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5c765c366434317725169aa8"
+  }
+  index: 14
+  text: "What kind of question is that?\nOh... you are serious.\nActually yes, there is one body remaining in morgue locker in south warden room."
+  branches {
+    responseText: "Thanks, stay focused!"
+    nextNodeIndex: -1
   }
   nodeType: ConversationNodeType_Simple
 }
