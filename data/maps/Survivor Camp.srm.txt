@@ -1,7 +1,7 @@
 minX: -88
 minZ: -58
-numX: 136
-numZ: 145
+numX: 169
+numZ: 134
 props {
   name: "cemetery_ground_dirt01"
   gridPoint {
@@ -12729,7 +12729,7 @@ props {
     inspectInteraction {
       dispalyTime: 5
       fadeTime: 3
-      inspectText: "Grave of Sarah and Steve Jobs"
+      inspectText: "Here rests H.P. Lovecraft"
       disableAfterInteracting: false
     }
   }
@@ -12765,7 +12765,7 @@ props {
     inspectInteraction {
       dispalyTime: 5
       fadeTime: 3
-      inspectText: "Grave of ... someone called Jay-Z?"
+      inspectText: "To the great hero: Ernest Hemingway"
       disableAfterInteracting: false
     }
   }
@@ -12788,7 +12788,7 @@ props {
     inspectInteraction {
       dispalyTime: 5
       fadeTime: 3
-      inspectText: "Grave of Eva and Adam Kowalsky."
+      inspectText: "Grave of Nicola Tesla"
       disableAfterInteracting: false
     }
   }
@@ -12811,7 +12811,7 @@ props {
     inspectInteraction {
       dispalyTime: 5
       fadeTime: 3
-      inspectText: "Grave of Brat and Sister Pitt."
+      inspectText: "Grave of Mary Todd and Abraham Lincoln"
       disableAfterInteracting: false
     }
   }
@@ -14154,9 +14154,9 @@ props {
 props {
   name: "pikePlace_vehicle_monorailConnector01"
   gridPoint {
-    x: 32
+    x: 14
     y: 0.06
-    z: 83
+    z: 38
   }
   orientation: ORIENTATION_S
   displayName: "Monorail day"
@@ -14167,29 +14167,7 @@ props {
     isEnabled: true
     interactionRadius: 1
     transitionPoint {
-      scene_name: "OpenWorld"
-      confirmation_text: "Sure to leave this island?"
-    }
-  }
-  lod: 0
-}
-props {
-  name: "pikePlace_vehicle_monorailConnector01"
-  gridPoint {
-    x: 29
-    y: 0.06
-    z: 83
-  }
-  orientation: ORIENTATION_S
-  displayName: "Monorail night"
-  idRef {
-    id: "5c755e9e643431b12131b830"
-  }
-  interactionRoot {
-    isEnabled: true
-    interactionRadius: 1
-    transitionPoint {
-      scene_name: "OpenWorld"
+      scene_name: "City"
       confirmation_text: "Sure to leave this island?"
     }
   }
@@ -14249,6 +14227,51 @@ props {
       dispalyTime: 5
       fadeTime: 3
       inspectText: "This is grave of Sara Shells"
+      disableAfterInteracting: false
+    }
+  }
+  lod: 0
+}
+props {
+  name: "diveBar_wall_saloonDoor01"
+  gridPoint {
+    x: 6
+    y: 0
+    z: -22
+  }
+  orientation: ORIENTATION_S
+  displayName: "Saloon Door congrats"
+  idRef {
+    id: "5c77abde643431dc2b1698c7"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    transitionPoint {
+      scene_name: "BarCongrats"
+      confirmation_text: "Going in bar, huh?"
+    }
+  }
+  lod: 0
+}
+props {
+  name: "docks_vehicle_seaplane"
+  gridPoint {
+    x: 73
+    y: 0
+    z: 72
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "5c780926643431362d7c3d51"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    inspectInteraction {
+      dispalyTime: 8
+      fadeTime: 4
+      inspectText: "I\'ve borrowed this bout from Richy.\nHe don\'t need it now."
       disableAfterInteracting: false
     }
   }

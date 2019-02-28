@@ -13819,9 +13819,9 @@ props {
 props {
   name: "pikePlace_vehicle_monorailConnector01"
   gridPoint {
-    x: 33
+    x: 14
     y: 0.06
-    z: 70
+    z: 38
   }
   orientation: ORIENTATION_S
   displayName: "Monorail day"
@@ -13832,7 +13832,7 @@ props {
     isEnabled: true
     interactionRadius: 1
     transitionPoint {
-      scene_name: "OpenWorld"
+      scene_name: "City"
       confirmation_text: "Sure to leave this island?"
     }
   }
@@ -14226,6 +14226,28 @@ props {
       fadeTime: 3
       inspectText: "This is grave of Sara Shells"
       disableAfterInteracting: false
+    }
+  }
+  lod: 0
+}
+props {
+  name: "diveBar_wall_saloonDoor01"
+  gridPoint {
+    x: 12
+    y: 0
+    z: -23
+  }
+  orientation: ORIENTATION_S
+  displayName: "Saloon Door congrats"
+  idRef {
+    id: "5c77b606643431dc2b169a4d"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    transitionPoint {
+      scene_name: "BarCongrats"
+      confirmation_text: "Going in bar, huh?"
     }
   }
   lod: 0

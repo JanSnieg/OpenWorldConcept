@@ -13,7 +13,7 @@ nodes {
     nextNodeIndex: 1
   }
   branches {
-    responseText: "What you doing here?"
+    responseText: "What are you doing here?"
     nextNodeIndex: 2
   }
   branches {
@@ -21,7 +21,7 @@ nodes {
     nextNodeIndex: -1
   }
   branches {
-    responseText: "What are you doing here?"
+    responseText: "What are you up to?"
     conditions {
       ops {
         functionName: "Evaluate If Actor is Inside Region"
@@ -62,6 +62,127 @@ nodes {
       }
     }
     nextNodeIndex: 3
+    hideIfUnavailable: true
+  }
+  branches {
+    responseText: "Is there any way to earn some credits?"
+    conditions {
+      ops {
+        functionName: "Comparison (bool)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (bool)"
+            args {
+              string_value: "5c6fd5ec6434311e0cb7acda"
+            }
+            args {
+              string_value: "killedRichy"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 4
+    hideIfUnavailable: true
+  }
+  branches {
+    responseText: "Can you tell me more about bugs problem here?"
+    conditions {
+      ops {
+        functionName: "Comparison (int)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (int)"
+            args {
+              string_value: "5c6fd5ec6434311e0cb7acda"
+            }
+            args {
+              string_value: "sewers"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          int_value: 1
+        }
+      }
+    }
+    nextNodeIndex: 5
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "You see this boat?\nI borrowed it from {{CC}}The Fucker{{/CC}}."
+    conditions {
+      ops {
+        functionName: "Comparison (bool)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (bool)"
+            args {
+              string_value: "5c6fd5ec6434311e0cb7acda"
+            }
+            args {
+              string_value: "killedRichy"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 11
     hideIfUnavailable: true
   }
   nodeType: ConversationNodeType_Simple
@@ -106,6 +227,241 @@ nodes {
   }
   index: 3
   text: "Just ordering a burger."
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5c77db3d643431dc2b169c53"
+  }
+  index: 4
+  text: "Yep, as you may saw city is taken by some gamgsters.\nThere are two ways for you to deal with them.\nFirst is to go to {{CC}}The Tower{{/CC}} by the front door and shoot those bastards.\nThe secound way is to go the sewers, near crossroad, kill those bugs and blow up theirs nest. There is an elevator to the top floor where {{CC}}The Fucker{{/CC}} lives."
+  branches {
+    responseText: "Tell me more about these sewers."
+    conditions {
+      ops {
+        functionName: "Comparison (bool)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (bool)"
+            args {
+              string_value: "5c6fd5ec6434311e0cb7acda"
+            }
+            args {
+              string_value: "serwersCleared"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 5
+    hideIfUnavailable: true
+  }
+  branches {
+    responseText: "What about this {{CC}}Tower{{/CC}}?"
+    nextNodeIndex: 7
+  }
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Set Variable (int)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (int)"
+          args {
+            string_value: "5c6fd5ec6434311e0cb7acda"
+          }
+          args {
+            string_value: "sewers"
+          }
+        }
+      }
+      args {
+        int_value: 1
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "5c77dc98643431dc2b169c68"
+  }
+  index: 5
+  text: "First of all, you will need a bomb to blow up a nest. I cen get you one."
+  branches {
+    responseText: "I will take this bomb."
+    actions {
+      ops {
+        functionName: "Add Item to Team"
+        args {
+          call_value {
+            functionName: "Get Map Item (Item)"
+            args {
+              string_value: "Bomb"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (string)"
+            args {
+              string_value: "FactionList"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WithOrWithout"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (SceneDimension)"
+            args {
+              string_value: "Default"
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 6
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "And then what?"
+    nextNodeIndex: 6
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5c77dd7e643431dc2b169cb6"
+  }
+  index: 6
+  text: "Somewhere there will be master keycard for the elavetor.\nWhith that you will go on the to floor without any problem."
+  branches {
+    responseText: "Ok, thanks. I will be back in notime."
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5c77ddd8643431dc2b169cbc"
+  }
+  index: 7
+  text: "You saw this crossroad, yes?"
+  branches {
+    responseText: "I was there"
+    nextNodeIndex: 8
+  }
+  branches {
+    responseText: "Yes"
+    nextNodeIndex: 8
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5c77de0c643431dc2b169cc0"
+  }
+  index: 8
+  text: "If you can take care of those guards you will propably get a keycard to the gate.\n\n"
+  branches {
+    responseText: ""
+    nextNodeIndex: 9
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5c77de42643431dc2b169cc3"
+  }
+  index: 9
+  text: "Then, You have to go into {{CC}}The Tower{{/CC}}, you will see huge blue building, and kill some more guards."
+  branches {
+    responseText: ""
+    nextNodeIndex: 10
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5c77de85643431dc2b169cc6"
+  }
+  index: 10
+  text: "After that You will go higher and finally to the top floor where {{CC}}The Fucker{{/CC}} lives.\nAfter taking care of him gangsters shouldn\'t be a problem anymore."
+  branches {
+    responseText: "I will do it."
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5c780a68643431362d7c3dc4"
+  }
+  index: 11
+  text: "Whoa dude!\nThis is fine ass boat!\nWe should get a ride sometime."
+  branches {
+    responseText: "Yea."
+    nextNodeIndex: 12
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5c780a8b643431362d7c3dc7"
+  }
+  index: 12
+  text: "And be the way, You killed this {{CC}}#$%&{{/CC}}er, right?"
+  branches {
+    responseText: "Sure I did."
+    nextNodeIndex: 13
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5c780ac7643431362d7c3dca"
+  }
+  index: 13
+  text: "Well now we all own you a some kind of party."
+  branches {
+    responseText: "Nah. don\'t bother."
+    nextNodeIndex: -1
+  }
   nodeType: ConversationNodeType_Simple
 }
 roots {

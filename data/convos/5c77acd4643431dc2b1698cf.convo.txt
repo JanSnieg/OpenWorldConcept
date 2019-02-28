@@ -1,0 +1,133 @@
+idRef {
+  id: "5c77acd4643431dc2b1698cf"
+}
+ui_name: "con_BarmanCongrats"
+nodes {
+  idRef {
+    id: "5c77aced643431dc2b1698d9"
+  }
+  index: 0
+  text: "Hello there big fella.\nWho is greatest ghost buster that ever been?"
+  branches {
+    responseText: "Me?"
+    nextNodeIndex: 1
+  }
+  branches {
+    responseText: "It\'s me, I guess?"
+    nextNodeIndex: 1
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "Is this all for me?"
+    nextNodeIndex: 9
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5c77ad85643431dc2b1698df"
+  }
+  index: 1
+  text: "Yea it\'s you.\nToday you drink on the house.\nFor such a hero like you I\'ve should done more, but I really can\'t do anything else."
+  branches {
+    responseText: "Thanks!!"
+    nextNodeIndex: 2
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5c77ae6d643431dc2b1698ea"
+  }
+  index: 2
+  text: "Thanks to you!\nNow I don\'t have to worry about this voices ever again.\nYou don\'t know how it was.\nYear after year I was hearing this {{CC}}f#$%&ing{{/CC}} tongue twister every damn morning.\nNow I feel just normal!"
+  branches {
+    responseText: ""
+    nextNodeIndex: 3
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5c77af48643431dc2b1698ed"
+  }
+  index: 3
+  text: "But, don\'t you worry now.\nNow we have to..."
+  branches {
+    responseText: ""
+    nextNodeIndex: 4
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5c77af6b643431dc2b1698f0"
+  }
+  index: 4
+  text: "...CELEBRATE!\nHEY THERE {{CC}}@#$&es{{/CC}}\n"
+  branches {
+    responseText: ""
+    nextNodeIndex: 5
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5c77b3e8643431dc2b16995e"
+  }
+  index: 5
+  text: "FOR\n"
+  branches {
+    responseText: ""
+    nextNodeIndex: 6
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5c77b405643431dc2b169961"
+  }
+  index: 6
+  text: "THE\n"
+  branches {
+    responseText: ""
+    nextNodeIndex: 7
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5c77b40d643431dc2b169964"
+  }
+  index: 7
+  text: "HERO!!!"
+  branches {
+    responseText: ""
+    nextNodeIndex: 8
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5c77b419643431dc2b169967"
+  }
+  index: 8
+  text: "{{GM}}You hear glass twang while every one of them is now drinking to you. You will not come out of here on your own{{/GM}}"
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5c77ae53643431dc2b1698e8"
+  }
+  index: 9
+  text: "Yea it is!\nYou deserved it."
+  branches {
+    responseText: ""
+    nextNodeIndex: 2
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+roots {
+  nextNodeIndex: 0
+}

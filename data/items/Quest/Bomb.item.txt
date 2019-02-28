@@ -1,0 +1,8 @@
+id: "Bomb"
+type: ItemType_QuestItem
+uirep {
+  name: "The Bomb"
+  description: "You will need that to take care of bugs problem once and for all."
+}
+credentials: 0
+sorting_group: "Quest"

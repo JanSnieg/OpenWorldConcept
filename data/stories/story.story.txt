@@ -12,18 +12,6 @@ variables {
   }
 }
 variables {
-  name: "haveBomb"
-  typeName: "bool"
-  defaultValue {
-    bool_value: true
-    variableref_value {
-      scope: TsVariableScope_Story
-      name: "haveBomb"
-      typeName: "bool"
-    }
-  }
-}
-variables {
   name: "isNight"
   typeName: "bool"
   defaultValue {
@@ -55,6 +43,42 @@ variables {
     variableref_value {
       scope: TsVariableScope_Story
       name: "kids"
+      typeName: "int"
+    }
+  }
+}
+variables {
+  name: "killedRichy"
+  typeName: "bool"
+  defaultValue {
+    bool_value: false
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "killedRichy"
+      typeName: "bool"
+    }
+  }
+}
+variables {
+  name: "serwersCleared"
+  typeName: "bool"
+  defaultValue {
+    bool_value: false
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "serwersCleared"
+      typeName: "bool"
+    }
+  }
+}
+variables {
+  name: "sewers"
+  typeName: "int"
+  defaultValue {
+    int_value: 0
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "sewers"
       typeName: "int"
     }
   }

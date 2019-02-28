@@ -115,7 +115,38 @@ nodes {
   }
   branches {
     responseText: "But you are safe here, right?"
+    conditions {
+      ops {
+        functionName: "Comparison (int)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (int)"
+            args {
+              string_value: "5c6fd5ec6434311e0cb7acda"
+            }
+            args {
+              string_value: "kids"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 3
+            }
+          }
+        }
+        args {
+          int_value: 0
+        }
+      }
+    }
     nextNodeIndex: 7
+    hideIfUnavailable: true
   }
   nodeType: ConversationNodeType_Simple
 }
@@ -216,7 +247,7 @@ nodes {
     id: "5c7531f2643431ea20a406a7"
   }
   index: 11
-  text: "There is a some kind of nest. It wouldn\'t be anything unusual, but if you could take care of that, there will be clear passage to {{CC}}The Tower{{/CC}}."
+  text: "There is a some kind of nest. It wouldn\'t be anything unusual, but if you could take care of that, there will be clear passage to {{CC}}The Tower{{/CC}}.\nFor more information go find David."
   branches {
     responseText: "Go on."
     nextNodeIndex: 12
@@ -226,6 +257,25 @@ nodes {
     nextNodeIndex: 14
   }
   nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Set Variable (int)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (int)"
+          args {
+            string_value: "5c6fd5ec6434311e0cb7acda"
+          }
+          args {
+            string_value: "sewers"
+          }
+        }
+      }
+      args {
+        int_value: 1
+      }
+    }
+  }
 }
 nodes {
   idRef {
@@ -269,7 +319,7 @@ nodes {
     id: "5c7533c0643431ea20a406d0"
   }
   index: 15
-  text: "If you... or someone will kill {{CC}}The Fucker{{/CC}}... this is his actual name btw....\nAll gangster will turn against each other, and gangster problem will disappear like a fart on the wind."
+  text: "If you... or someone will kill {{CC}}The Fucker{{/CC}}... this is his actual name btw....\nAll gangster will turn against each other, and gangster problem will disappear like a fart on the wind.\nFor more info go ask David."
   branches {
     responseText: "{{GM}}And I clould become some kind of hero to those peaople{{/GM}}"
     nextNodeIndex: 0

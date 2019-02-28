@@ -1,0 +1,1870 @@
+triggers {
+  name: "changeSceneTransisions"
+  events {
+    ops {
+      functionName: "On Map Start"
+    }
+  }
+  conditions {
+    ops {
+      functionName: "Comparison (bool)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (bool)"
+          args {
+            string_value: "5c6fd5ec6434311e0cb7acda"
+          }
+          args {
+            string_value: "isNight"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+  actions {
+    ops {
+      functionName: "Move Prop"
+      args {
+        call_value {
+          functionName: "Get Map Item (Prop)"
+          args {
+            string_value: "5c73f2d7643431821be50b19"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Specified Point (3D)"
+          args {
+            float_value: 2
+          }
+          args {
+            float_value: 2
+          }
+          args {
+            float_value: 4
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "5c75614d643431b12131b833"
+  }
+  elseActions {
+    ops {
+      functionName: "Move Prop"
+      args {
+        call_value {
+          functionName: "Get Map Item (Prop)"
+          args {
+            string_value: "5c756031643431b12131b832"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Specified Point (3D)"
+          args {
+            float_value: 2
+          }
+          args {
+            float_value: 2
+          }
+          args {
+            float_value: 4
+          }
+        }
+      }
+    }
+  }
+  is_oneshot: true
+}
+triggers {
+  name: "changePlayerLoaction"
+  events {
+    ops {
+      functionName: "On Map Start"
+    }
+  }
+  conditions {
+  }
+  actions {
+    ops {
+      functionName: "Set Variable (string)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (string)"
+          args {
+            string_value: "5c6fd5ec6434311e0cb7acda"
+          }
+          args {
+            string_value: "fromWhere"
+          }
+        }
+      }
+      args {
+        string_value: "bar"
+      }
+    }
+    ops {
+      functionName: "Set Variable (int)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (int)"
+          args {
+            string_value: "5c6fd5ec6434311e0cb7acda"
+          }
+          args {
+            string_value: "kids"
+          }
+        }
+      }
+      args {
+        int_value: -2
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "5c73e724643431821be50a90"
+  }
+  elseActions {
+  }
+  is_oneshot: true
+}
+triggers {
+  name: "celebrate"
+  events {
+    ops {
+      functionName: "On Map Start"
+    }
+  }
+  conditions {
+  }
+  actions {
+    ops {
+      functionName: "Display Text over Actor"
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor)"
+          args {
+            string_value: "5c77b0a7643431dc2b169936"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "TextPopupStyle"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        string_value: "Here he comes!"
+      }
+      args {
+        call_value {
+          functionName: "Random (float)"
+          args {
+            float_value: 0
+          }
+          args {
+            float_value: 255
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Random (float)"
+          args {
+            float_value: 0
+          }
+          args {
+            float_value: 255
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Random (float)"
+          args {
+            float_value: 0
+          }
+          args {
+            float_value: 255
+          }
+        }
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 3
+      }
+      args {
+        float_value: 3
+      }
+      args {
+        float_value: 0
+      }
+    }
+    ops {
+      functionName: "Display Text over Actor"
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor)"
+          args {
+            string_value: "5c77b0a7643431dc2b169937"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "TextPopupStyle"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        string_value: "You are the sweetest!"
+      }
+      args {
+        float_value: 30
+      }
+      args {
+        float_value: 30
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 3
+      }
+      args {
+        float_value: 3
+      }
+      args {
+        float_value: 6
+      }
+    }
+    ops {
+      functionName: "Display Text over Actor"
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor)"
+          args {
+            string_value: "5c77b0a7643431dc2b169939"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "TextPopupStyle"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        string_value: "Way to do champ!"
+      }
+      args {
+        float_value: 30
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 30
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 3
+      }
+      args {
+        float_value: 3
+      }
+      args {
+        float_value: 12
+      }
+    }
+    ops {
+      functionName: "Display Text over Actor"
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor)"
+          args {
+            string_value: "5c77b0a7643431dc2b169938"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "TextPopupStyle"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        string_value: "YEEEEEEEE"
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 30
+      }
+      args {
+        float_value: 30
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 3
+      }
+      args {
+        float_value: 3
+      }
+      args {
+        float_value: 18
+      }
+    }
+    ops {
+      functionName: "Display Text over Actor"
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor)"
+          args {
+            string_value: "5c77b1da643431dc2b169944"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "TextPopupStyle"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        string_value: "Ghost buster is coming!"
+      }
+      args {
+        call_value {
+          functionName: "Random (float)"
+          args {
+            float_value: 0
+          }
+          args {
+            float_value: 255
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Random (float)"
+          args {
+            float_value: 0
+          }
+          args {
+            float_value: 255
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Random (float)"
+          args {
+            float_value: 0
+          }
+          args {
+            float_value: 255
+          }
+        }
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 3
+      }
+      args {
+        float_value: 3
+      }
+      args {
+        call_value {
+          functionName: "Random (float)"
+          args {
+            float_value: 16
+          }
+          args {
+            float_value: 30
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Display Text over Actor"
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor)"
+          args {
+            string_value: "5c77ac6f643431dc2b1698cb"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "TextPopupStyle"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        string_value: "This is all for you!"
+      }
+      args {
+        call_value {
+          functionName: "Random (float)"
+          args {
+            float_value: 0
+          }
+          args {
+            float_value: 255
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Random (float)"
+          args {
+            float_value: 0
+          }
+          args {
+            float_value: 255
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Random (float)"
+          args {
+            float_value: 0
+          }
+          args {
+            float_value: 255
+          }
+        }
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 3
+      }
+      args {
+        float_value: 3
+      }
+      args {
+        call_value {
+          functionName: "Random (float)"
+          args {
+            float_value: 16
+          }
+          args {
+            float_value: 30
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Display Text over Actor"
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor)"
+          args {
+            string_value: "5c77b1c0643431dc2b16993d"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "TextPopupStyle"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        string_value: "Finally he comes, I almosts dried out!"
+      }
+      args {
+        call_value {
+          functionName: "Random (float)"
+          args {
+            float_value: 0
+          }
+          args {
+            float_value: 255
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Random (float)"
+          args {
+            float_value: 0
+          }
+          args {
+            float_value: 255
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Random (float)"
+          args {
+            float_value: 0
+          }
+          args {
+            float_value: 255
+          }
+        }
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 3
+      }
+      args {
+        float_value: 3
+      }
+      args {
+        call_value {
+          functionName: "Random (float)"
+          args {
+            float_value: 16
+          }
+          args {
+            float_value: 30
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "5c77b0dc643431dc2b16993a"
+  }
+  elseActions {
+  }
+  is_oneshot: true
+}
+triggers {
+  name: "wayOut"
+  events {
+    ops {
+      functionName: "On Conversation Complete"
+    }
+  }
+  conditions {
+  }
+  actions {
+    ops {
+      functionName: "Fade Camera Out"
+      args {
+        float_value: 3
+      }
+      args {
+        float_value: 4
+      }
+    }
+    ops {
+      functionName: "Open Scene"
+      args {
+        call_value {
+          functionName: "Get Map Item (Scene)"
+          args {
+            string_value: "Apartment"
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "5c77b7e1643431dc2b169a4e"
+  }
+  elseActions {
+  }
+  is_oneshot: true
+}
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: 4
+    y: 0
+    z: -5
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "5c77ac6f643431dc2b1698c8"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 3
+    conversationPoint {
+      conversationID: "5c77acd4643431dc2b1698cf"
+      turnToFace: true
+    }
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "Core/OrkMale"
+    character_sheet_id: "Lonestar_Lv1_Captain"
+    equipment_sheet_id: "Merchant_Outfit_High"
+    character_mod {
+      stats {
+        body: 0
+        quickness: 0
+        strength: 0
+        charisma: 0
+        intelligence: 0
+        willpower: 0
+        essence: 0
+        magic: 0
+        hp: 0
+        ap: 0
+        armor: 0
+        force: 0
+        morale: 0
+        discipline: 0
+        awareness: 0
+        perception: 0
+        authority: 0
+        protect_tether_range: 0
+        move_speed: 0
+      }
+      skills {
+        ranged_combat: 0
+        close_combat: 0
+        throwing_weapons: 0
+        spellcasting: 0
+        decking: 0
+        conjuring: 0
+        spirit_summoning: 0
+        drone_control: 0
+        biotech: 0
+        dodge: 0
+        etiquette_corporate: 0
+        etiquette_security: 0
+        etiquette_gang: 0
+        etiquette_socialite: 0
+        chi_casting: 0
+        etiquette_shadowrunner: 0
+        etiquette_street: 0
+        etiquette_academic: 0
+      }
+      specializations {
+        pistol: 0
+        rifle: 0
+        shotgun: 0
+        smg: 0
+        edged: 0
+        unarmed: 0
+        spirit_control: 0
+        esp_control: 0
+        drone_combat: 0
+      }
+      archetypeName: "Guard - Seek And Destroy"
+      attitude: AttitudeAggressive
+    }
+    equipment {
+      prefab_name: "DeckerJacket"
+    }
+    team_id: "Civilians"
+    char_name: "Barman"
+    pc_spawn_number: -1
+    hiring_type: HiringType_None
+    portrait {
+      filename: "Backer_OrkMale_EricMersmann"
+    }
+    portrait_code_override: "s3h3c4b0c0t0"
+    karma: 45
+    hiring_cost_override: 100
+  }
+}
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: 7
+    y: 0
+    z: -7
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "5c77ac6f643431dc2b1698c9"
+  }
+  lod: 0
+  character_instance {
+    character_sheet_id: "BaseCivilian"
+    character_mod {
+      stats {
+        body: 0
+        quickness: 0
+        strength: 0
+        charisma: 0
+        intelligence: 0
+        willpower: 0
+        essence: 0
+        hp: 0
+        ap: 0
+        morale: 0
+        discipline: 0
+        awareness: 0
+        perception: 0
+        authority: 0
+        protect_tether_range: 0
+        move_speed: 0
+      }
+      skills {
+      }
+      specializations {
+      }
+      vulnerabilities {
+      }
+    }
+    team_id: "Civilians"
+    char_name: "rando"
+    pc_spawn_number: -1
+    karma: 6
+    hiring_set_randomizer: "human_decker"
+  }
+}
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: 8
+    y: 0
+    z: -7
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "5c77ac6f643431dc2b1698ca"
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "Seattle:Core/HumanMale"
+    character_sheet_id: "BaseCivilian"
+    character_mod {
+      stats {
+        body: 0
+        quickness: 0
+        strength: 0
+        charisma: 0
+        intelligence: 0
+        willpower: 0
+        essence: 0
+        hp: 0
+        ap: 0
+        morale: 0
+        discipline: 0
+        awareness: 0
+        perception: 0
+        authority: 0
+        protect_tether_range: 0
+        move_speed: 0
+      }
+      skills {
+      }
+      specializations {
+      }
+      vulnerabilities {
+      }
+    }
+    team_id: "Civilians"
+    char_name: "rando"
+    pc_spawn_number: -1
+    karma: 6
+    hiring_set_randomizer: "troll_samurai"
+  }
+}
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: 9
+    y: 0
+    z: -7
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "5c77ac6f643431dc2b1698cb"
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "Seattle:Core/HumanMale"
+    character_sheet_id: "BaseCivilian"
+    character_mod {
+      stats {
+        body: 0
+        quickness: 0
+        strength: 0
+        charisma: 0
+        intelligence: 0
+        willpower: 0
+        essence: 0
+        hp: 0
+        ap: 0
+        morale: 0
+        discipline: 0
+        awareness: 0
+        perception: 0
+        authority: 0
+        protect_tether_range: 0
+        move_speed: 0
+      }
+      skills {
+      }
+      specializations {
+      }
+      vulnerabilities {
+      }
+    }
+    team_id: "Civilians"
+    char_name: "rando1"
+    pc_spawn_number: -1
+    karma: 6
+    hiring_set_randomizer: "elf_adept"
+  }
+}
+characters {
+  name: "system_spawner_playerSpawner"
+  gridPoint {
+    x: 8
+    y: 0
+    z: 4
+  }
+  orientation: ORIENTATION_W
+  idRef {
+    id: "5c77ac6f643431dc2b1698cc"
+  }
+  lod: 0
+  character_instance {
+    character_mod {
+      archetypeName: "Player"
+    }
+    team_id: "Shadowrunners"
+    char_name: "New Actor"
+    enabled_at_start: true
+    pc_spawn_number: 0
+  }
+}
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: 9
+    y: 0
+    z: 0
+  }
+  orientation: ORIENTATION_E
+  GeneralTags: "warden"
+  idRef {
+    id: "5c77b0a7643431dc2b169936"
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "Seattle:Security/DwarfMaleExecSecurity"
+    character_sheet_id: "Lvl4_Human_Decker"
+    character_mod {
+      stats {
+        body: 0
+        quickness: 0
+        strength: 0
+        charisma: 0
+        intelligence: 0
+        willpower: 0
+        essence: 0
+        magic: 0
+        hp: 0
+        ap: 0
+        armor: 0
+        force: 0
+        morale: 0
+        discipline: 0
+        awareness: 0
+        perception: 0
+        authority: 0
+        protect_tether_range: 0
+        move_speed: 0
+      }
+      skills {
+        ranged_combat: 0
+        close_combat: 0
+        throwing_weapons: 0
+        spellcasting: 0
+        decking: 0
+        conjuring: 0
+        spirit_summoning: 0
+        drone_control: 0
+        biotech: 0
+        dodge: 0
+        etiquette_corporate: 0
+        etiquette_security: 0
+        etiquette_gang: 0
+        etiquette_socialite: 0
+        chi_casting: 0
+        etiquette_shadowrunner: 0
+        etiquette_street: 0
+        etiquette_academic: 0
+      }
+      specializations {
+        pistol: 0
+        rifle: 0
+        shotgun: 0
+        smg: 0
+        edged: 0
+        unarmed: 0
+        spirit_control: 0
+        esp_control: 0
+        drone_combat: 0
+      }
+      archetypeName: "Guard - Protect"
+      attitude: AttitudeAggressive
+      vulnerabilities {
+      }
+    }
+    equipment {
+      prefab_name: "CyberdeckKraftwerk1"
+    }
+    equipment {
+      prefab_name: "ESP Assassin"
+    }
+    equipment {
+      prefab_name: "ESP Shield"
+    }
+    equipment {
+      prefab_name: "PR Supression 1"
+    }
+    equipment {
+      prefab_name: "PR Firewall 2"
+    }
+    equipment {
+      prefab_name: "PR Killer 2"
+    }
+    equipment {
+      prefab_name: "PR Medic 2"
+    }
+    equipment {
+      prefab_name: "SMG 2 Ingram Smartgun"
+    }
+    equipment {
+      prefab_name: "HealthPack_med"
+    }
+    equipment {
+      prefab_name: "HealthPack"
+    }
+    team_id: "Survivors"
+    char_name: "Travis"
+    GeneralTags: "warden"
+    patrolRoute: "None"
+    pc_spawn_number: -1
+    hiring_type: HiringType_Hireable
+    cyberware_jack: "Datajack"
+    cyberware_right_leg: "Obvious Cyberleg 2"
+    portrait {
+      filename: "backer_dwarfmale_davidfry"
+    }
+    karma: 4
+    hiring_cost_override: 1600
+    hiring_tag: "Decker"
+    id: "Lvl4_Human_Decker"
+  }
+}
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: 4
+    y: 0
+    z: 1
+  }
+  orientation: ORIENTATION_S
+  GeneralTags: "merchant"
+  idRef {
+    id: "5c77b0a7643431dc2b169937"
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "Seattle:Scientist/HumanFemaleScientist"
+    character_sheet_id: "BaseCivilian"
+    equipment_sheet_id: "Merchant_Doctor_Low"
+    character_mod {
+      stats {
+        body: 0
+        quickness: 0
+        strength: 0
+        charisma: 0
+        intelligence: 0
+        willpower: 0
+        essence: 0
+        magic: 0
+        hp: 0
+        ap: 0
+        armor: 0
+        force: 0
+        morale: 0
+        discipline: 0
+        awareness: 0
+        perception: 0
+        authority: 0
+        protect_tether_range: 0
+        move_speed: 0
+      }
+      skills {
+        ranged_combat: 0
+        close_combat: 0
+        throwing_weapons: 0
+        spellcasting: 0
+        decking: 0
+        conjuring: 0
+        spirit_summoning: 0
+        drone_control: 0
+        biotech: 0
+        dodge: 0
+        etiquette_corporate: 0
+        etiquette_security: 0
+        etiquette_gang: 0
+        etiquette_paranormal: 0
+        etiquette_socialite: 0
+        etiquette_infected: 0
+        chi_casting: 0
+        drain_resistance: 0
+        drone_combat: 0
+        etiquette_shadowrunner: 0
+        etiquette_street: 0
+        etiquette_academic: 0
+      }
+      specializations {
+        pistol: 0
+        rifle: 0
+        shotgun: 0
+        smg: 0
+        edged: 0
+        unarmed: 0
+        throwing_blades: 0
+        spirit_control: 0
+        esp_control: 0
+        drone_combat: 0
+      }
+      archetypeName: "Guard - Protect"
+      attitude: AttitudeAggressive
+      vulnerabilities {
+      }
+    }
+    team_id: "Civilians"
+    char_name: "Sara"
+    GeneralTags: "merchant"
+    pc_spawn_number: -1
+    hiring_type: HiringType_None
+    portrait {
+      filename: "Backer_HumanFemale_SaraCastle_DrSaraCastle_Tribute"
+    }
+    karma: 6
+    hiring_cost_override: 500
+  }
+}
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: 5
+    y: 0
+    z: 0
+  }
+  orientation: ORIENTATION_E
+  GeneralTags: "merchant"
+  idRef {
+    id: "5c77b0a7643431dc2b169938"
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "Core/OrkMale"
+    character_sheet_id: "Generic_Lv1_Human_Melee"
+    equipment_sheet_id: "Merchant_Outfit_Low"
+    character_mod {
+      stats {
+        body: 0
+        quickness: 0
+        strength: 0
+        charisma: 0
+        intelligence: 0
+        willpower: 0
+        essence: 0
+        magic: 0
+        hp: 0
+        ap: 0
+        armor: 0
+        force: 0
+        morale: 0
+        discipline: 0
+        awareness: 0
+        perception: 0
+        authority: 0
+        protect_tether_range: 0
+        move_speed: 0
+      }
+      skills {
+        ranged_combat: 0
+        close_combat: 0
+        throwing_weapons: 0
+        spellcasting: 0
+        decking: 0
+        conjuring: 0
+        spirit_summoning: 0
+        drone_control: 0
+        biotech: 0
+        dodge: 0
+        etiquette_corporate: 0
+        etiquette_security: 0
+        etiquette_gang: 0
+        etiquette_socialite: 0
+        chi_casting: 0
+        etiquette_shadowrunner: 0
+        etiquette_street: 0
+        etiquette_academic: 0
+      }
+      specializations {
+        pistol: 0
+        rifle: 0
+        shotgun: 0
+        smg: 0
+        edged: 0
+        unarmed: 0
+        spirit_control: 0
+        esp_control: 0
+        drone_combat: 0
+      }
+      archetypeName: "Guard - Seek And Destroy"
+      attitude: AttitudeAggressive
+      vulnerabilities {
+      }
+    }
+    equipment {
+      prefab_name: "DeckerJacket"
+    }
+    team_id: "Civilians"
+    char_name: "Eric"
+    GeneralTags: "merchant"
+    pc_spawn_number: -1
+    hiring_type: HiringType_None
+    portrait {
+      filename: "Backer_OrkMale_EricMersmann"
+    }
+    portrait_code_override: "s3h3c4b0c0t0"
+    karma: 45
+    hiring_cost_override: 100
+  }
+}
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: 6
+    y: 0
+    z: 0
+  }
+  orientation: ORIENTATION_E
+  GeneralTags: "merchant"
+  idRef {
+    id: "5c77b0a7643431dc2b169939"
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "Seattle:Standard/OrkMaleRigger"
+    character_sheet_id: "BaseCivilian"
+    equipment_sheet_id: "Merchant_Weapons_Low"
+    character_mod {
+      stats {
+        body: 0
+        quickness: 0
+        strength: 0
+        charisma: 0
+        intelligence: 0
+        willpower: 0
+        essence: 0
+        magic: 0
+        hp: 0
+        ap: 0
+        armor: 0
+        force: 0
+        morale: 0
+        discipline: 0
+        awareness: 0
+        perception: 0
+        authority: 0
+        protect_tether_range: 0
+        move_speed: 0
+      }
+      skills {
+        ranged_combat: 0
+        close_combat: 0
+        throwing_weapons: 0
+        spellcasting: 0
+        decking: 0
+        conjuring: 0
+        spirit_summoning: 0
+        drone_control: 0
+        biotech: 0
+        dodge: 0
+        etiquette_corporate: 0
+        etiquette_security: 0
+        etiquette_gang: 0
+        etiquette_paranormal: 0
+        etiquette_socialite: 0
+        etiquette_infected: 0
+        chi_casting: 0
+        drain_resistance: 0
+        drone_combat: 0
+        etiquette_shadowrunner: 0
+        etiquette_street: 0
+        etiquette_academic: 0
+      }
+      specializations {
+        pistol: 0
+        rifle: 0
+        shotgun: 0
+        smg: 0
+        edged: 0
+        unarmed: 0
+        throwing_blades: 0
+        spirit_control: 0
+        esp_control: 0
+        drone_combat: 0
+      }
+      archetypeName: "Guard - Protect"
+      attitude: AttitudeAggressive
+      vulnerabilities {
+      }
+    }
+    team_id: "Survivors"
+    char_name: "David"
+    GeneralTags: "merchant"
+    pc_spawn_number: -1
+    hiring_type: HiringType_None
+    portrait {
+      filename: "Backer_OrkMale_JamesHerbert_TheodoreBusterGruberman"
+    }
+    karma: 6
+    hiring_cost_override: 500
+  }
+}
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: 9
+    y: 0
+    z: -6
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "5c77b1c0643431dc2b16993b"
+  }
+  lod: 0
+  character_instance {
+    character_sheet_id: "BaseCivilian"
+    character_mod {
+      stats {
+        body: 0
+        quickness: 0
+        strength: 0
+        charisma: 0
+        intelligence: 0
+        willpower: 0
+        essence: 0
+        hp: 0
+        ap: 0
+        morale: 0
+        discipline: 0
+        awareness: 0
+        perception: 0
+        authority: 0
+        protect_tether_range: 0
+        move_speed: 0
+      }
+      skills {
+      }
+      specializations {
+      }
+      vulnerabilities {
+      }
+    }
+    team_id: "Civilians"
+    char_name: "rando"
+    pc_spawn_number: -1
+    karma: 6
+    hiring_set_randomizer: "human_decker"
+  }
+}
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: 11
+    y: 0
+    z: -6
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "5c77b1c0643431dc2b16993c"
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "Seattle:Core/HumanMale"
+    character_sheet_id: "BaseCivilian"
+    character_mod {
+      stats {
+        body: 0
+        quickness: 0
+        strength: 0
+        charisma: 0
+        intelligence: 0
+        willpower: 0
+        essence: 0
+        hp: 0
+        ap: 0
+        morale: 0
+        discipline: 0
+        awareness: 0
+        perception: 0
+        authority: 0
+        protect_tether_range: 0
+        move_speed: 0
+      }
+      skills {
+      }
+      specializations {
+      }
+      vulnerabilities {
+      }
+    }
+    team_id: "Civilians"
+    char_name: "rando"
+    pc_spawn_number: -1
+    karma: 6
+    hiring_set_randomizer: "elf_adept"
+  }
+}
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: 10
+    y: 0
+    z: -6
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "5c77b1c0643431dc2b16993d"
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "Seattle:Core/HumanMale"
+    character_sheet_id: "BaseCivilian"
+    character_mod {
+      stats {
+        body: 0
+        quickness: 0
+        strength: 0
+        charisma: 0
+        intelligence: 0
+        willpower: 0
+        essence: 0
+        hp: 0
+        ap: 0
+        morale: 0
+        discipline: 0
+        awareness: 0
+        perception: 0
+        authority: 0
+        protect_tether_range: 0
+        move_speed: 0
+      }
+      skills {
+      }
+      specializations {
+      }
+      vulnerabilities {
+      }
+    }
+    team_id: "Civilians"
+    char_name: "rando2"
+    pc_spawn_number: -1
+    karma: 6
+    hiring_set_randomizer: "troll_samurai"
+  }
+}
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: 8
+    y: 0
+    z: -5
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "5c77b1c3643431dc2b16993e"
+  }
+  lod: 0
+  character_instance {
+    character_sheet_id: "BaseCivilian"
+    character_mod {
+      stats {
+        body: 0
+        quickness: 0
+        strength: 0
+        charisma: 0
+        intelligence: 0
+        willpower: 0
+        essence: 0
+        hp: 0
+        ap: 0
+        morale: 0
+        discipline: 0
+        awareness: 0
+        perception: 0
+        authority: 0
+        protect_tether_range: 0
+        move_speed: 0
+      }
+      skills {
+      }
+      specializations {
+      }
+      vulnerabilities {
+      }
+    }
+    team_id: "Civilians"
+    char_name: "rando"
+    pc_spawn_number: -1
+    karma: 6
+    hiring_set_randomizer: "human_decker"
+  }
+}
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: 10
+    y: 0
+    z: -5
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "5c77b1c3643431dc2b16993f"
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "Seattle:Core/HumanMale"
+    character_sheet_id: "BaseCivilian"
+    character_mod {
+      stats {
+        body: 0
+        quickness: 0
+        strength: 0
+        charisma: 0
+        intelligence: 0
+        willpower: 0
+        essence: 0
+        hp: 0
+        ap: 0
+        morale: 0
+        discipline: 0
+        awareness: 0
+        perception: 0
+        authority: 0
+        protect_tether_range: 0
+        move_speed: 0
+      }
+      skills {
+      }
+      specializations {
+      }
+      vulnerabilities {
+      }
+    }
+    team_id: "Civilians"
+    char_name: "rando"
+    pc_spawn_number: -1
+    karma: 6
+    hiring_set_randomizer: "elf_adept"
+  }
+}
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: 9
+    y: 0
+    z: -5
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "5c77b1c3643431dc2b169940"
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "Seattle:Core/HumanMale"
+    character_sheet_id: "BaseCivilian"
+    character_mod {
+      stats {
+        body: 0
+        quickness: 0
+        strength: 0
+        charisma: 0
+        intelligence: 0
+        willpower: 0
+        essence: 0
+        hp: 0
+        ap: 0
+        morale: 0
+        discipline: 0
+        awareness: 0
+        perception: 0
+        authority: 0
+        protect_tether_range: 0
+        move_speed: 0
+      }
+      skills {
+      }
+      specializations {
+      }
+      vulnerabilities {
+      }
+    }
+    team_id: "Civilians"
+    char_name: "rando"
+    pc_spawn_number: -1
+    karma: 6
+    hiring_set_randomizer: "troll_samurai"
+  }
+}
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: 11
+    y: 0
+    z: -7
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "5c77b1c7643431dc2b169941"
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "Seattle:Core/HumanMale"
+    character_sheet_id: "BaseCivilian"
+    character_mod {
+      stats {
+        body: 0
+        quickness: 0
+        strength: 0
+        charisma: 0
+        intelligence: 0
+        willpower: 0
+        essence: 0
+        hp: 0
+        ap: 0
+        morale: 0
+        discipline: 0
+        awareness: 0
+        perception: 0
+        authority: 0
+        protect_tether_range: 0
+        move_speed: 0
+      }
+      skills {
+      }
+      specializations {
+      }
+      vulnerabilities {
+      }
+    }
+    team_id: "Civilians"
+    char_name: "rando"
+    pc_spawn_number: -1
+    karma: 6
+    hiring_set_randomizer: "elf_adept"
+  }
+}
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: 10
+    y: 0
+    z: -7
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "5c77b1cc643431dc2b169942"
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "Seattle:Core/HumanMale"
+    character_sheet_id: "BaseCivilian"
+    character_mod {
+      stats {
+        body: 0
+        quickness: 0
+        strength: 0
+        charisma: 0
+        intelligence: 0
+        willpower: 0
+        essence: 0
+        hp: 0
+        ap: 0
+        morale: 0
+        discipline: 0
+        awareness: 0
+        perception: 0
+        authority: 0
+        protect_tether_range: 0
+        move_speed: 0
+      }
+      skills {
+      }
+      specializations {
+      }
+      vulnerabilities {
+      }
+    }
+    team_id: "Civilians"
+    char_name: "rando"
+    pc_spawn_number: -1
+    karma: 6
+    hiring_set_randomizer: "elf_adept"
+  }
+}
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: 11
+    y: 0
+    z: -8
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "5c77b1cc643431dc2b169943"
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "Seattle:Core/HumanMale"
+    character_sheet_id: "BaseCivilian"
+    character_mod {
+      stats {
+        body: 0
+        quickness: 0
+        strength: 0
+        charisma: 0
+        intelligence: 0
+        willpower: 0
+        essence: 0
+        hp: 0
+        ap: 0
+        morale: 0
+        discipline: 0
+        awareness: 0
+        perception: 0
+        authority: 0
+        protect_tether_range: 0
+        move_speed: 0
+      }
+      skills {
+      }
+      specializations {
+      }
+      vulnerabilities {
+      }
+    }
+    team_id: "Civilians"
+    char_name: "rando"
+    pc_spawn_number: -1
+    karma: 6
+    hiring_set_randomizer: "elf_adept"
+  }
+}
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: 8
+    y: 0
+    z: -6
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "5c77b1da643431dc2b169944"
+  }
+  lod: 0
+  character_instance {
+    character_sheet_id: "BaseCivilian"
+    character_mod {
+      stats {
+        body: 0
+        quickness: 0
+        strength: 0
+        charisma: 0
+        intelligence: 0
+        willpower: 0
+        essence: 0
+        hp: 0
+        ap: 0
+        morale: 0
+        discipline: 0
+        awareness: 0
+        perception: 0
+        authority: 0
+        protect_tether_range: 0
+        move_speed: 0
+      }
+      skills {
+      }
+      specializations {
+      }
+      vulnerabilities {
+      }
+    }
+    team_id: "Civilians"
+    char_name: "rando"
+    pc_spawn_number: -1
+    karma: 6
+    hiring_set_randomizer: "human_decker"
+  }
+}
+worldMapLocation {
+  filename: ""
+  location {
+    x: 0
+    y: 0
+  }
+}
+mapName: "BarCongrats"
+parentStory: ""
+scene_title: "Bar"
+scene_subtitle: ""
+scene_synopsis: ""
+scene_image: ""
+scene_continue_button_skip: false
+scene_restore_runner_health: false
+directional_light_dir {
+  x: -0.5
+  y: -1
+  z: -0.75
+}
+directional_light_color {
+  r: 0.50196081
+  g: 0.50196081
+  b: 0.50196081
+}
+ambient_light_color {
+  r: 0.50196081
+  g: 0.50196081
+  b: 0.50196081
+}
+allow_drawn_weapons: false
+team_affiliations {
+  team_name: "Shadowrunners"
+  affiliation: 0
+  affiliation: 1
+  affiliation: 1
+  affiliation: 0
+}
+team_affiliations {
+  team_name: "Gangers"
+  affiliation: 1
+  affiliation: 0
+  affiliation: 1
+  affiliation: 0
+}
+team_affiliations {
+  team_name: "LoneStar"
+  affiliation: 1
+  affiliation: 1
+  affiliation: 0
+  affiliation: 0
+}
+team_affiliations {
+  team_name: "Civilians"
+  affiliation: 0
+  affiliation: 0
+  affiliation: 0
+  affiliation: 0
+}
+scene_dimensions {
+  dimension_name: "Default"
+}
+show_hiring_screen_on_scene_load: false
+scene_hiring_prerequisites {
+  prereq_description: ""
+  prereq_conditions {
+  }
+}
+hiring_slot_count: 0
+hiring_minimum_karma: 0
+hiring_maximum_karma: 0
+roster_overrides {
+}
+use_hiring_cost_warning: false
+hiring_average_cost: 0
+override_hiring_average_cost: false
+show_equip_screen_on_scene_load: false
+can_move_outside_camera_regions: true
+can_start_before_triggers: true

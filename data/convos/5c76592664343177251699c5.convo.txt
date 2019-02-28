@@ -40,7 +40,7 @@ nodes {
     id: "5c765a3a64343177251699de"
   }
   index: 2
-  text: "Dounther of Sarah and Steve Jobs where missing when they were buried in grave.\nKowalski youngest son body was never found due to storm in 20XX.\nSara Shells body never found, she and her parents were still alive when the war started. "
+  text: "H.P. Lovecraft grave was founud empty after 20 years of his death.\nSara Shells body was never found, she and her parents were still alive when the war started.\nNicola Tesla grave is empty, because of too mach voltage on shock terapy."
   branches {
     responseText: "Back"
     nextNodeIndex: 0

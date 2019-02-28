@@ -332,6 +332,47 @@ triggers {
         }
       }
     }
+    ops {
+      functionName: "Remove Item from Team"
+      args {
+        call_value {
+          functionName: "Get Map Item (Item)"
+          args {
+            string_value: "Bomb"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (string)"
+          args {
+            string_value: "FactionList"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (SceneDimension)"
+          args {
+            string_value: "Default"
+          }
+        }
+      }
+    }
   }
   isActive: true
   idRef {
@@ -349,6 +390,42 @@ triggers {
     }
   }
   conditions {
+    ops {
+      functionName: "Comparison (bool)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (bool)"
+          args {
+            string_value: "5c6fd5ec6434311e0cb7acda"
+          }
+          args {
+            string_value: "serwersCleared"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
   }
   actions {
     ops {
@@ -399,6 +476,309 @@ triggers {
   isActive: true
   idRef {
     id: "5c76a6a264343165267c3de2"
+  }
+  elseActions {
+  }
+  is_oneshot: true
+}
+triggers {
+  name: "changePlayerLoaction"
+  events {
+    ops {
+      functionName: "On Map Start"
+    }
+  }
+  conditions {
+  }
+  actions {
+    ops {
+      functionName: "Set Variable (string)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (string)"
+          args {
+            string_value: "5c6fd5ec6434311e0cb7acda"
+          }
+          args {
+            string_value: "fromWhere"
+          }
+        }
+      }
+      args {
+        string_value: "sewers"
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "5c77e89e643431dc2b169d2e"
+  }
+  elseActions {
+  }
+  is_oneshot: true
+}
+triggers {
+  name: "lootBoss"
+  events {
+    ops {
+      functionName: "On Actor Death"
+    }
+  }
+  conditions {
+    ops {
+      functionName: "AND"
+      args {
+        call_value {
+          functionName: "Comparison (Actor)"
+          args {
+            call_value {
+              functionName: "Triggering Target Actor"
+            }
+          }
+          args {
+            call_value {
+              functionName: "Get Preset Value (int)"
+              args {
+                string_value: "IsOrIsNot"
+              }
+              args {
+                int_value: 1
+              }
+            }
+          }
+          args {
+            call_value {
+              functionName: "Get Map Item (Actor)"
+              args {
+                string_value: "5c76934864343165267c3dd2"
+              }
+            }
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Compare Actor Team"
+          args {
+            call_value {
+              functionName: "Triggering Actor"
+            }
+          }
+          args {
+            call_value {
+              functionName: "Get Preset Value (int)"
+              args {
+                string_value: "IsOrIsNot"
+              }
+              args {
+                int_value: 1
+              }
+            }
+          }
+          args {
+            call_value {
+              functionName: "Get Preset Value (string)"
+              args {
+                string_value: "FactionList"
+              }
+              args {
+                int_value: 0
+              }
+            }
+          }
+          args {
+            call_value {
+              functionName: "Get Map Item (SceneDimension)"
+              args {
+                string_value: "Default"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  actions {
+    ops {
+      functionName: "Add Item to Team"
+      args {
+        call_value {
+          functionName: "Get Map Item (Item)"
+          args {
+            string_value: "Mastercard"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (string)"
+          args {
+            string_value: "FactionList"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (SceneDimension)"
+          args {
+            string_value: "Default"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Add Nuyen"
+      args {
+        int_value: 10000
+      }
+    }
+    ops {
+      functionName: "Set Variable (bool)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (bool)"
+          args {
+            string_value: "5c6fd5ec6434311e0cb7acda"
+          }
+          args {
+            string_value: "serwersCleared"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "5c77eefb643431dc2b169d30"
+  }
+  elseActions {
+  }
+  is_oneshot: true
+}
+triggers {
+  name: "whenClear"
+  events {
+    ops {
+      functionName: "On Map Start"
+    }
+  }
+  conditions {
+    ops {
+      functionName: "Comparison (bool)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (bool)"
+          args {
+            string_value: "5c6fd5ec6434311e0cb7acda"
+          }
+          args {
+            string_value: "serwersCleared"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+  actions {
+    ops {
+      functionName: "Kill Actor"
+      args {
+        call_value {
+          functionName: "All Actors With Tag"
+          args {
+            call_value {
+              functionName: "Get Map Item (SenseTagList)"
+              args {
+                string_value: "bug"
+              }
+            }
+          }
+          args {
+            call_value {
+              functionName: "Get Preset Value (int)"
+              args {
+                string_value: "AllOrAny"
+              }
+              args {
+                int_value: 0
+              }
+            }
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "DeathMethod"
+          }
+          args {
+            int_value: 3
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Delete Prop"
+      args {
+        call_value {
+          functionName: "Get Map Item (Prop)"
+          args {
+            string_value: "5c7691cd64343165267c3dca"
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "5c77ef0d643431dc2b169d31"
   }
   elseActions {
   }
@@ -500,6 +880,7 @@ characters {
     z: 24
   }
   orientation: ORIENTATION_E
+  GeneralTags: "bug"
   idRef {
     id: "5c76933464343165267c3dce"
   }
@@ -570,6 +951,7 @@ characters {
     }
     team_id: "LoneStar"
     char_name: "True Form Bombadier"
+    GeneralTags: "bug"
     pc_spawn_number: -1
     hiring_type: HiringType_None
     portrait {
@@ -587,6 +969,7 @@ characters {
     z: 22
   }
   orientation: ORIENTATION_E
+  GeneralTags: "bug"
   idRef {
     id: "5c76933964343165267c3dd0"
   }
@@ -656,6 +1039,7 @@ characters {
     }
     team_id: "LoneStar"
     char_name: "True Form Worker"
+    GeneralTags: "bug"
     pc_spawn_number: -1
     hiring_type: HiringType_None
     portrait {
@@ -673,6 +1057,7 @@ characters {
     z: 26
   }
   orientation: ORIENTATION_S
+  GeneralTags: "bug"
   idRef {
     id: "5c76933b64343165267c3dd1"
   }
@@ -742,6 +1127,7 @@ characters {
     }
     team_id: "LoneStar"
     char_name: "True Form Venom"
+    GeneralTags: "bug"
     pc_spawn_number: -1
     hiring_type: HiringType_None
     portrait {
@@ -759,6 +1145,7 @@ characters {
     z: 22
   }
   orientation: ORIENTATION_S
+  GeneralTags: "bug"
   idRef {
     id: "5c76934864343165267c3dd2"
   }
@@ -787,6 +1174,7 @@ characters {
     }
     team_id: "Civilians"
     char_name: "Pitezel"
+    GeneralTags: "bug"
     pc_spawn_number: -1
     portrait {
       filename: "NPC_TrollMale_Pitezel"
@@ -817,7 +1205,7 @@ scene_subtitle: ""
 scene_synopsis: ""
 scene_image: ""
 scene_continue_button_skip: false
-scene_restore_runner_health: false
+scene_restore_runner_health: true
 directional_light_dir {
   x: -0.5
   y: -1
@@ -867,7 +1255,7 @@ scene_dimensions {
 }
 character_roster {
 }
-show_hiring_screen_on_scene_load: true
+show_hiring_screen_on_scene_load: false
 scene_hiring_prerequisites {
   prereq_description: ""
   prereq_conditions {
@@ -883,4 +1271,4 @@ hiring_average_cost: 0
 override_hiring_average_cost: false
 show_equip_screen_on_scene_load: false
 can_move_outside_camera_regions: true
-can_start_before_triggers: true
+can_start_before_triggers: false

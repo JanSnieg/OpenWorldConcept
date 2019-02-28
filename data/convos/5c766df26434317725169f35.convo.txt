@@ -16,6 +16,10 @@ nodes {
     responseText: "I see an empty grave here. What is it all about?"
     nextNodeIndex: 1
   }
+  branches {
+    responseText: "I\'m sorry that i messed grave."
+    nextNodeIndex: -1
+  }
   nodeType: ConversationNodeType_Simple
 }
 nodes {

@@ -1,0 +1,561 @@
+idRef {
+  id: "5c77ff4b643431dc2b169e33"
+}
+ui_name: "con_Rich"
+nodes {
+  idRef {
+    id: "5c77ff5e643431dc2b169e39"
+  }
+  index: 0
+  text: "Oh. Hi, I was just finishing some buissnes."
+  branches {
+    responseText: "Who are you?"
+    nextNodeIndex: 1
+  }
+  branches {
+    responseText: "It is time to say goodbay!"
+    nextNodeIndex: 15
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5c77ffb5643431dc2b169e3f"
+  }
+  index: 1
+  text: "You maybe remembering me from the city."
+  branches {
+    responseText: "I\'ve never met you!"
+    nextNodeIndex: 2
+  }
+  branches {
+    responseText: "You would be dead if I met you!"
+    nextNodeIndex: 2
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5c780001643431dc2b169e43"
+  }
+  index: 2
+  text: "Maybe now.\n{{CC}}Stupid or what you are?\nCareful with those bastards you have to be, no joke they are!{{/CC}}"
+  branches {
+    responseText: ""
+    nextNodeIndex: 3
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5c780042643431dc2b169e62"
+  }
+  index: 3
+  text: "{{GM}}You now remeber, you met him on first night you came to his hopeless city{{/GM}}"
+  branches {
+    responseText: "So, why did you help me in the first place?"
+    conditions {
+      ops {
+        functionName: "Comparison (int)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (int)"
+            args {
+              string_value: "5c6fd5ec6434311e0cb7acda"
+            }
+            args {
+              string_value: "kids"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 4
+            }
+          }
+        }
+        args {
+          int_value: 0
+        }
+      }
+    }
+    nextNodeIndex: 4
+    hideIfUnavailable: true
+  }
+  branches {
+    responseText: "So, why did you help me in the first place?"
+    conditions {
+      ops {
+        functionName: "Comparison (int)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (int)"
+            args {
+              string_value: "5c6fd5ec6434311e0cb7acda"
+            }
+            args {
+              string_value: "kids"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 3
+            }
+          }
+        }
+        args {
+          int_value: 0
+        }
+      }
+    }
+    nextNodeIndex: 10
+    hideIfUnavailable: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5c7800c5643431dc2b169e6b"
+  }
+  index: 4
+  text: "I knew you would go there and help me someway."
+  branches {
+    responseText: ""
+    nextNodeIndex: 5
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5c7800e2643431dc2b169e6e"
+  }
+  index: 5
+  text: "You see. you don\'t even know how but you\'ve helped me."
+  branches {
+    responseText: "{{GM}}You look confused{{/GM}}"
+    nextNodeIndex: 6
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5c78011a643431dc2b169e71"
+  }
+  index: 6
+  text: "You remember that girl that was hounting the island?\nShe was my preety girl, my only dauther and I couldn\'t go there and bury her as she suppesed to be.\nI\'m rich, and my name is Rich, but I can\'t do everything on my own. My money can buy me a lot of things, but not always."
+  branches {
+    responseText: "So Sara Shells was you dauther? So why she died?"
+    nextNodeIndex: 7
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5c7801b4643431dc2b169e74"
+  }
+  index: 7
+  text: "She died because of this med scientists stubbornly kept her in this socaled hospital.\nI wasn\'t rich back then, so I\'ve become rich to buy her out of this mess.\nI\'ve started this war to make money out of it and to ruin st. Maria Hospital, but one of my {{CC}}employee{{/CC}} killed her and hidd her in locker when he found out she was She.\n"
+  branches {
+    responseText: "That is explaining this dead body on your floor."
+    nextNodeIndex: 8
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5c78034c643431dc2b169e77"
+  }
+  index: 8
+  text: "Yea, but don\'t worry about your skin.\nI don\'t have to kill you. I\'ve done my own vendetta already."
+  branches {
+    responseText: "You have to die so this war can end."
+    actions {
+      ops {
+        functionName: "Change Actor Team"
+        args {
+          call_value {
+            functionName: "Specific Actor"
+            args {
+              call_value {
+                functionName: "Get Map Item (Actor)"
+                args {
+                  string_value: "5c77fe9c643431dc2b169e2f"
+                }
+              }
+            }
+            args {
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (string)"
+            args {
+              string_value: "FactionList"
+            }
+            args {
+              int_value: 2
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (SceneDimension)"
+            args {
+              string_value: "Default"
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Order Actor to Hunt And Destroy (Team)"
+        args {
+          call_value {
+            functionName: "Specific Actor"
+            args {
+              call_value {
+                functionName: "Get Map Item (Actor)"
+                args {
+                  string_value: "5c77fe9c643431dc2b169e2f"
+                }
+              }
+            }
+            args {
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (string)"
+            args {
+              string_value: "FactionList"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (SceneDimension)"
+            args {
+              string_value: "Default"
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "I won\'t kill you."
+    nextNodeIndex: 9
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5c78067b643431362d7c3ccd"
+  }
+  index: 9
+  text: "Watch out for my guards. Thay are not as forgiving as I am."
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5c7803b3643431dc2b169e89"
+  }
+  index: 10
+  text: "I thought if you will go there and live there for a while, you will be smart enough to help those people."
+  branches {
+    responseText: ""
+    nextNodeIndex: 11
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5c7803b3643431dc2b169e8c"
+  }
+  index: 11
+  text: "You see. you don\'t even know why you are so stupid."
+  branches {
+    responseText: "{{GM}}You look confused{{/GM}}"
+    nextNodeIndex: 12
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5c7803b3643431dc2b169e8f"
+  }
+  index: 12
+  text: "Have you ever heard kids voice at the moring?"
+  branches {
+    responseText: "Yea, I\'ve heard."
+    conditions {
+      ops {
+        functionName: "Comparison (int)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (int)"
+            args {
+              string_value: "5c6fd5ec6434311e0cb7acda"
+            }
+            args {
+              string_value: "kids"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 2
+            }
+          }
+        }
+        args {
+          int_value: 1
+        }
+      }
+    }
+    nextNodeIndex: 13
+  }
+  branches {
+    responseText: "No"
+    conditions {
+      ops {
+        functionName: "Comparison (int)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (int)"
+            args {
+              string_value: "5c6fd5ec6434311e0cb7acda"
+            }
+            args {
+              string_value: "kids"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          int_value: 0
+        }
+      }
+    }
+    nextNodeIndex: 14
+    hideIfUnavailable: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5c780509643431dc2b169f43"
+  }
+  index: 13
+  text: "This voice is voice of my dauther.\nShe was my preety girl, my only dauther and I couldn\'t go there and bury her as she suppesed to be.\nI\'m rich, and my name is Rich, but I can\'t do everything on my own. My money can buy me a lot of things, but not everything."
+  branches {
+    responseText: "So she was you dauther? So why she died?"
+    nextNodeIndex: 7
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5c78052c643431dc2b169f45"
+  }
+  index: 14
+  text: "You are pathetic."
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Change Actor Team"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Get Map Item (Actor)"
+              args {
+                string_value: "5c77fe9c643431dc2b169e2f"
+              }
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (string)"
+          args {
+            string_value: "FactionList"
+          }
+          args {
+            int_value: 2
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (SceneDimension)"
+          args {
+            string_value: "Default"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Order Actor to Hunt And Destroy (Team)"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Get Map Item (Actor)"
+              args {
+                string_value: "5c77fe9c643431dc2b169e2f"
+              }
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (string)"
+          args {
+            string_value: "FactionList"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (SceneDimension)"
+          args {
+            string_value: "Default"
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "5c77ff8d643431dc2b169e3d"
+  }
+  index: 15
+  text: "Yea, I knew you would come."
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Change Actor Team"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Get Map Item (Actor)"
+              args {
+                string_value: "5c77fe9c643431dc2b169e2f"
+              }
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (string)"
+          args {
+            string_value: "FactionList"
+          }
+          args {
+            int_value: 2
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (SceneDimension)"
+          args {
+            string_value: "Default"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Order Actor to Hunt And Destroy (Team)"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Get Map Item (Actor)"
+              args {
+                string_value: "5c77fe9c643431dc2b169e2f"
+              }
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (string)"
+          args {
+            string_value: "FactionList"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (SceneDimension)"
+          args {
+            string_value: "Default"
+          }
+        }
+      }
+    }
+  }
+}
+roots {
+  responseText: ""
+  nextNodeIndex: 0
+}

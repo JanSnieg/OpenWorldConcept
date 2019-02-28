@@ -638,149 +638,6 @@ triggers {
   is_oneshot: true
 }
 triggers {
-  name: "changeSceneTransisions"
-  events {
-    ops {
-      functionName: "On Map Start"
-    }
-  }
-  conditions {
-    ops {
-      functionName: "Comparison (bool)"
-      args {
-        call_value {
-          functionName: "Get Story Variable (bool)"
-          args {
-            string_value: "5c6fd5ec6434311e0cb7acda"
-          }
-          args {
-            string_value: "isNight"
-          }
-        }
-      }
-      args {
-        call_value {
-          functionName: "Get Preset Value (int)"
-          args {
-            string_value: "IsOrIsNot"
-          }
-          args {
-            int_value: 1
-          }
-        }
-      }
-      args {
-        call_value {
-          functionName: "Get Preset Value (int)"
-          args {
-            string_value: "bool"
-          }
-          args {
-            int_value: 1
-          }
-        }
-      }
-    }
-  }
-  actions {
-    ops {
-      functionName: "Move Prop"
-      args {
-        call_value {
-          functionName: "Get Map Item (Prop)"
-          args {
-            string_value: "5c7556a1643431b12131b819"
-          }
-        }
-      }
-      args {
-        call_value {
-          functionName: "Specified Point (2D)"
-          args {
-            float_value: 4
-          }
-          args {
-            float_value: -8
-          }
-        }
-      }
-    }
-    ops {
-      functionName: "Move Prop"
-      args {
-        call_value {
-          functionName: "Get Map Item (Prop)"
-          args {
-            string_value: "5c73d783643431bd1aa40610"
-          }
-        }
-      }
-      args {
-        call_value {
-          functionName: "Specified Point (2D)"
-          args {
-            float_value: 14
-          }
-          args {
-            float_value: 38
-          }
-        }
-      }
-    }
-  }
-  isActive: true
-  idRef {
-    id: "5c7555a7643431b12131b817"
-  }
-  elseActions {
-    ops {
-      functionName: "Move Prop"
-      args {
-        call_value {
-          functionName: "Get Map Item (Prop)"
-          args {
-            string_value: "5c73d8bc643431bd1aa40677"
-          }
-        }
-      }
-      args {
-        call_value {
-          functionName: "Specified Point (2D)"
-          args {
-            float_value: 4
-          }
-          args {
-            float_value: -8
-          }
-        }
-      }
-    }
-    ops {
-      functionName: "Move Prop"
-      args {
-        call_value {
-          functionName: "Get Map Item (Prop)"
-          args {
-            string_value: "5c755b73643431b12131b820"
-          }
-        }
-      }
-      args {
-        call_value {
-          functionName: "Specified Point (2D)"
-          args {
-            float_value: 14
-          }
-          args {
-            float_value: 38
-          }
-        }
-      }
-    }
-  }
-  is_oneshot: true
-}
-triggers {
   name: "goalBurySara"
   events {
     ops {
@@ -1120,6 +977,232 @@ triggers {
   isActive: true
   idRef {
     id: "5c7660786434317725169ae9"
+  }
+  elseActions {
+  }
+  is_oneshot: true
+}
+triggers {
+  name: "changeSceneTransisionsBar"
+  events {
+    ops {
+      functionName: "On Map Start"
+    }
+  }
+  conditions {
+    ops {
+      functionName: "Comparison (bool)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (bool)"
+          args {
+            string_value: "5c6fd5ec6434311e0cb7acda"
+          }
+          args {
+            string_value: "isNight"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+  actions {
+    ops {
+      functionName: "Move Prop"
+      args {
+        call_value {
+          functionName: "Get Map Item (Prop)"
+          args {
+            string_value: "5c7556a1643431b12131b819"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Specified Point (2D)"
+          args {
+            float_value: 4
+          }
+          args {
+            float_value: -8
+          }
+        }
+      }
+    }
+  }
+  isActive: false
+  idRef {
+    id: "5c77aafd643431dc2b1698c5"
+  }
+  elseActions {
+    ops {
+      functionName: "Move Prop"
+      args {
+        call_value {
+          functionName: "Get Map Item (Prop)"
+          args {
+            string_value: "5c73d8bc643431bd1aa40677"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Specified Point (2D)"
+          args {
+            float_value: 4
+          }
+          args {
+            float_value: -8
+          }
+        }
+      }
+    }
+  }
+  is_oneshot: true
+}
+triggers {
+  name: "BarCongrats"
+  events {
+    ops {
+      functionName: "On Map Start"
+    }
+  }
+  conditions {
+    ops {
+      functionName: "Comparison (int)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (int)"
+          args {
+            string_value: "5c6fd5ec6434311e0cb7acda"
+          }
+          args {
+            string_value: "kids"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "Comparison Ops"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        int_value: -1
+      }
+    }
+  }
+  actions {
+    ops {
+      functionName: "Move Prop"
+      args {
+        call_value {
+          functionName: "Get Map Item (Prop)"
+          args {
+            string_value: "5c77b606643431dc2b169a4d"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Specified Point (2D)"
+          args {
+            float_value: 4
+          }
+          args {
+            float_value: -8
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "5c77abb4643431dc2b1698c6"
+  }
+  elseActions {
+    ops {
+      functionName: "Enable/Disable Trigger"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "EnableOrDisable"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (Trigger)"
+          args {
+            string_value: "5c77aafd643431dc2b1698c5"
+          }
+        }
+      }
+    }
+  }
+  is_oneshot: true
+}
+triggers {
+  name: "changePlayerLoaction"
+  events {
+    ops {
+      functionName: "On Map Start"
+    }
+  }
+  conditions {
+  }
+  actions {
+    ops {
+      functionName: "Set Variable (string)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (string)"
+          args {
+            string_value: "5c6fd5ec6434311e0cb7acda"
+          }
+          args {
+            string_value: "fromWhere"
+          }
+        }
+      }
+      args {
+        string_value: "city"
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "5c73e724643431821be50a90"
   }
   elseActions {
   }
