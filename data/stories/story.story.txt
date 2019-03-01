@@ -1,5 +1,17 @@
 id: ""
 variables {
+  name: "dealPunk"
+  typeName: "bool"
+  defaultValue {
+    bool_value: false
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "dealPunk"
+      typeName: "bool"
+    }
+  }
+}
+variables {
   name: "fromWhere"
   typeName: "string"
   defaultValue {
@@ -83,9 +95,23 @@ variables {
     }
   }
 }
+variables {
+  name: "sleptWithPunk"
+  typeName: "bool"
+  defaultValue {
+    bool_value: false
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "sleptWithPunk"
+      typeName: "bool"
+    }
+  }
+}
 startScene: "OpenWorld"
+allowCharacterImport: true
 allowCharacterGen: true
 useDefaultEquipment: false
+defaultCharacterEquipment: "lonestar_lv1_captain_gear"
 resalePercent: 75
 upgradeToThreeApLevel: 117
 show_conversation_triggering_actor: true

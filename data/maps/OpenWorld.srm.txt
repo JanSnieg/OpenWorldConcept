@@ -2097,14 +2097,6 @@ props {
   idRef {
     id: "5c76a53e64343165267c3de1"
   }
-  interactionRoot {
-    isEnabled: true
-    interactionRadius: 1
-    transitionPoint {
-      scene_name: "Sewers"
-      confirmation_text: "Are you sure, you want to go into sewers? Did you take bomb?"
-    }
-  }
   lod: 0
 }
 props {
@@ -5773,11 +5765,12 @@ props {
 props {
   name: "pikePlace_vehicle_monorailConnector01"
   gridPoint {
-    x: -31.1
+    x: -34.1
     y: 3.3
     z: 8.4
   }
   orientation: ORIENTATION_E
+  displayName: "Monorail"
   idRef {
     id: "5c717c59643431351231b903"
   }
@@ -5844,7 +5837,7 @@ props {
       }
     }
     transitionPoint {
-      scene_name: "Survivor Camp"
+      scene_name: "Survivors Camp night"
       confirmation_text: "Are you shure you whant to leave \"City\"?"
     }
   }
@@ -5853,7 +5846,7 @@ props {
 props {
   name: "pikePlace_vehicle_monorailConnector02"
   gridPoint {
-    x: -34
+    x: -30
     y: 3.41
     z: 8.5
   }
@@ -9650,6 +9643,19 @@ props {
   orientation: ORIENTATION_S
   idRef {
     id: "5c76a92d64343165267c3e08"
+  }
+  lod: 0
+}
+props {
+  name: "pikePlace_street_temporaryPoliceRail02"
+  gridPoint {
+    x: -61
+    y: 0
+    z: 19.7
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "5c78ed5d64343108317c3c9f"
   }
   lod: 0
 }

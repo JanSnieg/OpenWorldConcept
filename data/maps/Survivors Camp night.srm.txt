@@ -1,6 +1,6 @@
 minX: -88
 minZ: -58
-numX: 136
+numX: 161
 numZ: 132
 props {
   name: "cemetery_ground_dirt01"
@@ -3272,16 +3272,6 @@ props {
   lod: 0
 }
 props {
-  name: "docks_clutter_shippingCrate04"
-  gridPoint {
-    x: 12
-    y: 0
-    z: 19
-  }
-  orientation: ORIENTATION_S
-  lod: 0
-}
-props {
   name: "docks_clutter_shippingCrate03"
   gridPoint {
     x: 13
@@ -3572,16 +3562,6 @@ props {
     x: 23
     y: 0
     z: 36
-  }
-  orientation: ORIENTATION_S
-  lod: 0
-}
-props {
-  name: "docks_vehicle_tugboat01"
-  gridPoint {
-    x: 24
-    y: 0
-    z: 46
   }
   orientation: ORIENTATION_S
   lod: 0
@@ -14248,6 +14228,163 @@ props {
     transitionPoint {
       scene_name: "BarCongrats"
       confirmation_text: "Going in bar, huh?"
+    }
+  }
+  lod: 0
+}
+props {
+  name: "docks_vehicle_seaplane"
+  gridPoint {
+    x: 65
+    y: 0
+    z: 67
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "5c78ecd864343108317c3c76"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    inspectInteraction {
+      dispalyTime: 8
+      fadeTime: 4
+      inspectText: "I\'ve borrowed this bout from Richy.\nHe don\'t need it now."
+      disableAfterInteracting: false
+    }
+  }
+  lod: 0
+}
+props {
+  name: "docks_clutter_shippingCrate04"
+  gridPoint {
+    x: 55.699997
+    y: 0
+    z: 69
+  }
+  orientation: ORIENTATION_S
+  GeneralTags: "beer"
+  displayName: "Beer03"
+  idRef {
+    id: "5c79092564343175311698d8"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    inspectInteraction {
+      dispalyTime: 5
+      fadeTime: 3
+      inspectText: "Crate full of cold well-made beer."
+      disableAfterInteracting: false
+    }
+  }
+  lod: 0
+}
+props {
+  name: "docks_clutter_shippingCrate04"
+  gridPoint {
+    x: 56.699997
+    y: 0
+    z: 69
+  }
+  orientation: ORIENTATION_S
+  GeneralTags: "beer"
+  displayName: "Beer02"
+  idRef {
+    id: "5c79092564343175311698d9"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    inspectInteraction {
+      dispalyTime: 5
+      fadeTime: 3
+      inspectText: "Crate full of cold well-made beer."
+      disableAfterInteracting: false
+    }
+  }
+  lod: 0
+}
+props {
+  name: "docks_clutter_shippingCrate04"
+  gridPoint {
+    x: 55.699997
+    y: 0
+    z: 71
+  }
+  orientation: ORIENTATION_E
+  GeneralTags: "beer"
+  displayName: "Beer01"
+  idRef {
+    id: "5c79092564343175311698da"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    inspectInteraction {
+      dispalyTime: 5
+      fadeTime: 3
+      inspectText: "Crate full of cold well-made beer."
+      disableAfterInteracting: false
+    }
+  }
+  lod: 0
+}
+props {
+  name: "docks_vehicle_tugboat01"
+  gridPoint {
+    x: 23
+    y: 0
+    z: 46
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "5c79096864343175311698db"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    prerequisites {
+      ops {
+        functionName: "Comparison (bool)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (bool)"
+            args {
+              string_value: "5c6fd5ec6434311e0cb7acda"
+            }
+            args {
+              string_value: "dealPunk"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+    }
+    transitionPoint {
+      scene_name: "Dock"
+      confirmation_text: "Ready to make a deal with Punks?"
     }
   }
   lod: 0

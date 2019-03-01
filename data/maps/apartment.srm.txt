@@ -1180,3 +1180,16 @@ props {
   }
   lod: 0
 }
+props {
+  name: "diveBar_floor_wood01"
+  gridPoint {
+    x: 13
+    y: 0
+    z: 18
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "5c79011364343137311698f0"
+  }
+  lod: 0
+}

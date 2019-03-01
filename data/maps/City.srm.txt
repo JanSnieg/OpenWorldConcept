@@ -1,7 +1,7 @@
 minX: -111
 minZ: -21
-numX: 110
-numZ: 76
+numX: 128
+numZ: 85
 props {
   name: "barrens_street_billboard01"
   gridPoint {
@@ -5564,76 +5564,18 @@ props {
 props {
   name: "pikePlace_vehicle_monorailConnector01"
   gridPoint {
-    x: -31.1
+    x: 13.9
     y: 3.3
-    z: 8.4
+    z: 61.4
   }
   orientation: ORIENTATION_E
+  displayName: "Monorail day"
   idRef {
     id: "5c717c59643431351231b903"
   }
   interactionRoot {
     isEnabled: true
     interactionRadius: 6
-    prerequisites {
-      ops {
-        functionName: "Evaluate If Actor Has Item"
-        args {
-          call_value {
-            functionName: "All Actors on Team"
-            args {
-              call_value {
-                functionName: "Get Preset Value (string)"
-                args {
-                  string_value: "FactionList"
-                }
-                args {
-                  int_value: 0
-                }
-              }
-            }
-            args {
-              call_value {
-                functionName: "Get Preset Value (int)"
-                args {
-                  string_value: "AllOrAny"
-                }
-                args {
-                  int_value: 0
-                }
-              }
-            }
-            args {
-              call_value {
-                functionName: "Get Map Item (SceneDimension)"
-                args {
-                  string_value: "Default"
-                }
-              }
-            }
-          }
-        }
-        args {
-          call_value {
-            functionName: "Get Preset Value (int)"
-            args {
-              string_value: "HasOrHasNot"
-            }
-            args {
-              int_value: 1
-            }
-          }
-        }
-        args {
-          call_value {
-            functionName: "Get Map Item (Item)"
-            args {
-              string_value: "MonorailKey"
-            }
-          }
-        }
-      }
-    }
     transitionPoint {
       scene_name: "Survivor Camp"
       confirmation_text: "Are you shure you whant to leave \"City\"?"
@@ -9441,6 +9383,28 @@ props {
   orientation: ORIENTATION_S
   idRef {
     id: "5c76a92d64343165267c3e08"
+  }
+  lod: 0
+}
+props {
+  name: "pikePlace_vehicle_monorailConnector01"
+  gridPoint {
+    x: 9.9
+    y: 3.3
+    z: 61.4
+  }
+  orientation: ORIENTATION_E
+  displayName: "Monorail night"
+  idRef {
+    id: "5c78f14d6434311331fc4118"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 6
+    transitionPoint {
+      scene_name: "Survivor Camp"
+      confirmation_text: "Are you shure you whant to leave \"City\"?"
+    }
   }
   lod: 0
 }

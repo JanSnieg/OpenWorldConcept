@@ -64,6 +64,48 @@ nodes {
     nextNodeIndex: 4
     hideIfUnavailable: true
   }
+  branches {
+    responseText: "What is about this boat?"
+    conditions {
+      ops {
+        functionName: "Comparison (bool)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (bool)"
+            args {
+              string_value: "5c6fd5ec6434311e0cb7acda"
+            }
+            args {
+              string_value: "dealPunk"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 5
+  }
   nodeType: ConversationNodeType_Simple
 }
 nodes {
@@ -118,6 +160,90 @@ nodes {
     responseText: "Cool."
     nextNodeIndex: -1
   }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5c790a9d64343175311698f1"
+  }
+  index: 5
+  text: "We have this to go to places other than city. As you can tell city dock is busted.\nFor example we can take this boat to a dock."
+  branches {
+    responseText: "A dock?"
+    nextNodeIndex: 6
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5c790ae264343175311698f4"
+  }
+  index: 6
+  text: "Yea!\nI knew you would love this.\nThis is place where punks are living."
+  branches {
+    responseText: "So what about them?"
+    nextNodeIndex: 7
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5c790b1f64343175311698f7"
+  }
+  index: 7
+  text: "So... they are making the best beer in this freaking state.\nAnd if we could go to them and buy that beer for us we will all be happily drunk and drunkly happy."
+  branches {
+    responseText: ""
+    nextNodeIndex: 8
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5c790b8464343175311698fa"
+  }
+  index: 8
+  text: "But there is a trick.\nThey are wierd, and you can\'t tell if they will kill of {{CC}}@#$%{{/CC}} you next second."
+  branches {
+    responseText: "Challange accepted!!"
+    nextNodeIndex: 9
+  }
+  branches {
+    responseText: "Nah. I\'m good."
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5c790be564343175311698fd"
+  }
+  index: 9
+  text: "Ok. So listen, I will give you 4k Nyuen to buy 3 crates of beer, right?\nIf you will get it lower, rest is yours, if higher, you pay.\n"
+  branches {
+    responseText: "is there anything more you would like to tell me?"
+    nextNodeIndex: 10
+  }
+  branches {
+    responseText: ""
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Add Nuyen"
+      args {
+        int_value: 4000
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "5c790c686434317531169902"
+  }
+  index: 10
+  text: "Remember that there is always a way to shoot those punks and take beer anyway."
   nodeType: ConversationNodeType_Simple
 }
 roots {

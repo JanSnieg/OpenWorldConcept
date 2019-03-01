@@ -1,0 +1,11 @@
+id: "beerCrate"
+type: ItemType_QuestItem
+uirep {
+  name: "Crate of beer"
+  description: "Huge ass container of cold well made beer."
+}
+credentials: 0
+sorting_group: "Quest"
+closeupImage {
+  filename: "docks/docks_clutter_shippingcrate04_s@2x"
+}

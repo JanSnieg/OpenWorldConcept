@@ -14,6 +14,36 @@ nodes {
   }
   branches {
     responseText: "I see an empty grave here. What is it all about?"
+    conditions {
+      ops {
+        functionName: "Comparison (int)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (int)"
+            args {
+              string_value: "5c6fd5ec6434311e0cb7acda"
+            }
+            args {
+              string_value: "kids"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 3
+            }
+          }
+        }
+        args {
+          int_value: 0
+        }
+      }
+    }
     nextNodeIndex: 1
   }
   branches {
@@ -39,7 +69,31 @@ nodes {
     id: "5c7683cc64343165267c3cc0"
   }
   index: 2
-  text: "You should get some info in bar."
+  text: "You know this place is hounted, right?"
+  branches {
+    responseText: "Sure..."
+    nextNodeIndex: 3
+  }
+  branches {
+    responseText: "I hear it for the first time."
+    nextNodeIndex: 4
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5c78e99264343108317c3c64"
+  }
+  index: 3
+  text: "Than you shouldn\'t be surprised about this empty grave."
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5c78e9b164343108317c3c66"
+  }
+  index: 4
+  text: "Oh, really?\nWell than, from time to time you can hear a kids playing on the seashore.\nBut i don\'t really care about some pathetic ghosts, I\'m a gravedigger.\nMaybe you could get some more information somewhere in the bar."
   nodeType: ConversationNodeType_Simple
 }
 roots {

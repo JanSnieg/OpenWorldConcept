@@ -59,6 +59,10 @@ nodes {
     nextNodeIndex: 16
     hideIfUnavailable: true
   }
+  branches {
+    responseText: "{{CC}}PunkBeer{{/CC}} please."
+    nextNodeIndex: 20
+  }
   nodeType: ConversationNodeType_Simple
 }
 nodes {
@@ -66,7 +70,7 @@ nodes {
     id: "5c75310a643431ea20a4069c"
   }
   index: 1
-  text: "Androind hunter come right up."
+  text: "{{CC}}Blade Runner{{/CC}} is coming."
   branches {
     responseText: ""
     nextNodeIndex: 0
@@ -79,7 +83,7 @@ nodes {
     id: "5c7530af643431ea20a40690"
   }
   index: 2
-  text: "Peacebear go in now."
+  text: "{{CC}}Peacebear{{/CC}} fo you."
   branches {
     responseText: ""
     nextNodeIndex: 0
@@ -402,6 +406,31 @@ nodes {
       }
     }
   }
+}
+nodes {
+  idRef {
+    id: "5c790da364343175311699f9"
+  }
+  index: 20
+  text: "Will be there in a moment."
+  branches {
+    responseText: ""
+    nextNodeIndex: 21
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5c790e196434317531169a3c"
+  }
+  index: 21
+  text: "Oh... thats you.\nFor you this will be free."
+  branches {
+    responseText: "Thanks man."
+    nextNodeIndex: 0
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
 }
 roots {
   responseText: "Barman!"
