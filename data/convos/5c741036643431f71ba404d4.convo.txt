@@ -219,7 +219,7 @@ nodes {
     id: "5c790be564343175311698fd"
   }
   index: 9
-  text: "Ok. So listen, I will give you 4k Nyuen to buy 3 crates of beer, right?\nIf you get it for less, rest is yours, if more, you pay.\n"
+  text: "Ok. So listen, I will give you 5k Nyuen to buy 3 crates of beer, right?\nIf you get it for less, rest is yours, if more, you pay.\n"
   branches {
     responseText: "Is there anything more you would like to tell me?"
     nextNodeIndex: 10
@@ -233,7 +233,7 @@ nodes {
     ops {
       functionName: "Add Nuyen"
       args {
-        int_value: 4000
+        int_value: 5000
       }
     }
   }

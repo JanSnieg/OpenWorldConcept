@@ -113,6 +113,7 @@ allowImportedEquipment: true
 allowCharacterGen: true
 useDefaultEquipment: false
 defaultCharacterEquipment: "lonestar_lv1_captain_gear"
+storyKarmaLevel: 200
 resalePercent: 75
 upgradeToThreeApLevel: 117
 show_conversation_triggering_actor: true
