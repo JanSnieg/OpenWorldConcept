@@ -7,7 +7,7 @@ nodes {
     id: "5c743f1e643431f71ba40581"
   }
   index: 0
-  text: "Please put your chin on stand and look directly in camera."
+  text: "Please put your chin on a stand and look directly in camera."
   branches {
     responseText: ""
     nextNodeIndex: 1

@@ -2,7 +2,7 @@ project_id: "5c6fd5ec6434311e0cb7acda"
 project_name: "OpenWorldConcept"
 project_version: "1"
 author_name: "Pawe\305\202 Olszowy"
-synopsis: ""
+synopsis: "Nameless City"
 has_story: true
 read_only: false
 preview_image: "preview"

@@ -45,7 +45,7 @@ nodes {
     id: "5c73cf91643431bd1aa404db"
   }
   index: 2
-  text: "Welcome in our camp than.\nThis is propably only safe place in the city. Once this was psyciatry hospital, but now we are here.\nDo you need a quick tour around?"
+  text: "Welcome in our camp than.\nThis is propably the only safe place in the city. Once this was psychiatry hospital, but now we are here.\nDo you need a quick tour around?"
   branches {
     responseText: "Sure."
     nextNodeIndex: 3
@@ -275,7 +275,7 @@ nodes {
     id: "5c73d5c9643431bd1aa4057c"
   }
   index: 9
-  text: "But from time to time at night we can hear screems.\nThat is why we all have earplugs, you better find yourself one pair too."
+  text: "But from time to time at night we can hear screems.\nThat is why we all have earplugs, you better find yourself a pair too."
   branches {
     responseText: "Okeeeey...."
     nextNodeIndex: 7

@@ -140,7 +140,7 @@ nodes {
     id: "5c717376643431351231b7d5"
   }
   index: 3
-  text: "...?\nBetter not knowing for you!\nGo south, find Monorail and survivors visit you shold!\nMy ticket you take. Needed to ride it is."
+  text: "...?\nBetter not knowing for you!\nGo south, find Monorail and survivors visit you should!\nMy ticket you take. Needed to ride it is."
   nodeType: ConversationNodeType_Simple
   actions {
     ops {

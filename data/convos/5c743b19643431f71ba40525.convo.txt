@@ -70,7 +70,7 @@ nodes {
     auxiliaryLink: true
   }
   branches {
-    responseText: "{{GM}}You need to talk to him{{/GM}}I better go then."
+    responseText: "I better go then."
     nextNodeIndex: -1
   }
   branches {
@@ -117,7 +117,7 @@ nodes {
     hideIfUnavailable: true
   }
   branches {
-    responseText: "Heve you heard kids noises in the distance?"
+    responseText: "Have you heard kids noises in the distance?"
     conditions {
       ops {
         functionName: "OR"
@@ -381,7 +381,7 @@ nodes {
     id: "5c743cc7643431f71ba40546"
   }
   index: 5
-  text: "We have day/night cicle here.\nDuring the day we are all here, outside doing our jobs, as should you.\nAt night most of us are sleeping, rest patroling the teritory.\nIf you need to do anything in this area, better do it during the day.\nBut if you want to shoot some gangsters, do it at night, get it?"
+  text: "We have day/night cycle here.\nDuring the day we are all here, outside doing our jobs, as should you.\nAt night most of us are sleeping, the rest is patroling the teritory.\nIf you need to do anything in this area, better do it during the day.\nBut if you want to shoot some gangsters, do it at night, get it?"
   branches {
     responseText: ""
     nextNodeIndex: 6
@@ -418,7 +418,7 @@ nodes {
     id: "5c743fe3643431f71ba405a7"
   }
   index: 8
-  text: "I\'m secirity chief here.\nMy name is Travis.\nIf anything goes wrong, you tell me, got it?"
+  text: "I\'m secirity chief here.\nMy name is Travis.\nIf anything goes wrong, you tell me, get it?"
   branches {
     responseText: ""
     nextNodeIndex: 0
@@ -448,7 +448,7 @@ nodes {
     id: "5c7563b2643431b12131b8f5"
   }
   index: 10
-  text: "I know every one on this dammed island ..."
+  text: "I know everyone on this dammed island ..."
   branches {
     responseText: ""
     nextNodeIndex: 11
@@ -467,7 +467,7 @@ nodes {
     auxiliaryLink: true
   }
   branches {
-    responseText: "I swear I\'ve heard them, They where repeting some tongue twister over and over again."
+    responseText: "I swear I\'ve heard them, they where repeating some tongue twister over and over again."
     nextNodeIndex: 12
   }
   nodeType: ConversationNodeType_Simple

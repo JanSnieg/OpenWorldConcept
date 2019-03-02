@@ -167,7 +167,7 @@ nodes {
     id: "5c790a9d64343175311698f1"
   }
   index: 5
-  text: "We have this to go to places other than city. As you can tell city dock is busted.\nFor example we can take this boat to a dock."
+  text: "We have it to go to places other than city. As you can tell city dock is busted.\nFor example we can take this boat to a dock."
   branches {
     responseText: "A dock?"
     nextNodeIndex: 6
@@ -179,7 +179,7 @@ nodes {
     id: "5c790ae264343175311698f4"
   }
   index: 6
-  text: "Yea!\nI knew you would love this.\nThis is place where punks are living."
+  text: "Yea!\nI knew you would love this.\nThis is a place where punks are living."
   branches {
     responseText: "So what about them?"
     nextNodeIndex: 7
@@ -191,7 +191,7 @@ nodes {
     id: "5c790b1f64343175311698f7"
   }
   index: 7
-  text: "So... they are making the best beer in this freaking state.\nAnd if we could go to them and buy that beer for us we will all be happily drunk and drunkly happy."
+  text: "So... they are making the best beer in this freaking state.\nAnd if we go to them and buy that beer for us we all will be happily drunk and drunkly happy."
   branches {
     responseText: ""
     nextNodeIndex: 8
@@ -203,7 +203,7 @@ nodes {
     id: "5c790b8464343175311698fa"
   }
   index: 8
-  text: "But there is a trick.\nThey are wierd, and you can\'t tell if they will kill of {{CC}}@#$%{{/CC}} you next second."
+  text: "But there is a trick.\nThey are weird, and you can\'t tell if they will kill or {{CC}}fu**{{/CC}} you next second."
   branches {
     responseText: "Challange accepted!!"
     nextNodeIndex: 9
@@ -219,9 +219,9 @@ nodes {
     id: "5c790be564343175311698fd"
   }
   index: 9
-  text: "Ok. So listen, I will give you 4k Nyuen to buy 3 crates of beer, right?\nIf you will get it lower, rest is yours, if higher, you pay.\n"
+  text: "Ok. So listen, I will give you 4k Nyuen to buy 3 crates of beer, right?\nIf you get it for less, rest is yours, if more, you pay.\n"
   branches {
-    responseText: "is there anything more you would like to tell me?"
+    responseText: "Is there anything more you would like to tell me?"
     nextNodeIndex: 10
   }
   branches {

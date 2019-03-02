@@ -61,7 +61,46 @@ nodes {
   }
   branches {
     responseText: "{{CC}}PunkBeer{{/CC}} please."
+    conditions {
+      ops {
+        functionName: "Comparison (bool)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (bool)"
+            args {
+              string_value: "5c6fd5ec6434311e0cb7acda"
+            }
+            args {
+              string_value: "dealPunk"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
     nextNodeIndex: 20
+    hideIfUnavailable: true
   }
   nodeType: ConversationNodeType_Simple
 }
@@ -83,7 +122,7 @@ nodes {
     id: "5c7530af643431ea20a40690"
   }
   index: 2
-  text: "{{CC}}Peacebear{{/CC}} fo you."
+  text: "{{CC}}Peacebear{{/CC}} for you."
   branches {
     responseText: ""
     nextNodeIndex: 0
@@ -112,7 +151,7 @@ nodes {
     id: "5c7534bb643431ea20a406fb"
   }
   index: 4
-  text: "Place like any other else. Nothing special around here."
+  text: "Place like any other. Nothing special around here."
   branches {
     responseText: "I\'ve heard that it scares in here."
     nextNodeIndex: 5
@@ -311,7 +350,7 @@ nodes {
     id: "5c7532e7643431ea20a406b2"
   }
   index: 14
-  text: "{{CC}}The Tower{{/CC}} is where {{CC}}The Fucker{{/CC}} leaves.\nHe is boss of every single gangster in this god forgotten city."
+  text: "{{CC}}The Tower{{/CC}} is where {{CC}}The Fucker{{/CC}} lives.\nHe is a boss of every single gangster in this god forgotten city."
   branches {
     responseText: ""
     nextNodeIndex: 15
@@ -323,9 +362,9 @@ nodes {
     id: "5c7533c0643431ea20a406d0"
   }
   index: 15
-  text: "If you... or someone will kill {{CC}}The Fucker{{/CC}}... this is his actual name btw....\nAll gangster will turn against each other, and gangster problem will disappear like a fart on the wind.\nFor more info go ask David."
+  text: "If you... or someone will kill {{CC}}The Fucker{{/CC}}... (this is his actual name btw)....\nAll gangster will turn against each other, and gangster problem will disappear like a fart on the wind.\nFor more info go ask David."
   branches {
-    responseText: "{{GM}}And I clould become some kind of hero to those peaople{{/GM}}"
+    responseText: "{{GM}}And I clould become some kind of hero to those people{{/GM}}"
     nextNodeIndex: 0
     auxiliaryLink: true
   }
@@ -348,7 +387,7 @@ nodes {
     id: "5c76559764343177251698ff"
   }
   index: 17
-  text: "Travis talked to me, and he said we don\'t have any children around here.\nBut I\'ve done some research on my own and I\'ve found out that before this big war here were pactions menatly ill."
+  text: "Travis talked to me, and he said we don\'t have any children around here.\nBut I\'ve done some research on my own and I\'ve found out that before this big war here were menatly ill patients."
   branches {
     responseText: "What war?"
     nextNodeIndex: 18
@@ -368,7 +407,7 @@ nodes {
     id: "5c7656296434317725169902"
   }
   index: 18
-  text: "Where are you from?\nThis {{CC}}$%&ing{{/CC}} big war that tore down this state. \nThis war that coused us to live like rats in trash.\nYou really didn\'t knew?"
+  text: "Where are you from?\nThis {{CC}}$%&ing{{/CC}} big war that tore down this state. \nThis war that coused us to live like rats in a trash.\nYou really didn\'t know?"
   branches {
     responseText: ""
     nextNodeIndex: 17
@@ -381,7 +420,7 @@ nodes {
     id: "5c7656ef643431772516990e"
   }
   index: 19
-  text: "There are few missing death certificates in local system.\nYou can find a acces to that in wall tablet near Travises favorite spot.\nThere is a graveyard in sounth wall of this biulding, you could find anwsers there too."
+  text: "There are few missing death certificates in local system.\nYou can find an acces to that in the wall tablet near Travises favorite spot.\nThere is a graveyard in sounth wall of this biulding, you could find anwsers there too."
   branches {
     responseText: "Thanks man, I will go right there."
     nextNodeIndex: -1

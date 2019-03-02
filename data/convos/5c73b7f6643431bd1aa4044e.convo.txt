@@ -7,7 +7,7 @@ nodes {
     id: "5c73b82a643431bd1aa40458"
   }
   index: 0
-  text: "This was last warning.\nPrepere to die, {{CC}}#$%&{{/CC}}"
+  text: "This was a last warning.\nPrepare to die, {{CC}}#$%&{{/CC}}"
   nodeType: ConversationNodeType_Simple
 }
 roots {

@@ -346,7 +346,7 @@ triggers {
         }
       }
       args {
-        string_value: "You hear some kids playing in distance nad repeating this seashore twister."
+        string_value: "You hear some kids playing in distance and repeating this seashore twister."
       }
       args {
         float_value: 0
@@ -556,7 +556,7 @@ triggers {
             call_value {
               functionName: "Get Map Item (Actor)"
               args {
-                string_value: "5c79014264343137311698f1"
+                string_value: "5c7911eb6434317531169b1a"
               }
             }
           }
@@ -604,7 +604,7 @@ triggers {
         call_value {
           functionName: "Get Map Item (Actor)"
           args {
-            string_value: "5c79014264343137311698f1"
+            string_value: "5c7911eb6434317531169b1a"
           }
         }
       }

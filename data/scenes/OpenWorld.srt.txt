@@ -38,6 +38,12 @@ triggers {
         }
       }
     }
+    ops {
+      functionName: "Add Nuyen"
+      args {
+        int_value: 100000
+      }
+    }
   }
   isActive: true
   idRef {

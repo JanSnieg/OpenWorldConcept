@@ -234,7 +234,7 @@ nodes {
     id: "5c77db3d643431dc2b169c53"
   }
   index: 4
-  text: "Yep, as you may saw city is taken by some gamgsters.\nThere are two ways for you to deal with them.\nFirst is to go to {{CC}}The Tower{{/CC}} by the front door and shoot those bastards.\nThe secound way is to go the sewers, near crossroad, kill those bugs and blow up theirs nest. There is an elevator to the top floor where {{CC}}The Fucker{{/CC}} lives."
+  text: "Yep, as you may saw city is taken by some gangsters.\nThere are two ways for you to deal with them.\nFirst is to go to {{CC}}The Tower{{/CC}} by the front door and shoot those bastards.\nThe second way is to go to the sewers, near crossroad, kill some bugs and blow up their nest. There is an elevator to the top floor where {{CC}}The Fucker{{/CC}} lives."
   branches {
     responseText: "Tell me more about these sewers."
     conditions {
@@ -308,7 +308,7 @@ nodes {
     id: "5c77dc98643431dc2b169c68"
   }
   index: 5
-  text: "First of all, you will need a bomb to blow up a nest. I cen get you one."
+  text: "First of all, you will need a bomb to blow up a nest. I can get you one."
   branches {
     responseText: "I will take this bomb."
     actions {
@@ -368,7 +368,7 @@ nodes {
     id: "5c77dd7e643431dc2b169cb6"
   }
   index: 6
-  text: "Somewhere there will be master keycard for the elavetor.\nWhith that you will go on the to floor without any problem."
+  text: "Somewhere there will be master keycard for the elevator.\nWith that you will go to the top floor without any problem."
   branches {
     responseText: "Ok, thanks. I will be back in notime."
     nextNodeIndex: -1
@@ -397,7 +397,7 @@ nodes {
     id: "5c77de0c643431dc2b169cc0"
   }
   index: 8
-  text: "If you can take care of those guards you will propably get a keycard to the gate.\n\n"
+  text: "If you can take care of those guards you will probably get a keycard to the gate.\n\n"
   branches {
     responseText: ""
     nextNodeIndex: 9
@@ -409,7 +409,7 @@ nodes {
     id: "5c77de42643431dc2b169cc3"
   }
   index: 9
-  text: "Then, You have to go into {{CC}}The Tower{{/CC}}, you will see huge blue building, and kill some more guards."
+  text: "Then, you have to go into {{CC}}The Tower{{/CC}}, you will see huge blue building, and kill some more guards."
   branches {
     responseText: ""
     nextNodeIndex: 10
@@ -421,7 +421,7 @@ nodes {
     id: "5c77de85643431dc2b169cc6"
   }
   index: 10
-  text: "After that You will go higher and finally to the top floor where {{CC}}The Fucker{{/CC}} lives.\nAfter taking care of him gangsters shouldn\'t be a problem anymore."
+  text: "After that you will go higher and finally to the top floor where {{CC}}The Fucker{{/CC}} lives.\nAfter taking care of him gangsters shouldn\'t be a problem anymore."
   branches {
     responseText: "I will do it."
     nextNodeIndex: -1
@@ -445,7 +445,7 @@ nodes {
     id: "5c780a8b643431362d7c3dc7"
   }
   index: 12
-  text: "And be the way, You killed this {{CC}}#$%&{{/CC}}er, right?"
+  text: "And by the way, you killed this {{CC}}#$%&{{/CC}}er, right?"
   branches {
     responseText: "Sure I did."
     nextNodeIndex: 13

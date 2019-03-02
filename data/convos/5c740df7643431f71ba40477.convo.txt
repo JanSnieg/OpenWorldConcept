@@ -7,7 +7,7 @@ nodes {
     id: "5c740e06643431f71ba4047d"
   }
   index: 0
-  text: "What can I do for you sweety?"
+  text: "What can I do for you, sweety?"
   branches {
     responseText: "What do you do for a living?"
     nextNodeIndex: 1
@@ -71,7 +71,7 @@ nodes {
     id: "5c740e4b643431f71ba40484"
   }
   index: 1
-  text: "Just an ordinary think, I sell stuff to heros like you.\nIsn\'t it wonderfull, sweety?"
+  text: "Just an ordinary thing, I sell stuff to heros like you.\nIsn\'t it wonderfull, sweety?"
   branches {
     responseText: ""
     nextNodeIndex: 0
@@ -84,7 +84,7 @@ nodes {
     id: "5c740e8f643431f71ba40491"
   }
   index: 2
-  text: "Take a look, but don\'t touch anythink my dear!"
+  text: "Take a look, but don\'t touch anything my dear!"
   nodeType: ConversationNodeType_Simple
   actions {
     ops {

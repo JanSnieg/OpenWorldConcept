@@ -9,7 +9,7 @@ nodes {
   index: 0
   text: "I take care of graves, and you?"
   branches {
-    responseText: "I ... don\'t really know my puprouse here."
+    responseText: "I ... don\'t really know my puprose here."
     nextNodeIndex: -1
   }
   branches {
@@ -48,6 +48,36 @@ nodes {
   }
   branches {
     responseText: "I\'m sorry that i messed grave."
+    conditions {
+      ops {
+        functionName: "Comparison (int)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (int)"
+            args {
+              string_value: "5c6fd5ec6434311e0cb7acda"
+            }
+            args {
+              string_value: "kids"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 4
+            }
+          }
+        }
+        args {
+          int_value: 0
+        }
+      }
+    }
     nextNodeIndex: -1
   }
   nodeType: ConversationNodeType_Simple

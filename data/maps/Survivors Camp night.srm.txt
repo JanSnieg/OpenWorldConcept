@@ -3262,16 +3262,6 @@ props {
   lod: 0
 }
 props {
-  name: "morgue_appliance_mobileWashbasin"
-  gridPoint {
-    x: 18
-    y: 0
-    z: 6
-  }
-  orientation: ORIENTATION_S
-  lod: 0
-}
-props {
   name: "docks_clutter_shippingCrate03"
   gridPoint {
     x: 13
@@ -14060,98 +14050,6 @@ props {
   lod: 0
 }
 props {
-  name: "cemetery_ground_grave04"
-  gridPoint {
-    x: 17
-    y: 0
-    z: -24
-  }
-  orientation: ORIENTATION_S
-  idRef {
-    id: "5c767a2664343165267c3ca8"
-  }
-  interactionRoot {
-    isEnabled: true
-    interactionRadius: 1
-    inspectInteraction {
-      dispalyTime: 5
-      fadeTime: 3
-      inspectText: "Grave of Sarah and Steve Jobs"
-      disableAfterInteracting: false
-    }
-  }
-  lod: 0
-}
-props {
-  name: "cemetery_ground_grave04"
-  gridPoint {
-    x: 17
-    y: 0
-    z: -22
-  }
-  orientation: ORIENTATION_S
-  idRef {
-    id: "5c767a2664343165267c3ca9"
-  }
-  interactionRoot {
-    isEnabled: true
-    interactionRadius: 1
-    inspectInteraction {
-      dispalyTime: 5
-      fadeTime: 3
-      inspectText: "Grave of Eva and Adam Kowalsky."
-      disableAfterInteracting: false
-    }
-  }
-  lod: 0
-}
-props {
-  name: "cemetery_ground_grave04"
-  gridPoint {
-    x: 17
-    y: 0
-    z: -16
-  }
-  orientation: ORIENTATION_S
-  idRef {
-    id: "5c767a2664343165267c3caa"
-  }
-  interactionRoot {
-    isEnabled: true
-    interactionRadius: 1
-    inspectInteraction {
-      dispalyTime: 5
-      fadeTime: 3
-      inspectText: "Grave of ... someone called Jay-Z?"
-      disableAfterInteracting: false
-    }
-  }
-  lod: 0
-}
-props {
-  name: "cemetery_ground_grave04"
-  gridPoint {
-    x: 17
-    y: 0
-    z: -14
-  }
-  orientation: ORIENTATION_S
-  idRef {
-    id: "5c767a2664343165267c3cab"
-  }
-  interactionRoot {
-    isEnabled: true
-    interactionRadius: 1
-    inspectInteraction {
-      dispalyTime: 5
-      fadeTime: 3
-      inspectText: "Grave of Brat and Sister Pitt."
-      disableAfterInteracting: false
-    }
-  }
-  lod: 0
-}
-props {
   name: "cemetery_ground_grave01"
   gridPoint {
     x: 21
@@ -14343,7 +14241,7 @@ props {
   }
   interactionRoot {
     isEnabled: true
-    interactionRadius: 1
+    interactionRadius: 5
     prerequisites {
       ops {
         functionName: "Comparison (bool)"
@@ -14385,6 +14283,98 @@ props {
     transitionPoint {
       scene_name: "Dock"
       confirmation_text: "Ready to make a deal with Punks?"
+    }
+  }
+  lod: 0
+}
+props {
+  name: "cemetery_ground_grave04"
+  gridPoint {
+    x: 17
+    y: 0
+    z: -22
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "5c7921ce616134842400428c"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    inspectInteraction {
+      dispalyTime: 5
+      fadeTime: 3
+      inspectText: "Grave of Nicola Tesla"
+      disableAfterInteracting: false
+    }
+  }
+  lod: 0
+}
+props {
+  name: "cemetery_ground_grave04"
+  gridPoint {
+    x: 17
+    y: 0
+    z: -24
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "5c7921ce616134842400428d"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    inspectInteraction {
+      dispalyTime: 5
+      fadeTime: 3
+      inspectText: "Here rests H.P. Lovecraft"
+      disableAfterInteracting: false
+    }
+  }
+  lod: 0
+}
+props {
+  name: "cemetery_ground_grave04"
+  gridPoint {
+    x: 17
+    y: 0
+    z: -16
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "5c7921ce616134842400428e"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    inspectInteraction {
+      dispalyTime: 5
+      fadeTime: 3
+      inspectText: "To the great hero: Ernest Hemingway"
+      disableAfterInteracting: false
+    }
+  }
+  lod: 0
+}
+props {
+  name: "cemetery_ground_grave04"
+  gridPoint {
+    x: 17
+    y: 0
+    z: -14
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "5c7921ce616134842400428f"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    inspectInteraction {
+      dispalyTime: 5
+      fadeTime: 3
+      inspectText: "Grave of Mary Todd and Abraham Lincoln"
+      disableAfterInteracting: false
     }
   }
   lod: 0

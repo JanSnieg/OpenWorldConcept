@@ -1,4 +1,4 @@
-id: ""
+id: "Nameless City"
 variables {
   name: "dealPunk"
   typeName: "bool"
@@ -109,6 +109,7 @@ variables {
 }
 startScene: "OpenWorld"
 allowCharacterImport: true
+allowImportedEquipment: true
 allowCharacterGen: true
 useDefaultEquipment: false
 defaultCharacterEquipment: "lonestar_lv1_captain_gear"

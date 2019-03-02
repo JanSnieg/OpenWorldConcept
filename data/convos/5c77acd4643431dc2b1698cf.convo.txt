@@ -7,7 +7,7 @@ nodes {
     id: "5c77aced643431dc2b1698d9"
   }
   index: 0
-  text: "Hello there big fella.\nWho is greatest ghost buster that ever been?"
+  text: "Hello there big fella.\nWho is the greatest ghost buster that ever been?"
   branches {
     responseText: "Me?"
     nextNodeIndex: 1
